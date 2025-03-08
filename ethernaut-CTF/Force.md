@@ -35,7 +35,8 @@ contract Force { /*
 
 
 
-本關基本上不是很了解以太坊內部機制的很難一時之間想到答案，但要是知道答案了就很簡單，就是使用[selfdestruct](https://docs.soliditylang.org/en/v0.8.1/units-and-global-variables.html#contract-related)把以太幣強行送進合約。selfdestruct(address payable recipient)這個函數會在移除呼叫合約的同時強行把當前合約剩餘的以太幣傳送到指定地址，不論該地址有否定義payable或fallback。
+> 本關基本上不是很了解以太坊內部機制的很難一時之間想到答案，但要是知道答案了就很簡單，就是使用[selfdestruct](https://docs.soliditylang.org/en/v0.8.1/units-and-global-variables.html#contract-related)把以太幣強行送進合約。selfdestruct(address payable recipient)這個函數會在移除呼叫合約的同時強行把當前合約剩餘的以太幣傳送到指定地址，不論該地址有否定義payable或fallback。
+>
 
 
 
