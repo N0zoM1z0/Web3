@@ -1,0 +1,1113 @@
+'forge config --json' running
+'/home/web/.solc-select/artifacts/solc-0.8.20/solc-0.8.20 --version' running
+'/home/web/.solc-select/artifacts/solc-0.8.20/solc-0.8.20 @pythnetwork/pyth-sdk-solidity/=node_modules/@pythnetwork/pyth-sdk-solidity/ @openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/ @contracts/=contracts/ @aerodrome/=lib/contracts/contracts/ forge-std/=lib/forge-std/src/ @chainlink/=lib/foundry-chainlink-toolkit/ @redstone-finance/evm-connector/dist/contracts/=lib/redstone-oracles-monorepo/packages/evm-connector/contracts/ @opengsn/=lib/contracts/lib/gsn/packages/ @uniswap/v3-core/=lib/contracts/lib/v3-core/ chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/contracts/src/v0.6/vendor/@arbitrum/nitro-contracts/src/ contracts/=lib/contracts/contracts/ ds-test/=lib/contracts/lib/ds-test/src/ erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/ foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/ gsn/=lib/contracts/lib/ halmos-cheatcodes/=lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/ openzeppelin-contracts/=lib/openzeppelin-contracts/ redstone-oracles-monorepo/=lib/redstone-oracles-monorepo/ utils/=lib/contracts/test/utils/ v3-core/=lib/contracts/lib/v3-core/ ./contracts/DebitaIncentives.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --via-ir --evm-version shanghai --allow-paths .,/home/web/Desktop/Tmp/2024-11-debita-finance-v3/Debita-V3-Contracts/contracts' running
+Compilation warnings/errors on ./contracts/DebitaIncentives.sol:
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> contracts/DebitaIncentives.sol
+
+
+'forge config --json' running
+'/home/web/.solc-select/artifacts/solc-0.8.20/solc-0.8.20 --version' running
+'/home/web/.solc-select/artifacts/solc-0.8.20/solc-0.8.20 @pythnetwork/pyth-sdk-solidity/=node_modules/@pythnetwork/pyth-sdk-solidity/ @openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/ @contracts/=contracts/ @aerodrome/=lib/contracts/contracts/ forge-std/=lib/forge-std/src/ @chainlink/=lib/foundry-chainlink-toolkit/ @redstone-finance/evm-connector/dist/contracts/=lib/redstone-oracles-monorepo/packages/evm-connector/contracts/ @opengsn/=lib/contracts/lib/gsn/packages/ @uniswap/v3-core/=lib/contracts/lib/v3-core/ chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/contracts/src/v0.6/vendor/@arbitrum/nitro-contracts/src/ contracts/=lib/contracts/contracts/ ds-test/=lib/contracts/lib/ds-test/src/ erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/ foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/ gsn/=lib/contracts/lib/ halmos-cheatcodes/=lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/ openzeppelin-contracts/=lib/openzeppelin-contracts/ redstone-oracles-monorepo/=lib/redstone-oracles-monorepo/ utils/=lib/contracts/test/utils/ v3-core/=lib/contracts/lib/v3-core/ ./contracts/DebitaBorrowOffer-Implementation.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --via-ir --evm-version shanghai --allow-paths .,/home/web/Desktop/Tmp/2024-11-debita-finance-v3/Debita-V3-Contracts/contracts' running
+Compilation warnings/errors on ./contracts/DebitaBorrowOffer-Implementation.sol:
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> contracts/DebitaBorrowOffer-Implementation.sol
+
+
+'forge config --json' running
+'/home/web/.solc-select/artifacts/solc-0.8.20/solc-0.8.20 --version' running
+'/home/web/.solc-select/artifacts/solc-0.8.20/solc-0.8.20 @pythnetwork/pyth-sdk-solidity/=node_modules/@pythnetwork/pyth-sdk-solidity/ @openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/ @contracts/=contracts/ @aerodrome/=lib/contracts/contracts/ forge-std/=lib/forge-std/src/ @chainlink/=lib/foundry-chainlink-toolkit/ @redstone-finance/evm-connector/dist/contracts/=lib/redstone-oracles-monorepo/packages/evm-connector/contracts/ @opengsn/=lib/contracts/lib/gsn/packages/ @uniswap/v3-core/=lib/contracts/lib/v3-core/ chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/contracts/src/v0.6/vendor/@arbitrum/nitro-contracts/src/ contracts/=lib/contracts/contracts/ ds-test/=lib/contracts/lib/ds-test/src/ erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/ foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/ gsn/=lib/contracts/lib/ halmos-cheatcodes/=lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/ openzeppelin-contracts/=lib/openzeppelin-contracts/ redstone-oracles-monorepo/=lib/redstone-oracles-monorepo/ utils/=lib/contracts/test/utils/ v3-core/=lib/contracts/lib/v3-core/ ./contracts/DebitaLoanOwnerships.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --via-ir --evm-version shanghai --allow-paths .,/home/web/Desktop/Tmp/2024-11-debita-finance-v3/Debita-V3-Contracts/contracts' running
+Compilation warnings/errors on ./contracts/DebitaLoanOwnerships.sol:
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> contracts/DebitaLoanOwnerships.sol
+
+Warning: Function state mutability can be restricted to pure
+  --> contracts/DebitaLoanOwnerships.sol:53:5:
+   |
+53 |     function buildImage(
+   |     ^ (Relevant source part starts here and spans across multiple lines).
+
+
+'forge config --json' running
+'/home/web/.solc-select/artifacts/solc-0.8.20/solc-0.8.20 --version' running
+'/home/web/.solc-select/artifacts/solc-0.8.20/solc-0.8.20 @pythnetwork/pyth-sdk-solidity/=node_modules/@pythnetwork/pyth-sdk-solidity/ @openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/ @contracts/=contracts/ @aerodrome/=lib/contracts/contracts/ forge-std/=lib/forge-std/src/ @chainlink/=lib/foundry-chainlink-toolkit/ @redstone-finance/evm-connector/dist/contracts/=lib/redstone-oracles-monorepo/packages/evm-connector/contracts/ @opengsn/=lib/contracts/lib/gsn/packages/ @uniswap/v3-core/=lib/contracts/lib/v3-core/ chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/contracts/src/v0.6/vendor/@arbitrum/nitro-contracts/src/ contracts/=lib/contracts/contracts/ ds-test/=lib/contracts/lib/ds-test/src/ erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/ foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/ gsn/=lib/contracts/lib/ halmos-cheatcodes/=lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/ openzeppelin-contracts/=lib/openzeppelin-contracts/ redstone-oracles-monorepo/=lib/redstone-oracles-monorepo/ utils/=lib/contracts/test/utils/ v3-core/=lib/contracts/lib/v3-core/ ./contracts/DebitaV3Loan.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --via-ir --evm-version shanghai --allow-paths .,/home/web/Desktop/Tmp/2024-11-debita-finance-v3/Debita-V3-Contracts/contracts' running
+Compilation warnings/errors on ./contracts/DebitaV3Loan.sol:
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> contracts/DebitaV3Loan.sol
+
+Warning: Unused local variable.
+   --> contracts/DebitaV3Loan.sol:260:9:
+    |
+260 |         IOwnerships ownershipContract = IOwnerships(s_OwnershipContract);
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Warning: Unused local variable.
+   --> contracts/DebitaV3Loan.sol:590:17:
+    |
+590 |                 uint extendedTime = offer.maxDeadline -
+    |                 ^^^^^^^^^^^^^^^^^
+
+
+'forge config --json' running
+'/home/web/.solc-select/artifacts/solc-0.8.20/solc-0.8.20 --version' running
+'/home/web/.solc-select/artifacts/solc-0.8.20/solc-0.8.20 @pythnetwork/pyth-sdk-solidity/=node_modules/@pythnetwork/pyth-sdk-solidity/ @openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/ @contracts/=contracts/ @aerodrome/=lib/contracts/contracts/ forge-std/=lib/forge-std/src/ @chainlink/=lib/foundry-chainlink-toolkit/ @redstone-finance/evm-connector/dist/contracts/=lib/redstone-oracles-monorepo/packages/evm-connector/contracts/ @opengsn/=lib/contracts/lib/gsn/packages/ @uniswap/v3-core/=lib/contracts/lib/v3-core/ chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/contracts/src/v0.6/vendor/@arbitrum/nitro-contracts/src/ contracts/=lib/contracts/contracts/ ds-test/=lib/contracts/lib/ds-test/src/ erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/ foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/ gsn/=lib/contracts/lib/ halmos-cheatcodes/=lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/ openzeppelin-contracts/=lib/openzeppelin-contracts/ redstone-oracles-monorepo/=lib/redstone-oracles-monorepo/ utils/=lib/contracts/test/utils/ v3-core/=lib/contracts/lib/v3-core/ ./contracts/DebitaLendOfferFactory.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --via-ir --evm-version shanghai --allow-paths .,/home/web/Desktop/Tmp/2024-11-debita-finance-v3/Debita-V3-Contracts/contracts' running
+Compilation warnings/errors on ./contracts/DebitaLendOfferFactory.sol:
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> contracts/DebitaLendOfferFactory.sol
+
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> contracts/DebitaProxyContract.sol
+
+Warning: Function state mutability can be restricted to view
+   --> contracts/DebitaLendOfferFactory.sol:222:5:
+    |
+222 |     function getActiveOrders(
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+
+'forge config --json' running
+'/home/web/.solc-select/artifacts/solc-0.8.20/solc-0.8.20 --version' running
+'/home/web/.solc-select/artifacts/solc-0.8.20/solc-0.8.20 @pythnetwork/pyth-sdk-solidity/=node_modules/@pythnetwork/pyth-sdk-solidity/ @openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/ @contracts/=contracts/ @aerodrome/=lib/contracts/contracts/ forge-std/=lib/forge-std/src/ @chainlink/=lib/foundry-chainlink-toolkit/ @redstone-finance/evm-connector/dist/contracts/=lib/redstone-oracles-monorepo/packages/evm-connector/contracts/ @opengsn/=lib/contracts/lib/gsn/packages/ @uniswap/v3-core/=lib/contracts/lib/v3-core/ chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/contracts/src/v0.6/vendor/@arbitrum/nitro-contracts/src/ contracts/=lib/contracts/contracts/ ds-test/=lib/contracts/lib/ds-test/src/ erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/ foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/ gsn/=lib/contracts/lib/ halmos-cheatcodes/=lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/ openzeppelin-contracts/=lib/openzeppelin-contracts/ redstone-oracles-monorepo/=lib/redstone-oracles-monorepo/ utils/=lib/contracts/test/utils/ v3-core/=lib/contracts/lib/v3-core/ ./contracts/DebitaV3Aggregator.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --via-ir --evm-version shanghai --allow-paths .,/home/web/Desktop/Tmp/2024-11-debita-finance-v3/Debita-V3-Contracts/contracts' running
+Compilation warnings/errors on ./contracts/DebitaV3Aggregator.sol:
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> contracts/DebitaV3Aggregator.sol
+
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> contracts/DebitaProxyContract.sol
+
+Warning: This declaration shadows an existing declaration.
+   --> contracts/DebitaV3Aggregator.sol:682:26:
+    |
+682 |     function changeOwner(address owner) public {
+    |                          ^^^^^^^^^^^^^
+Note: The shadowed declaration is here:
+   --> contracts/DebitaV3Aggregator.sol:198:5:
+    |
+198 |     address public owner;
+    |     ^^^^^^^^^^^^^^^^^^^^
+
+Warning: Function state mutability can be restricted to view
+   --> contracts/DebitaV3Aggregator.sol:682:5:
+    |
+682 |     function changeOwner(address owner) public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+
+'forge config --json' running
+'/home/web/.solc-select/artifacts/solc-0.8.20/solc-0.8.20 --version' running
+'/home/web/.solc-select/artifacts/solc-0.8.20/solc-0.8.20 @pythnetwork/pyth-sdk-solidity/=node_modules/@pythnetwork/pyth-sdk-solidity/ @openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/ @contracts/=contracts/ @aerodrome/=lib/contracts/contracts/ forge-std/=lib/forge-std/src/ @chainlink/=lib/foundry-chainlink-toolkit/ @redstone-finance/evm-connector/dist/contracts/=lib/redstone-oracles-monorepo/packages/evm-connector/contracts/ @opengsn/=lib/contracts/lib/gsn/packages/ @uniswap/v3-core/=lib/contracts/lib/v3-core/ chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/contracts/src/v0.6/vendor/@arbitrum/nitro-contracts/src/ contracts/=lib/contracts/contracts/ ds-test/=lib/contracts/lib/ds-test/src/ erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/ foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/ gsn/=lib/contracts/lib/ halmos-cheatcodes/=lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/ openzeppelin-contracts/=lib/openzeppelin-contracts/ redstone-oracles-monorepo/=lib/redstone-oracles-monorepo/ utils/=lib/contracts/test/utils/ v3-core/=lib/contracts/lib/v3-core/ ./contracts/DebitaBorrowOffer-Factory.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --via-ir --evm-version shanghai --allow-paths .,/home/web/Desktop/Tmp/2024-11-debita-finance-v3/Debita-V3-Contracts/contracts' running
+Compilation warnings/errors on ./contracts/DebitaBorrowOffer-Factory.sol:
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> contracts/DebitaBorrowOffer-Factory.sol
+
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> contracts/DebitaBorrowOffer-Implementation.sol
+
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> contracts/DebitaProxyContract.sol
+
+
+'forge config --json' running
+'/home/web/.solc-select/artifacts/solc-0.8.20/solc-0.8.20 --version' running
+'/home/web/.solc-select/artifacts/solc-0.8.20/solc-0.8.20 @pythnetwork/pyth-sdk-solidity/=node_modules/@pythnetwork/pyth-sdk-solidity/ @openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/ @contracts/=contracts/ @aerodrome/=lib/contracts/contracts/ forge-std/=lib/forge-std/src/ @chainlink/=lib/foundry-chainlink-toolkit/ @redstone-finance/evm-connector/dist/contracts/=lib/redstone-oracles-monorepo/packages/evm-connector/contracts/ @opengsn/=lib/contracts/lib/gsn/packages/ @uniswap/v3-core/=lib/contracts/lib/v3-core/ chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/contracts/src/v0.6/vendor/@arbitrum/nitro-contracts/src/ contracts/=lib/contracts/contracts/ ds-test/=lib/contracts/lib/ds-test/src/ erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/ foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/ gsn/=lib/contracts/lib/ halmos-cheatcodes/=lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/ openzeppelin-contracts/=lib/openzeppelin-contracts/ redstone-oracles-monorepo/=lib/redstone-oracles-monorepo/ utils/=lib/contracts/test/utils/ v3-core/=lib/contracts/lib/v3-core/ ./contracts/DebitaLendOffer-Implementation.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --via-ir --evm-version shanghai --allow-paths .,/home/web/Desktop/Tmp/2024-11-debita-finance-v3/Debita-V3-Contracts/contracts' running
+Compilation warnings/errors on ./contracts/DebitaLendOffer-Implementation.sol:
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> contracts/DebitaLendOffer-Implementation.sol
+
+Warning: Unused local variable.
+   --> contracts/DebitaLendOffer-Implementation.sol:113:9:
+    |
+113 |         uint previousAvailableAmount = m_lendInformation.availableAmount;
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+'forge config --json' running
+'/home/web/.solc-select/artifacts/solc-0.8.20/solc-0.8.20 --version' running
+'/home/web/.solc-select/artifacts/solc-0.8.20/solc-0.8.20 @pythnetwork/pyth-sdk-solidity/=node_modules/@pythnetwork/pyth-sdk-solidity/ @openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/ @contracts/=contracts/ @aerodrome/=lib/contracts/contracts/ forge-std/=lib/forge-std/src/ @chainlink/=lib/foundry-chainlink-toolkit/ @redstone-finance/evm-connector/dist/contracts/=lib/redstone-oracles-monorepo/packages/evm-connector/contracts/ @opengsn/=lib/contracts/lib/gsn/packages/ @uniswap/v3-core/=lib/contracts/lib/v3-core/ chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/contracts/src/v0.6/vendor/@arbitrum/nitro-contracts/src/ contracts/=lib/contracts/contracts/ ds-test/=lib/contracts/lib/ds-test/src/ erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/ foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/ gsn/=lib/contracts/lib/ halmos-cheatcodes/=lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/ openzeppelin-contracts/=lib/openzeppelin-contracts/ redstone-oracles-monorepo/=lib/redstone-oracles-monorepo/ utils/=lib/contracts/test/utils/ v3-core/=lib/contracts/lib/v3-core/ ./contracts/DebitaProxyContract.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --via-ir --evm-version shanghai --allow-paths .,/home/web/Desktop/Tmp/2024-11-debita-finance-v3/Debita-V3-Contracts/contracts' running
+Compilation warnings/errors on ./contracts/DebitaProxyContract.sol:
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> contracts/DebitaProxyContract.sol
+
+
+INFO:Detectors:
+DebitaIncentives.claimIncentives(address[],address[][],uint256) (contracts/DebitaIncentives.sol#142-214) ignores return value by IERC20(token).transfer(msg.sender,amountToClaim) (contracts/DebitaIncentives.sol#203)
+DebitaIncentives.incentivizePair(address[],address[],bool[],uint256[],uint256[]) (contracts/DebitaIncentives.sol#225-294) ignores return value by IERC20(incentivizeToken).transferFrom(msg.sender,address(this),amount) (contracts/DebitaIncentives.sol#269-273)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#unchecked-transfer
+INFO:Detectors:
+DebitaIncentives.claimIncentives(address[],address[][],uint256) (contracts/DebitaIncentives.sol#142-214) performs a multiplication on the result of a division:
+	- porcentageBorrow = (borrowAmount * 10000) / totalBorrowAmount (contracts/DebitaIncentives.sol#175)
+	- amountToClaim += (borrowIncentive * porcentageBorrow) / 10000 (contracts/DebitaIncentives.sol#201)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#divide-before-multiply
+INFO:Detectors:
+Reentrancy in DebitaIncentives.claimIncentives(address[],address[][],uint256) (contracts/DebitaIncentives.sol#142-214):
+	External calls:
+	- IERC20(token).transfer(msg.sender,amountToClaim) (contracts/DebitaIncentives.sol#203)
+	State variables written after the call(s):
+	- claimedIncentives[msg.sender][hashVariablesT(principle,epoch,token)] = true (contracts/DebitaIncentives.sol#196-198)
+	DebitaIncentives.claimedIncentives (contracts/DebitaIncentives.sol#94) can be used in cross function reentrancies:
+	- DebitaIncentives.claimIncentives(address[],address[][],uint256) (contracts/DebitaIncentives.sol#142-214)
+	- DebitaIncentives.claimedIncentives (contracts/DebitaIncentives.sol#94)
+Reentrancy in DebitaIncentives.incentivizePair(address[],address[],bool[],uint256[],uint256[]) (contracts/DebitaIncentives.sol#225-294):
+	External calls:
+	- IERC20(incentivizeToken).transferFrom(msg.sender,address(this),amount) (contracts/DebitaIncentives.sol#269-273)
+	State variables written after the call(s):
+	- borrowedIncentivesPerTokenPerEpoch[principle][hashVariables(incentivizeToken,epoch)] += amount (contracts/DebitaIncentives.sol#282-284)
+	DebitaIncentives.borrowedIncentivesPerTokenPerEpoch (contracts/DebitaIncentives.sol#83-84) can be used in cross function reentrancies:
+	- DebitaIncentives.borrowedIncentivesPerTokenPerEpoch (contracts/DebitaIncentives.sol#83-84)
+	- DebitaIncentives.claimIncentives(address[],address[][],uint256) (contracts/DebitaIncentives.sol#142-214)
+	- DebitaIncentives.getBribesPerEpoch(uint256,uint256,uint256) (contracts/DebitaIncentives.sol#344-397)
+	- DebitaIncentives.incentivizePair(address[],address[],bool[],uint256[],uint256[]) (contracts/DebitaIncentives.sol#225-294)
+	- bribeCountPerPrincipleOnEpoch[epoch][incentivizeToken] ++ (contracts/DebitaIncentives.sol#264)
+	DebitaIncentives.bribeCountPerPrincipleOnEpoch (contracts/DebitaIncentives.sol#119-120) can be used in cross function reentrancies:
+	- DebitaIncentives.bribeCountPerPrincipleOnEpoch (contracts/DebitaIncentives.sol#119-120)
+	- DebitaIncentives.getBribesPerEpoch(uint256,uint256,uint256) (contracts/DebitaIncentives.sol#344-397)
+	- DebitaIncentives.incentivizePair(address[],address[],bool[],uint256[],uint256[]) (contracts/DebitaIncentives.sol#225-294)
+	- hasBeenIndexed[epochs[i]][principles[i]] = true (contracts/DebitaIncentives.sol#253)
+	DebitaIncentives.hasBeenIndexed (contracts/DebitaIncentives.sol#112) can be used in cross function reentrancies:
+	- DebitaIncentives.hasBeenIndexed (contracts/DebitaIncentives.sol#112)
+	- DebitaIncentives.incentivizePair(address[],address[],bool[],uint256[],uint256[]) (contracts/DebitaIncentives.sol#225-294)
+	- hasBeenIndexedBribe[epoch][incentivizeToken] = true (contracts/DebitaIncentives.sol#265)
+	DebitaIncentives.hasBeenIndexedBribe (contracts/DebitaIncentives.sol#123) can be used in cross function reentrancies:
+	- DebitaIncentives.hasBeenIndexedBribe (contracts/DebitaIncentives.sol#123)
+	- DebitaIncentives.incentivizePair(address[],address[],bool[],uint256[],uint256[]) (contracts/DebitaIncentives.sol#225-294)
+	- lentIncentivesPerTokenPerEpoch[principle][hashVariables(incentivizeToken,epoch)] += amount (contracts/DebitaIncentives.sol#278-280)
+	DebitaIncentives.lentIncentivesPerTokenPerEpoch (contracts/DebitaIncentives.sol#70-71) can be used in cross function reentrancies:
+	- DebitaIncentives.claimIncentives(address[],address[][],uint256) (contracts/DebitaIncentives.sol#142-214)
+	- DebitaIncentives.getBribesPerEpoch(uint256,uint256,uint256) (contracts/DebitaIncentives.sol#344-397)
+	- DebitaIncentives.incentivizePair(address[],address[],bool[],uint256[],uint256[]) (contracts/DebitaIncentives.sol#225-294)
+	- DebitaIncentives.lentIncentivesPerTokenPerEpoch (contracts/DebitaIncentives.sol#70-71)
+	- principlesIncentivizedPerEpoch[epochs[i]] ++ (contracts/DebitaIncentives.sol#252)
+	DebitaIncentives.principlesIncentivizedPerEpoch (contracts/DebitaIncentives.sol#109) can be used in cross function reentrancies:
+	- DebitaIncentives.getBribesPerEpoch(uint256,uint256,uint256) (contracts/DebitaIncentives.sol#344-397)
+	- DebitaIncentives.incentivizePair(address[],address[],bool[],uint256[],uint256[]) (contracts/DebitaIncentives.sol#225-294)
+	- DebitaIncentives.principlesIncentivizedPerEpoch (contracts/DebitaIncentives.sol#109)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-1
+INFO:Detectors:
+DebitaIncentives.claimIncentives(address[],address[][],uint256).porcentageLent (contracts/DebitaIncentives.sol#158) is a local variable never initialized
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#uninitialized-local-variables
+INFO:Detectors:
+DebitaIncentives.setAggregatorContract(address) (contracts/DebitaIncentives.sol#399-403) should emit an event for: 
+	- aggregatorContract = _aggregatorContract (contracts/DebitaIncentives.sol#402) 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-events-access-control
+INFO:Detectors:
+DebitaIncentives.setAggregatorContract(address)._aggregatorContract (contracts/DebitaIncentives.sol#399) lacks a zero-check on :
+		- aggregatorContract = _aggregatorContract (contracts/DebitaIncentives.sol#402)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-zero-address-validation
+INFO:Detectors:
+DebitaIncentives.claimIncentives(address[],address[][],uint256) (contracts/DebitaIncentives.sol#142-214) has external calls inside a loop: IERC20(token).transfer(msg.sender,amountToClaim) (contracts/DebitaIncentives.sol#203)
+DebitaIncentives.incentivizePair(address[],address[],bool[],uint256[],uint256[]) (contracts/DebitaIncentives.sol#225-294) has external calls inside a loop: IERC20(incentivizeToken).transferFrom(msg.sender,address(this),amount) (contracts/DebitaIncentives.sol#269-273)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation/#calls-inside-a-loop
+INFO:Detectors:
+Reentrancy in DebitaIncentives.incentivizePair(address[],address[],bool[],uint256[],uint256[]) (contracts/DebitaIncentives.sol#225-294):
+	External calls:
+	- IERC20(incentivizeToken).transferFrom(msg.sender,address(this),amount) (contracts/DebitaIncentives.sol#269-273)
+	State variables written after the call(s):
+	- SpecificBribePerPrincipleOnEpoch[epoch][hashVariables(principle,lastAmount_scope_0)] = incentivizeToken (contracts/DebitaIncentives.sol#261-263)
+	- epochIndexToPrinciple[epochs[i]][lastAmount] = principles[i] (contracts/DebitaIncentives.sol#251)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-2
+INFO:Detectors:
+Reentrancy in DebitaIncentives.claimIncentives(address[],address[][],uint256) (contracts/DebitaIncentives.sol#142-214):
+	External calls:
+	- IERC20(token).transfer(msg.sender,amountToClaim) (contracts/DebitaIncentives.sol#203)
+	Event emitted after the call(s):
+	- ClaimedIncentives(msg.sender,principle,token,amountToClaim,epoch) (contracts/DebitaIncentives.sol#205-211)
+Reentrancy in DebitaIncentives.incentivizePair(address[],address[],bool[],uint256[],uint256[]) (contracts/DebitaIncentives.sol#225-294):
+	External calls:
+	- IERC20(incentivizeToken).transferFrom(msg.sender,address(this),amount) (contracts/DebitaIncentives.sol#269-273)
+	Event emitted after the call(s):
+	- Incentivized(principles[i],incentiveToken[i],amounts[i],lendIncentivize[i],epochs[i]) (contracts/DebitaIncentives.sol#286-292)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-3
+INFO:Detectors:
+DebitaIncentives.claimIncentives(address[],address[][],uint256) (contracts/DebitaIncentives.sol#142-214) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(epoch < currentEpoch(),Epoch not finished) (contracts/DebitaIncentives.sol#148)
+DebitaIncentives.incentivizePair(address[],address[],bool[],uint256[],uint256[]) (contracts/DebitaIncentives.sol#225-294) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(epoch > currentEpoch(),Epoch already started) (contracts/DebitaIncentives.sol#245)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#block-timestamp
+INFO:Detectors:
+DebitaIncentives.whitelListCollateral(address,address,bool) (contracts/DebitaIncentives.sol#405-416) compares to a boolean constant:
+	-isPrincipleWhitelisted[_principle] == false && whitelist (contracts/DebitaIncentives.sol#411)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#boolean-equality
+INFO:Detectors:
+Version constraint ^0.8.0 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- DataLocationChangeInInternalOverride
+	- NestedCalldataArrayAbiReencodingSizeValidation
+	- SignedImmutables
+	- ABIDecodeTwoDimensionalArrayMemory
+	- KeccakCaching.
+It is used by:
+	- ^0.8.0 (contracts/DebitaIncentives.sol#1)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Struct DebitaIncentives.infoOfOffers (contracts/DebitaIncentives.sol#41-55) is not in CapWords
+Parameter DebitaIncentives.setAggregatorContract(address)._aggregatorContract (contracts/DebitaIncentives.sol#399) is not in mixedCase
+Parameter DebitaIncentives.whitelListCollateral(address,address,bool)._principle (contracts/DebitaIncentives.sol#406) is not in mixedCase
+Parameter DebitaIncentives.whitelListCollateral(address,address,bool)._collateral (contracts/DebitaIncentives.sol#407) is not in mixedCase
+Parameter DebitaIncentives.deprecatePrinciple(address)._principle (contracts/DebitaIncentives.sol#418) is not in mixedCase
+Parameter DebitaIncentives.hashVariables(address,uint256)._principle (contracts/DebitaIncentives.sol#424) is not in mixedCase
+Parameter DebitaIncentives.hashVariables(address,uint256)._epoch (contracts/DebitaIncentives.sol#425) is not in mixedCase
+Parameter DebitaIncentives.hashVariablesT(address,uint256,address)._principle (contracts/DebitaIncentives.sol#430) is not in mixedCase
+Parameter DebitaIncentives.hashVariablesT(address,uint256,address)._epoch (contracts/DebitaIncentives.sol#431) is not in mixedCase
+Parameter DebitaIncentives.hashVariablesT(address,uint256,address)._tokenToClaim (contracts/DebitaIncentives.sol#432) is not in mixedCase
+Variable DebitaIncentives.SpecificBribePerPrincipleOnEpoch (contracts/DebitaIncentives.sol#115-116) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Detectors:
+DebitaIncentives.epochDuration (contracts/DebitaIncentives.sol#37) should be constant 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-constant
+INFO:Detectors:
+DebitaIncentives.blockDeployedContract (contracts/DebitaIncentives.sol#36) should be immutable 
+DebitaIncentives.owner (contracts/DebitaIncentives.sol#38) should be immutable 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-immutable
+INFO:Detectors:
+DBOImplementation.onlyAfterTimeOut() (contracts/DebitaBorrowOffer-Implementation.sol#74-80) uses a dangerous strict equality:
+	- require(bool,string)(lastUpdate == 0 || (block.timestamp - lastUpdate) > 60,Offer has been updated in the last minute) (contracts/DebitaBorrowOffer-Implementation.sol#75-78)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities
+INFO:Detectors:
+Reentrancy in DBOImplementation.acceptBorrowOffer(uint256) (contracts/DebitaBorrowOffer-Implementation.sol#137-183):
+	External calls:
+	- IERC721(m_borrowInformation.collateral).transferFrom(address(this),aggregatorContract,m_borrowInformation.receiptID) (contracts/DebitaBorrowOffer-Implementation.sol#151-155)
+	State variables written after the call(s):
+	- borrowInformation.availableAmount = 0 (contracts/DebitaBorrowOffer-Implementation.sol#177)
+	DBOImplementation.borrowInformation (contracts/DebitaBorrowOffer-Implementation.sol#61) can be used in cross function reentrancies:
+	- DBOImplementation.borrowInformation (contracts/DebitaBorrowOffer-Implementation.sol#61)
+	- DBOImplementation.getBorrowInfo() (contracts/DebitaBorrowOffer-Implementation.sol#220-230)
+	- DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256) (contracts/DebitaBorrowOffer-Implementation.sol#82-132)
+	- DBOImplementation.onlyOwner() (contracts/DebitaBorrowOffer-Implementation.sol#63-66)
+	- DBOImplementation.updateBorrowOrder(uint256,uint256,uint256[],uint256[]) (contracts/DebitaBorrowOffer-Implementation.sol#232-252)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-1
+INFO:Detectors:
+DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256)._aggregatorContract (contracts/DebitaBorrowOffer-Implementation.sol#83) lacks a zero-check on :
+		- aggregatorContract = _aggregatorContract (contracts/DebitaBorrowOffer-Implementation.sol#98)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-zero-address-validation
+INFO:Detectors:
+Reentrancy in DBOImplementation.acceptBorrowOffer(uint256) (contracts/DebitaBorrowOffer-Implementation.sol#137-183):
+	External calls:
+	- IERC721(m_borrowInformation.collateral).transferFrom(address(this),aggregatorContract,m_borrowInformation.receiptID) (contracts/DebitaBorrowOffer-Implementation.sol#151-155)
+	State variables written after the call(s):
+	- isActive = false (contracts/DebitaBorrowOffer-Implementation.sol#168)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-2
+INFO:Detectors:
+Version constraint ^0.8.0 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- DataLocationChangeInInternalOverride
+	- NestedCalldataArrayAbiReencodingSizeValidation
+	- SignedImmutables
+	- ABIDecodeTwoDimensionalArrayMemory
+	- KeccakCaching.
+It is used by:
+	- ^0.8.0 (contracts/DebitaBorrowOffer-Implementation.sol#1)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Struct NFR.receiptInstance (contracts/DebitaBorrowOffer-Implementation.sol#12-20) is not in CapWords
+Parameter DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256)._aggregatorContract (contracts/DebitaBorrowOffer-Implementation.sol#83) is not in mixedCase
+Parameter DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256)._owner (contracts/DebitaBorrowOffer-Implementation.sol#84) is not in mixedCase
+Parameter DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256)._acceptedPrinciples (contracts/DebitaBorrowOffer-Implementation.sol#85) is not in mixedCase
+Parameter DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256)._collateral (contracts/DebitaBorrowOffer-Implementation.sol#86) is not in mixedCase
+Parameter DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256)._oraclesActivated (contracts/DebitaBorrowOffer-Implementation.sol#87) is not in mixedCase
+Parameter DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256)._isNFT (contracts/DebitaBorrowOffer-Implementation.sol#88) is not in mixedCase
+Parameter DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256)._LTVs (contracts/DebitaBorrowOffer-Implementation.sol#89) is not in mixedCase
+Parameter DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256)._maxApr (contracts/DebitaBorrowOffer-Implementation.sol#90) is not in mixedCase
+Parameter DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256)._duration (contracts/DebitaBorrowOffer-Implementation.sol#91) is not in mixedCase
+Parameter DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256)._receiptID (contracts/DebitaBorrowOffer-Implementation.sol#92) is not in mixedCase
+Parameter DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256)._oracleIDS_Principles (contracts/DebitaBorrowOffer-Implementation.sol#93) is not in mixedCase
+Parameter DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256)._ratio (contracts/DebitaBorrowOffer-Implementation.sol#94) is not in mixedCase
+Parameter DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256)._oracleID_Collateral (contracts/DebitaBorrowOffer-Implementation.sol#95) is not in mixedCase
+Parameter DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256)._startedBorrowAmount (contracts/DebitaBorrowOffer-Implementation.sol#96) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Detectors:
+Ownerships.initialized (contracts/DebitaLoanOwnerships.sol#18) is never initialized. It is used in:
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#uninitialized-state-variables
+INFO:Detectors:
+Ownerships.setDebitaContract(address) (contracts/DebitaLoanOwnerships.sol#40-42) should emit an event for: 
+	- DebitaContract = newContract (contracts/DebitaLoanOwnerships.sol#41) 
+Ownerships.transferOwnership(address) (contracts/DebitaLoanOwnerships.sol#110-112) should emit an event for: 
+	- admin = _newAddress (contracts/DebitaLoanOwnerships.sol#111) 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-events-access-control
+INFO:Detectors:
+Ownerships.setDebitaContract(address).newContract (contracts/DebitaLoanOwnerships.sol#40) lacks a zero-check on :
+		- DebitaContract = newContract (contracts/DebitaLoanOwnerships.sol#41)
+Ownerships.transferOwnership(address)._newAddress (contracts/DebitaLoanOwnerships.sol#110) lacks a zero-check on :
+		- admin = _newAddress (contracts/DebitaLoanOwnerships.sol#111)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-zero-address-validation
+INFO:Detectors:
+Version constraint ^0.8.0 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- DataLocationChangeInInternalOverride
+	- NestedCalldataArrayAbiReencodingSizeValidation
+	- SignedImmutables
+	- ABIDecodeTwoDimensionalArrayMemory
+	- KeccakCaching.
+It is used by:
+	- ^0.8.0 (contracts/DebitaLoanOwnerships.sol#1)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Parameter Ownerships.buildImage(string,address)._type (contracts/DebitaLoanOwnerships.sol#54) is not in mixedCase
+Parameter Ownerships.transferOwnership(address)._newAddress (contracts/DebitaLoanOwnerships.sol#110) is not in mixedCase
+Variable Ownerships.DebitaContract (contracts/DebitaLoanOwnerships.sol#17) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Detectors:
+Ownerships.initialized (contracts/DebitaLoanOwnerships.sol#18) should be constant 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-constant
+INFO:Detectors:
+DebitaV3Loan.calculateInterestToPay(uint256) (contracts/DebitaV3Loan.sol#721-738) performs a multiplication on the result of a division:
+	- anualInterest = (offer.principleAmount * offer.apr) / 10000 (contracts/DebitaV3Loan.sol#723)
+	- interest = (anualInterest * activeTime) / 31536000 (contracts/DebitaV3Loan.sol#734)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#divide-before-multiply
+INFO:Detectors:
+DebitaV3Loan._claimDebt(uint256) (contracts/DebitaV3Loan.sol#288-311) uses a dangerous strict equality:
+	- require(bool,string)(offer.paid == true,Not paid) (contracts/DebitaV3Loan.sol#297)
+DebitaV3Loan._claimDebt(uint256) (contracts/DebitaV3Loan.sol#288-311) uses a dangerous strict equality:
+	- require(bool,string)(offer.debtClaimed == false,Already claimed) (contracts/DebitaV3Loan.sol#298)
+DebitaV3Loan.claimCollateralAsBorrower(uint256[]) (contracts/DebitaV3Loan.sol#496-522) uses a dangerous strict equality:
+	- offersCollateralClaimed_Borrower == loanData._acceptedOffers.length (contracts/DebitaV3Loan.sol#517)
+DebitaV3Loan.claimCollateralAsNFTLender(uint256) (contracts/DebitaV3Loan.sol#374-411) uses a dangerous strict equality:
+	- m_loan._acceptedOffers.length == 1 && ! m_loan.auctionInitialized (contracts/DebitaV3Loan.sol#399)
+DebitaV3Loan.claimCollateralERC20AsBorrower(uint256[]) (contracts/DebitaV3Loan.sol#524-543) uses a dangerous strict equality:
+	- require(bool,string)(loanData.isCollateralNFT == false,Collateral is NFT) (contracts/DebitaV3Loan.sol#525)
+DebitaV3Loan.claimCollateralERC20AsBorrower(uint256[]) (contracts/DebitaV3Loan.sol#524-543) uses a dangerous strict equality:
+	- require(bool,string)(offer.paid == true,Not paid) (contracts/DebitaV3Loan.sol#530)
+DebitaV3Loan.claimCollateralERC20AsBorrower(uint256[]) (contracts/DebitaV3Loan.sol#524-543) uses a dangerous strict equality:
+	- require(bool,string)(offer.collateralClaimed == false,Already executed) (contracts/DebitaV3Loan.sol#531)
+DebitaV3Loan.claimCollateralNFTAsBorrower(uint256[]) (contracts/DebitaV3Loan.sol#665-718) uses a dangerous strict equality:
+	- require(bool,string)(offer.paid == true,Not paid) (contracts/DebitaV3Loan.sol#673)
+DebitaV3Loan.claimCollateralNFTAsBorrower(uint256[]) (contracts/DebitaV3Loan.sol#665-718) uses a dangerous strict equality:
+	- require(bool,string)(offer.collateralClaimed == false,Already executed) (contracts/DebitaV3Loan.sol#675)
+DebitaV3Loan.claimCollateralNFTAsBorrower(uint256[]) (contracts/DebitaV3Loan.sol#665-718) uses a dangerous strict equality:
+	- require(bool,string)(m_loan_scope_0.totalCountPaid == m_loan_scope_0._acceptedOffers.length,Not paid) (contracts/DebitaV3Loan.sol#696-699)
+DebitaV3Loan.claimCollateralNFTAsBorrower(uint256[]) (contracts/DebitaV3Loan.sol#665-718) uses a dangerous strict equality:
+	- require(bool,string)(m_loan_scope_0._acceptedOffers[i_scope_1].paid == true,Not paid) (contracts/DebitaV3Loan.sol#702)
+DebitaV3Loan.claimCollateralNFTAsBorrower(uint256[]) (contracts/DebitaV3Loan.sol#665-718) uses a dangerous strict equality:
+	- require(bool,string)(m_loan_scope_0._acceptedOffers[i_scope_1].collateralClaimed == false,Already executed) (contracts/DebitaV3Loan.sol#704-707)
+DebitaV3Loan.nextDeadline() (contracts/DebitaV3Loan.sol#743-764) uses a dangerous strict equality:
+	- _nextDeadline == 0 && m_loan._acceptedOffers[i].paid == false (contracts/DebitaV3Loan.sol#749-750)
+DebitaV3Loan.nextDeadline() (contracts/DebitaV3Loan.sol#743-764) uses a dangerous strict equality:
+	- m_loan._acceptedOffers[i].paid == false && _nextDeadline > m_loan._acceptedOffers[i].maxDeadline (contracts/DebitaV3Loan.sol#754-755)
+DebitaV3Loan.payDebt(uint256[]) (contracts/DebitaV3Loan.sol#186-257) uses a dangerous strict equality:
+	- require(bool,string)(offer.paid == false,Already paid) (contracts/DebitaV3Loan.sol#208)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities
+INFO:Detectors:
+Reentrancy in DebitaV3Loan.claimCollateralAsLender(uint256) (contracts/DebitaV3Loan.sol#340-372):
+	External calls:
+	- ownershipContract.burn(offer.lenderID) (contracts/DebitaV3Loan.sol#349)
+	- claimCollateralAsNFTLender(index) (contracts/DebitaV3Loan.sol#361)
+		- decimalsCollateral = IveNFTEqualizer(loanData.collateral).getDataByReceipt(loanData.NftID).decimals (contracts/DebitaV3Loan.sol#384-386)
+		- IERC721(m_loan.collateral).transferFrom(address(this),msg.sender,m_loan.NftID) (contracts/DebitaV3Loan.sol#403-407)
+	State variables written after the call(s):
+	- claimCollateralAsNFTLender(index) (contracts/DebitaV3Loan.sol#361)
+		- loanData._acceptedOffers[index].collateralClaimed = true (contracts/DebitaV3Loan.sol#377)
+	DebitaV3Loan.loanData (contracts/DebitaV3Loan.sol#134) can be used in cross function reentrancies:
+	- DebitaV3Loan.calculateInterestToPay(uint256) (contracts/DebitaV3Loan.sol#721-738)
+	- DebitaV3Loan.extendLoan() (contracts/DebitaV3Loan.sol#547-664)
+	- DebitaV3Loan.getLoanData() (contracts/DebitaV3Loan.sol#766-768)
+	- DebitaV3Loan.loanData (contracts/DebitaV3Loan.sol#134)
+	- DebitaV3Loan.nextDeadline() (contracts/DebitaV3Loan.sol#743-764)
+Reentrancy in DebitaV3Loan.claimCollateralAsLender(uint256) (contracts/DebitaV3Loan.sol#340-372):
+	External calls:
+	- ownershipContract.burn(offer.lenderID) (contracts/DebitaV3Loan.sol#349)
+	State variables written after the call(s):
+	- loanData._acceptedOffers[index].collateralClaimed = true (contracts/DebitaV3Loan.sol#363)
+	DebitaV3Loan.loanData (contracts/DebitaV3Loan.sol#134) can be used in cross function reentrancies:
+	- DebitaV3Loan.calculateInterestToPay(uint256) (contracts/DebitaV3Loan.sol#721-738)
+	- DebitaV3Loan.extendLoan() (contracts/DebitaV3Loan.sol#547-664)
+	- DebitaV3Loan.getLoanData() (contracts/DebitaV3Loan.sol#766-768)
+	- DebitaV3Loan.loanData (contracts/DebitaV3Loan.sol#134)
+	- DebitaV3Loan.nextDeadline() (contracts/DebitaV3Loan.sol#743-764)
+Reentrancy in DebitaV3Loan.claimCollateralNFTAsBorrower(uint256[]) (contracts/DebitaV3Loan.sol#665-718):
+	External calls:
+	- decimalsCollateral = IveNFTEqualizer(loanData.collateral).getDataByReceipt(loanData.NftID).decimals (contracts/DebitaV3Loan.sol#678-680)
+	State variables written after the call(s):
+	- loanData._acceptedOffers[indexes[i]].collateralClaimed = true (contracts/DebitaV3Loan.sol#676)
+	DebitaV3Loan.loanData (contracts/DebitaV3Loan.sol#134) can be used in cross function reentrancies:
+	- DebitaV3Loan.calculateInterestToPay(uint256) (contracts/DebitaV3Loan.sol#721-738)
+	- DebitaV3Loan.extendLoan() (contracts/DebitaV3Loan.sol#547-664)
+	- DebitaV3Loan.getLoanData() (contracts/DebitaV3Loan.sol#766-768)
+	- DebitaV3Loan.loanData (contracts/DebitaV3Loan.sol#134)
+	- DebitaV3Loan.nextDeadline() (contracts/DebitaV3Loan.sol#743-764)
+Reentrancy in DebitaV3Loan.extendLoan() (contracts/DebitaV3Loan.sol#547-664):
+	External calls:
+	- lendInfo = lendOffer.getLendInfo() (contracts/DebitaV3Loan.sol#635-636)
+	- IERC20(offer.principle).approve(address(lendOffer),interestOfUsedTime - interestToPayToDebita) (contracts/DebitaV3Loan.sol#648-651)
+	- lendOffer.addFunds(interestOfUsedTime - interestToPayToDebita) (contracts/DebitaV3Loan.sol#652-654)
+	State variables written after the call(s):
+	- loanData._acceptedOffers[i].interestToClaim += interestOfUsedTime - interestToPayToDebita (contracts/DebitaV3Loan.sol#656-658)
+	DebitaV3Loan.loanData (contracts/DebitaV3Loan.sol#134) can be used in cross function reentrancies:
+	- DebitaV3Loan.calculateInterestToPay(uint256) (contracts/DebitaV3Loan.sol#721-738)
+	- DebitaV3Loan.extendLoan() (contracts/DebitaV3Loan.sol#547-664)
+	- DebitaV3Loan.getLoanData() (contracts/DebitaV3Loan.sol#766-768)
+	- DebitaV3Loan.loanData (contracts/DebitaV3Loan.sol#134)
+	- DebitaV3Loan.nextDeadline() (contracts/DebitaV3Loan.sol#743-764)
+	- loanData._acceptedOffers[i].interestPaid += interestOfUsedTime (contracts/DebitaV3Loan.sol#660)
+	DebitaV3Loan.loanData (contracts/DebitaV3Loan.sol#134) can be used in cross function reentrancies:
+	- DebitaV3Loan.calculateInterestToPay(uint256) (contracts/DebitaV3Loan.sol#721-738)
+	- DebitaV3Loan.extendLoan() (contracts/DebitaV3Loan.sol#547-664)
+	- DebitaV3Loan.getLoanData() (contracts/DebitaV3Loan.sol#766-768)
+	- DebitaV3Loan.loanData (contracts/DebitaV3Loan.sol#134)
+	- DebitaV3Loan.nextDeadline() (contracts/DebitaV3Loan.sol#743-764)
+Reentrancy in DebitaV3Loan.handleAuctionSell(uint256) (contracts/DebitaV3Loan.sol#318-334):
+	External calls:
+	- nftData = IveNFTEqualizer(m_loan.collateral).getDataByReceipt(m_loan.NftID) (contracts/DebitaV3Loan.sol#325-327)
+	State variables written after the call(s):
+	- auctionData.soldAmount = amount (contracts/DebitaV3Loan.sol#329)
+	DebitaV3Loan.auctionData (contracts/DebitaV3Loan.sol#135) can be used in cross function reentrancies:
+	- DebitaV3Loan.auctionData (contracts/DebitaV3Loan.sol#135)
+	- DebitaV3Loan.getAuctionData() (contracts/DebitaV3Loan.sol#770-772)
+	- auctionData.alreadySold = true (contracts/DebitaV3Loan.sol#330)
+	DebitaV3Loan.auctionData (contracts/DebitaV3Loan.sol#135) can be used in cross function reentrancies:
+	- DebitaV3Loan.auctionData (contracts/DebitaV3Loan.sol#135)
+	- DebitaV3Loan.getAuctionData() (contracts/DebitaV3Loan.sol#770-772)
+	- auctionData.tokenPerCollateralUsed = ((amount * PRECISION) / (loanData.valuableCollateralUsed)) (contracts/DebitaV3Loan.sol#331-332)
+	DebitaV3Loan.auctionData (contracts/DebitaV3Loan.sol#135) can be used in cross function reentrancies:
+	- DebitaV3Loan.auctionData (contracts/DebitaV3Loan.sol#135)
+	- DebitaV3Loan.getAuctionData() (contracts/DebitaV3Loan.sol#770-772)
+Reentrancy in DebitaV3Loan.payDebt(uint256[]) (contracts/DebitaV3Loan.sol#186-257):
+	External calls:
+	- lendInfo = lendOffer.getLendInfo() (contracts/DebitaV3Loan.sol#223-224)
+	- IERC20(offer.principle).approve(address(lendOffer),total) (contracts/DebitaV3Loan.sol#235)
+	- lendOffer.addFunds(total) (contracts/DebitaV3Loan.sol#236)
+	State variables written after the call(s):
+	- i < indexes.length (contracts/DebitaV3Loan.sol#199)
+	DebitaV3Loan.loanData (contracts/DebitaV3Loan.sol#134) can be used in cross function reentrancies:
+	- DebitaV3Loan.calculateInterestToPay(uint256) (contracts/DebitaV3Loan.sol#721-738)
+	- DebitaV3Loan.extendLoan() (contracts/DebitaV3Loan.sol#547-664)
+	- DebitaV3Loan.getLoanData() (contracts/DebitaV3Loan.sol#766-768)
+	- DebitaV3Loan.loanData (contracts/DebitaV3Loan.sol#134)
+	- DebitaV3Loan.nextDeadline() (contracts/DebitaV3Loan.sol#743-764)
+	- loanData._acceptedOffers[index].paid = true (contracts/DebitaV3Loan.sol#205)
+	DebitaV3Loan.loanData (contracts/DebitaV3Loan.sol#134) can be used in cross function reentrancies:
+	- DebitaV3Loan.calculateInterestToPay(uint256) (contracts/DebitaV3Loan.sol#721-738)
+	- DebitaV3Loan.extendLoan() (contracts/DebitaV3Loan.sol#547-664)
+	- DebitaV3Loan.getLoanData() (contracts/DebitaV3Loan.sol#766-768)
+	- DebitaV3Loan.loanData (contracts/DebitaV3Loan.sol#134)
+	- DebitaV3Loan.nextDeadline() (contracts/DebitaV3Loan.sol#743-764)
+	- loanData._acceptedOffers[index].debtClaimed = true (contracts/DebitaV3Loan.sol#234)
+	DebitaV3Loan.loanData (contracts/DebitaV3Loan.sol#134) can be used in cross function reentrancies:
+	- DebitaV3Loan.calculateInterestToPay(uint256) (contracts/DebitaV3Loan.sol#721-738)
+	- DebitaV3Loan.extendLoan() (contracts/DebitaV3Loan.sol#547-664)
+	- DebitaV3Loan.getLoanData() (contracts/DebitaV3Loan.sol#766-768)
+	- DebitaV3Loan.loanData (contracts/DebitaV3Loan.sol#134)
+	- DebitaV3Loan.nextDeadline() (contracts/DebitaV3Loan.sol#743-764)
+	- loanData._acceptedOffers[index].interestToClaim = interest - feeOnInterest (contracts/DebitaV3Loan.sol#238-240)
+	DebitaV3Loan.loanData (contracts/DebitaV3Loan.sol#134) can be used in cross function reentrancies:
+	- DebitaV3Loan.calculateInterestToPay(uint256) (contracts/DebitaV3Loan.sol#721-738)
+	- DebitaV3Loan.extendLoan() (contracts/DebitaV3Loan.sol#547-664)
+	- DebitaV3Loan.getLoanData() (contracts/DebitaV3Loan.sol#766-768)
+	- DebitaV3Loan.loanData (contracts/DebitaV3Loan.sol#134)
+	- DebitaV3Loan.nextDeadline() (contracts/DebitaV3Loan.sol#743-764)
+	- loanData._acceptedOffers[index].interestPaid += interest (contracts/DebitaV3Loan.sol#250)
+	DebitaV3Loan.loanData (contracts/DebitaV3Loan.sol#134) can be used in cross function reentrancies:
+	- DebitaV3Loan.calculateInterestToPay(uint256) (contracts/DebitaV3Loan.sol#721-738)
+	- DebitaV3Loan.extendLoan() (contracts/DebitaV3Loan.sol#547-664)
+	- DebitaV3Loan.getLoanData() (contracts/DebitaV3Loan.sol#766-768)
+	- DebitaV3Loan.loanData (contracts/DebitaV3Loan.sol#134)
+	- DebitaV3Loan.nextDeadline() (contracts/DebitaV3Loan.sol#743-764)
+	- loanData.totalCountPaid += indexes.length (contracts/DebitaV3Loan.sol#253)
+	DebitaV3Loan.loanData (contracts/DebitaV3Loan.sol#134) can be used in cross function reentrancies:
+	- DebitaV3Loan.calculateInterestToPay(uint256) (contracts/DebitaV3Loan.sol#721-738)
+	- DebitaV3Loan.extendLoan() (contracts/DebitaV3Loan.sol#547-664)
+	- DebitaV3Loan.getLoanData() (contracts/DebitaV3Loan.sol#766-768)
+	- DebitaV3Loan.loanData (contracts/DebitaV3Loan.sol#134)
+	- DebitaV3Loan.nextDeadline() (contracts/DebitaV3Loan.sol#743-764)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-1
+INFO:Detectors:
+DebitaV3Loan.extendLoan().currentOwnerOfOffer (contracts/DebitaV3Loan.sol#637) is a local variable never initialized
+DebitaV3Loan.nextDeadline()._nextDeadline (contracts/DebitaV3Loan.sol#744) is a local variable never initialized
+DebitaV3Loan.extendLoan().misingBorrowFee (contracts/DebitaV3Loan.sol#597) is a local variable never initialized
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#uninitialized-local-variables
+INFO:Detectors:
+DebitaV3Loan.payDebt(uint256[]) (contracts/DebitaV3Loan.sol#186-257) ignores return value by IERC20(offer.principle).approve(address(lendOffer),total) (contracts/DebitaV3Loan.sol#235)
+DebitaV3Loan.extendLoan() (contracts/DebitaV3Loan.sol#547-664) ignores return value by IERC20(offer.principle).approve(address(lendOffer),interestOfUsedTime - interestToPayToDebita) (contracts/DebitaV3Loan.sol#648-651)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#unused-return
+INFO:Detectors:
+DebitaV3Loan.initialize(address,address[],bool,uint256,uint256,uint256,uint256,address,uint256,uint256[],uint256,DebitaV3Loan.infoOfOffers[],address,uint256,address).m_OwnershipContract (contracts/DebitaV3Loan.sol#151) lacks a zero-check on :
+		- s_OwnershipContract = m_OwnershipContract (contracts/DebitaV3Loan.sol#175)
+DebitaV3Loan.initialize(address,address[],bool,uint256,uint256,uint256,uint256,address,uint256,uint256[],uint256,DebitaV3Loan.infoOfOffers[],address,uint256,address)._feeAddress (contracts/DebitaV3Loan.sol#153) lacks a zero-check on :
+		- feeAddress = _feeAddress (contracts/DebitaV3Loan.sol#178)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-zero-address-validation
+INFO:Detectors:
+DebitaV3Loan.payDebt(uint256[]) (contracts/DebitaV3Loan.sol#186-257) has external calls inside a loop: _lenderOwner = ownershipContract.ownerOf(offer.lenderID) (contracts/DebitaV3Loan.sol#216-220)
+DebitaV3Loan.payDebt(uint256[]) (contracts/DebitaV3Loan.sol#186-257) has external calls inside a loop: lendInfo = lendOffer.getLendInfo() (contracts/DebitaV3Loan.sol#223-224)
+DebitaV3Loan.payDebt(uint256[]) (contracts/DebitaV3Loan.sol#186-257) has external calls inside a loop: IERC20(offer.principle).approve(address(lendOffer),total) (contracts/DebitaV3Loan.sol#235)
+DebitaV3Loan.payDebt(uint256[]) (contracts/DebitaV3Loan.sol#186-257) has external calls inside a loop: lendOffer.addFunds(total) (contracts/DebitaV3Loan.sol#236)
+DebitaV3Loan.extendLoan() (contracts/DebitaV3Loan.sol#547-664) has external calls inside a loop: lendInfo = lendOffer.getLendInfo() (contracts/DebitaV3Loan.sol#635-636)
+DebitaV3Loan.extendLoan() (contracts/DebitaV3Loan.sol#547-664) has external calls inside a loop: _lenderOwner = ownershipContract.ownerOf(offer.lenderID) (contracts/DebitaV3Loan.sol#639-643)
+DebitaV3Loan.extendLoan() (contracts/DebitaV3Loan.sol#547-664) has external calls inside a loop: IERC20(offer.principle).approve(address(lendOffer),interestOfUsedTime - interestToPayToDebita) (contracts/DebitaV3Loan.sol#648-651)
+DebitaV3Loan.extendLoan() (contracts/DebitaV3Loan.sol#547-664) has external calls inside a loop: lendOffer.addFunds(interestOfUsedTime - interestToPayToDebita) (contracts/DebitaV3Loan.sol#652-654)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation/#calls-inside-a-loop
+INFO:Detectors:
+Reentrancy in DebitaV3Loan.claimCollateralAsBorrower(uint256[]) (contracts/DebitaV3Loan.sol#496-522):
+	External calls:
+	- claimCollateralNFTAsBorrower(indexs) (contracts/DebitaV3Loan.sol#508)
+		- decimalsCollateral = IveNFTEqualizer(loanData.collateral).getDataByReceipt(loanData.NftID).decimals (contracts/DebitaV3Loan.sol#678-680)
+		- IERC721(m_loan_scope_0.collateral).transferFrom(address(this),msg.sender,m_loan_scope_0.NftID) (contracts/DebitaV3Loan.sol#712-716)
+	State variables written after the call(s):
+	- offersCollateralClaimed_Borrower += indexs.length (contracts/DebitaV3Loan.sol#513)
+Reentrancy in DebitaV3Loan.createAuctionForCollateral(uint256) (contracts/DebitaV3Loan.sol#417-489):
+	External calls:
+	- receiptInfo = IveNFTEqualizer(m_loan.collateral).getDataByReceipt(m_loan.NftID) (contracts/DebitaV3Loan.sol#456-458)
+	- IERC721(m_loan.collateral).approve(address(auctionFactory),m_loan.NftID) (contracts/DebitaV3Loan.sol#466-469)
+	- liveAuction = auctionFactory.createAuction(m_loan.NftID,m_loan.collateral,receiptInfo.underlying,receiptInfo.lockedAmount,floorAmount,864000) (contracts/DebitaV3Loan.sol#470-477)
+	State variables written after the call(s):
+	- auctionData = AuctionData({auctionAddress:liveAuction,liquidationAddress:receiptInfo.underlying,soldAmount:0,tokenPerCollateralUsed:0,alreadySold:false}) (contracts/DebitaV3Loan.sol#479-485)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-2
+INFO:Detectors:
+DebitaV3Loan.payDebt(uint256[]) (contracts/DebitaV3Loan.sol#186-257) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(ownershipContract.ownerOf(loanData.borrowerID) == msg.sender,Not borrower) (contracts/DebitaV3Loan.sol#189-192)
+	- require(bool,string)(nextDeadline() >= block.timestamp,Deadline passed to pay Debt) (contracts/DebitaV3Loan.sol#194-197)
+	- require(bool,string)(offer.paid == false,Already paid) (contracts/DebitaV3Loan.sol#208)
+	- require(bool,string)(offer.maxDeadline > block.timestamp,Deadline passed) (contracts/DebitaV3Loan.sol#210)
+	- lendInfo.perpetual && lendInfo.owner == currentOwnerOfOffer (contracts/DebitaV3Loan.sol#233)
+DebitaV3Loan.claimInterest(uint256) (contracts/DebitaV3Loan.sol#259-269) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(interest > 0,No interest to claim) (contracts/DebitaV3Loan.sol#264)
+DebitaV3Loan._claimDebt(uint256) (contracts/DebitaV3Loan.sol#288-311) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(ownershipContract.ownerOf(offer.lenderID) == msg.sender,Not lender) (contracts/DebitaV3Loan.sol#293-296)
+	- require(bool,string)(offer.paid == true,Not paid) (contracts/DebitaV3Loan.sol#297)
+	- require(bool,string)(offer.debtClaimed == false,Already claimed) (contracts/DebitaV3Loan.sol#298)
+DebitaV3Loan.handleAuctionSell(uint256) (contracts/DebitaV3Loan.sol#318-334) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(msg.sender == auctionData.auctionAddress,Not auction contract) (contracts/DebitaV3Loan.sol#319-322)
+	- require(bool,string)(auctionData.alreadySold == false,Already sold) (contracts/DebitaV3Loan.sol#323)
+DebitaV3Loan.claimCollateralAsLender(uint256) (contracts/DebitaV3Loan.sol#340-372) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(_nextDeadline < block.timestamp && _nextDeadline != 0,Deadline not passed) (contracts/DebitaV3Loan.sol#353-356)
+DebitaV3Loan.claimCollateralAsNFTLender(uint256) (contracts/DebitaV3Loan.sol#374-411) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(auctionData.alreadySold,Not sold on auction) (contracts/DebitaV3Loan.sol#382)
+	- m_loan._acceptedOffers.length == 1 && ! m_loan.auctionInitialized (contracts/DebitaV3Loan.sol#399)
+DebitaV3Loan.createAuctionForCollateral(uint256) (contracts/DebitaV3Loan.sol#417-489) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(nextDeadline() < block.timestamp,Deadline not passed) (contracts/DebitaV3Loan.sol#441)
+DebitaV3Loan.claimCollateralAsBorrower(uint256[]) (contracts/DebitaV3Loan.sol#496-522) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(ownershipContract.ownerOf(loanData.borrowerID) == msg.sender,Not borrower) (contracts/DebitaV3Loan.sol#501-504)
+	- offersCollateralClaimed_Borrower == loanData._acceptedOffers.length (contracts/DebitaV3Loan.sol#517)
+DebitaV3Loan.claimCollateralERC20AsBorrower(uint256[]) (contracts/DebitaV3Loan.sol#524-543) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(loanData.isCollateralNFT == false,Collateral is NFT) (contracts/DebitaV3Loan.sol#525)
+	- require(bool,string)(offer.paid == true,Not paid) (contracts/DebitaV3Loan.sol#530)
+	- require(bool,string)(offer.collateralClaimed == false,Already executed) (contracts/DebitaV3Loan.sol#531)
+DebitaV3Loan.extendLoan() (contracts/DebitaV3Loan.sol#547-664) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(ownershipContract.ownerOf(loanData.borrowerID) == msg.sender,Not borrower) (contracts/DebitaV3Loan.sol#550-553)
+	- require(bool,string)(nextDeadline() > block.timestamp,Deadline passed to extend loan) (contracts/DebitaV3Loan.sol#554-557)
+	- require(bool,string)(loanData.extended == false,Already extended) (contracts/DebitaV3Loan.sol#558)
+	- require(bool,string)((block.timestamp - m_loan.startedAt) > minimalDurationPayment,Not enough time) (contracts/DebitaV3Loan.sol#561-564)
+	- PorcentageOfFeePaid > maxFee (contracts/DebitaV3Loan.sol#575)
+	- PorcentageOfFeePaid < minFEE (contracts/DebitaV3Loan.sol#577)
+	- i < m_loan._acceptedOffers.length (contracts/DebitaV3Loan.sol#583)
+	- PorcentageOfFeePaid != maxFee (contracts/DebitaV3Loan.sol#600)
+	- feeOfMaxDeadline > maxFee (contracts/DebitaV3Loan.sol#604)
+	- feeOfMaxDeadline < feePerDay (contracts/DebitaV3Loan.sol#606)
+	- lendInfo.perpetual && lendInfo.owner == currentOwnerOfOffer (contracts/DebitaV3Loan.sol#646)
+DebitaV3Loan.claimCollateralNFTAsBorrower(uint256[]) (contracts/DebitaV3Loan.sol#665-718) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(offer.paid == true,Not paid) (contracts/DebitaV3Loan.sol#673)
+	- require(bool,string)(offer.collateralClaimed == false,Already executed) (contracts/DebitaV3Loan.sol#675)
+	- require(bool,string)(m_loan_scope_0.totalCountPaid == m_loan_scope_0._acceptedOffers.length,Not paid) (contracts/DebitaV3Loan.sol#696-699)
+	- i_scope_1 < m_loan_scope_0._acceptedOffers.length (contracts/DebitaV3Loan.sol#700)
+	- require(bool,string)(m_loan_scope_0._acceptedOffers[i_scope_1].paid == true,Not paid) (contracts/DebitaV3Loan.sol#702)
+	- require(bool,string)(m_loan_scope_0._acceptedOffers[i_scope_1].collateralClaimed == false,Already executed) (contracts/DebitaV3Loan.sol#704-707)
+DebitaV3Loan.calculateInterestToPay(uint256) (contracts/DebitaV3Loan.sol#721-738) uses timestamp for comparisons
+	Dangerous comparisons:
+	- activeTime > maxDuration (contracts/DebitaV3Loan.sol#728)
+	- activeTime < minimalDurationPayment (contracts/DebitaV3Loan.sol#730)
+DebitaV3Loan.nextDeadline() (contracts/DebitaV3Loan.sol#743-764) uses timestamp for comparisons
+	Dangerous comparisons:
+	- i < m_loan._acceptedOffers.length (contracts/DebitaV3Loan.sol#747)
+	- _nextDeadline == 0 && m_loan._acceptedOffers[i].paid == false (contracts/DebitaV3Loan.sol#749-750)
+	- m_loan._acceptedOffers[i].paid == false && _nextDeadline > m_loan._acceptedOffers[i].maxDeadline (contracts/DebitaV3Loan.sol#754-755)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#block-timestamp
+INFO:Detectors:
+DebitaV3Loan.payDebt(uint256[]) (contracts/DebitaV3Loan.sol#186-257) compares to a boolean constant:
+	-require(bool,string)(offer.paid == false,Already paid) (contracts/DebitaV3Loan.sol#208)
+DebitaV3Loan._claimDebt(uint256) (contracts/DebitaV3Loan.sol#288-311) compares to a boolean constant:
+	-require(bool,string)(offer.debtClaimed == false,Already claimed) (contracts/DebitaV3Loan.sol#298)
+DebitaV3Loan._claimDebt(uint256) (contracts/DebitaV3Loan.sol#288-311) compares to a boolean constant:
+	-require(bool,string)(offer.paid == true,Not paid) (contracts/DebitaV3Loan.sol#297)
+DebitaV3Loan.handleAuctionSell(uint256) (contracts/DebitaV3Loan.sol#318-334) compares to a boolean constant:
+	-require(bool,string)(auctionData.alreadySold == false,Already sold) (contracts/DebitaV3Loan.sol#323)
+DebitaV3Loan.claimCollateralAsLender(uint256) (contracts/DebitaV3Loan.sol#340-372) compares to a boolean constant:
+	-require(bool,string)(offer.collateralClaimed == false,Already executed) (contracts/DebitaV3Loan.sol#357)
+DebitaV3Loan.claimCollateralAsLender(uint256) (contracts/DebitaV3Loan.sol#340-372) compares to a boolean constant:
+	-require(bool,string)(offer.paid == false,Already paid) (contracts/DebitaV3Loan.sol#352)
+DebitaV3Loan.createAuctionForCollateral(uint256) (contracts/DebitaV3Loan.sol#417-489) compares to a boolean constant:
+	-require(bool,string)(m_loan.auctionInitialized == false,Already initialized) (contracts/DebitaV3Loan.sol#443)
+DebitaV3Loan.createAuctionForCollateral(uint256) (contracts/DebitaV3Loan.sol#417-489) compares to a boolean constant:
+	-hasLenderRightToInitAuction = lenderAddress == msg.sender && m_loan._acceptedOffers[indexOfLender].paid == false (contracts/DebitaV3Loan.sol#427-428)
+DebitaV3Loan.claimCollateralERC20AsBorrower(uint256[]) (contracts/DebitaV3Loan.sol#524-543) compares to a boolean constant:
+	-require(bool,string)(offer.collateralClaimed == false,Already executed) (contracts/DebitaV3Loan.sol#531)
+DebitaV3Loan.claimCollateralERC20AsBorrower(uint256[]) (contracts/DebitaV3Loan.sol#524-543) compares to a boolean constant:
+	-require(bool,string)(offer.paid == true,Not paid) (contracts/DebitaV3Loan.sol#530)
+DebitaV3Loan.claimCollateralERC20AsBorrower(uint256[]) (contracts/DebitaV3Loan.sol#524-543) compares to a boolean constant:
+	-require(bool,string)(loanData.isCollateralNFT == false,Collateral is NFT) (contracts/DebitaV3Loan.sol#525)
+DebitaV3Loan.extendLoan() (contracts/DebitaV3Loan.sol#547-664) compares to a boolean constant:
+	-require(bool,string)(loanData.extended == false,Already extended) (contracts/DebitaV3Loan.sol#558)
+DebitaV3Loan.claimCollateralNFTAsBorrower(uint256[]) (contracts/DebitaV3Loan.sol#665-718) compares to a boolean constant:
+	-require(bool,string)(m_loan_scope_0._acceptedOffers[i_scope_1].paid == true,Not paid) (contracts/DebitaV3Loan.sol#702)
+DebitaV3Loan.claimCollateralNFTAsBorrower(uint256[]) (contracts/DebitaV3Loan.sol#665-718) compares to a boolean constant:
+	-require(bool,string)(offer.paid == true,Not paid) (contracts/DebitaV3Loan.sol#673)
+DebitaV3Loan.claimCollateralNFTAsBorrower(uint256[]) (contracts/DebitaV3Loan.sol#665-718) compares to a boolean constant:
+	-require(bool,string)(m_loan_scope_0._acceptedOffers[i_scope_1].collateralClaimed == false,Already executed) (contracts/DebitaV3Loan.sol#704-707)
+DebitaV3Loan.claimCollateralNFTAsBorrower(uint256[]) (contracts/DebitaV3Loan.sol#665-718) compares to a boolean constant:
+	-require(bool,string)(offer.collateralClaimed == false,Already executed) (contracts/DebitaV3Loan.sol#675)
+DebitaV3Loan.nextDeadline() (contracts/DebitaV3Loan.sol#743-764) compares to a boolean constant:
+	-_nextDeadline == 0 && m_loan._acceptedOffers[i].paid == false (contracts/DebitaV3Loan.sol#749-750)
+DebitaV3Loan.nextDeadline() (contracts/DebitaV3Loan.sol#743-764) compares to a boolean constant:
+	-m_loan._acceptedOffers[i].paid == false && _nextDeadline > m_loan._acceptedOffers[i].maxDeadline (contracts/DebitaV3Loan.sol#754-755)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#boolean-equality
+INFO:Detectors:
+Version constraint ^0.8.0 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- DataLocationChangeInInternalOverride
+	- NestedCalldataArrayAbiReencodingSizeValidation
+	- SignedImmutables
+	- ABIDecodeTwoDimensionalArrayMemory
+	- KeccakCaching.
+It is used by:
+	- ^0.8.0 (contracts/DebitaV3Loan.sol#1)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Function Aggregator.s_AuctionFactory() (contracts/DebitaV3Loan.sol#11) is not in mixedCase
+Struct IveNFTEqualizer.receiptInstance (contracts/DebitaV3Loan.sol#19-27) is not in CapWords
+Struct DebitaV3Loan.infoOfOffers (contracts/DebitaV3Loan.sol#91-105) is not in CapWords
+Parameter DebitaV3Loan.initialize(address,address[],bool,uint256,uint256,uint256,uint256,address,uint256,uint256[],uint256,DebitaV3Loan.infoOfOffers[],address,uint256,address)._collateral (contracts/DebitaV3Loan.sol#139) is not in mixedCase
+Parameter DebitaV3Loan.initialize(address,address[],bool,uint256,uint256,uint256,uint256,address,uint256,uint256[],uint256,DebitaV3Loan.infoOfOffers[],address,uint256,address)._principles (contracts/DebitaV3Loan.sol#140) is not in mixedCase
+Parameter DebitaV3Loan.initialize(address,address[],bool,uint256,uint256,uint256,uint256,address,uint256,uint256[],uint256,DebitaV3Loan.infoOfOffers[],address,uint256,address)._isCollateralNFT (contracts/DebitaV3Loan.sol#141) is not in mixedCase
+Parameter DebitaV3Loan.initialize(address,address[],bool,uint256,uint256,uint256,uint256,address,uint256,uint256[],uint256,DebitaV3Loan.infoOfOffers[],address,uint256,address)._NftID (contracts/DebitaV3Loan.sol#142) is not in mixedCase
+Parameter DebitaV3Loan.initialize(address,address[],bool,uint256,uint256,uint256,uint256,address,uint256,uint256[],uint256,DebitaV3Loan.infoOfOffers[],address,uint256,address)._collateralAmount (contracts/DebitaV3Loan.sol#143) is not in mixedCase
+Parameter DebitaV3Loan.initialize(address,address[],bool,uint256,uint256,uint256,uint256,address,uint256,uint256[],uint256,DebitaV3Loan.infoOfOffers[],address,uint256,address)._valuableCollateralAmount (contracts/DebitaV3Loan.sol#144) is not in mixedCase
+Parameter DebitaV3Loan.initialize(address,address[],bool,uint256,uint256,uint256,uint256,address,uint256,uint256[],uint256,DebitaV3Loan.infoOfOffers[],address,uint256,address)._initialDuration (contracts/DebitaV3Loan.sol#147) is not in mixedCase
+Parameter DebitaV3Loan.initialize(address,address[],bool,uint256,uint256,uint256,uint256,address,uint256,uint256[],uint256,DebitaV3Loan.infoOfOffers[],address,uint256,address)._principlesAmount (contracts/DebitaV3Loan.sol#148) is not in mixedCase
+Parameter DebitaV3Loan.initialize(address,address[],bool,uint256,uint256,uint256,uint256,address,uint256,uint256[],uint256,DebitaV3Loan.infoOfOffers[],address,uint256,address)._borrowerID (contracts/DebitaV3Loan.sol#149) is not in mixedCase
+Parameter DebitaV3Loan.initialize(address,address[],bool,uint256,uint256,uint256,uint256,address,uint256,uint256[],uint256,DebitaV3Loan.infoOfOffers[],address,uint256,address)._acceptedOffers (contracts/DebitaV3Loan.sol#150) is not in mixedCase
+Parameter DebitaV3Loan.initialize(address,address[],bool,uint256,uint256,uint256,uint256,address,uint256,uint256[],uint256,DebitaV3Loan.infoOfOffers[],address,uint256,address).m_OwnershipContract (contracts/DebitaV3Loan.sol#151) is not in mixedCase
+Parameter DebitaV3Loan.initialize(address,address[],bool,uint256,uint256,uint256,uint256,address,uint256,uint256[],uint256,DebitaV3Loan.infoOfOffers[],address,uint256,address)._feeAddress (contracts/DebitaV3Loan.sol#153) is not in mixedCase
+Variable DebitaV3Loan.s_OwnershipContract (contracts/DebitaV3Loan.sol#86) is not in mixedCase
+Variable DebitaV3Loan.AggregatorContract (contracts/DebitaV3Loan.sol#87) is not in mixedCase
+Variable DebitaV3Loan.offersCollateralClaimed_Borrower (contracts/DebitaV3Loan.sol#136) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Detectors:
+DLOFactory.constructor(address)._implementationContract (contracts/DebitaLendOfferFactory.sol#96) lacks a zero-check on :
+		- implementationContract = _implementationContract (contracts/DebitaLendOfferFactory.sol#99)
+DLOFactory.setAggregatorContract(address)._aggregatorContract (contracts/DebitaLendOfferFactory.sol#245) lacks a zero-check on :
+		- aggregatorContract = _aggregatorContract (contracts/DebitaLendOfferFactory.sol#248)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-zero-address-validation
+INFO:Detectors:
+DLOFactory.getActiveOrders(uint256,uint256) (contracts/DebitaLendOfferFactory.sol#222-243) has external calls inside a loop: result[i] = DLOImplementation(allActiveLendOrders[offset + i]).getLendInfo() (contracts/DebitaLendOfferFactory.sol#238-239)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation/#calls-inside-a-loop
+INFO:Detectors:
+Reentrancy in DLOFactory.createLendOrder(bool,bool[],bool,uint256[],uint256,uint256,uint256,address[],address,address[],uint256[],address,uint256) (contracts/DebitaLendOfferFactory.sol#124-203):
+	External calls:
+	- lendOffer.initialize(aggregatorContract,_perpetual,_oraclesActivated,_lonelyLender,_LTVs,_apr,_maxDuration,_minDuration,msg.sender,_principle,_acceptedCollaterals,_oracles_Collateral,_ratio,_oracleID_Principle,_startedLendingAmount) (contracts/DebitaLendOfferFactory.sol#159-175)
+	State variables written after the call(s):
+	- LendOrderIndex[address(lendOffer)] = activeOrdersCount (contracts/DebitaLendOfferFactory.sol#187)
+	- activeOrdersCount ++ (contracts/DebitaLendOfferFactory.sol#189)
+	- allActiveLendOrders[activeOrdersCount] = address(lendOffer) (contracts/DebitaLendOfferFactory.sol#188)
+	- isLendOrderLegit[address(lendOffer)] = true (contracts/DebitaLendOfferFactory.sol#186)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-2
+INFO:Detectors:
+Reentrancy in DLOFactory.createLendOrder(bool,bool[],bool,uint256[],uint256,uint256,uint256,address[],address,address[],uint256[],address,uint256) (contracts/DebitaLendOfferFactory.sol#124-203):
+	External calls:
+	- lendOffer.initialize(aggregatorContract,_perpetual,_oraclesActivated,_lonelyLender,_LTVs,_apr,_maxDuration,_minDuration,msg.sender,_principle,_acceptedCollaterals,_oracles_Collateral,_ratio,_oracleID_Principle,_startedLendingAmount) (contracts/DebitaLendOfferFactory.sol#159-175)
+	Event emitted after the call(s):
+	- LendOrderCreated(address(lendOffer),msg.sender,_apr,_maxDuration,_minDuration,_LTVs,_ratio,_startedLendingAmount,true,_perpetual) (contracts/DebitaLendOfferFactory.sol#190-201)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-3
+INFO:Detectors:
+DebitaProxyContract.constructor(address) (contracts/DebitaProxyContract.sol#5-12) uses assembly
+	- INLINE ASM (contracts/DebitaProxyContract.sol#9-11)
+DebitaProxyContract._implementation() (contracts/DebitaProxyContract.sol#13-23) uses assembly
+	- INLINE ASM (contracts/DebitaProxyContract.sol#19-21)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#assembly-usage
+INFO:Detectors:
+Version constraint ^0.8.0 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- DataLocationChangeInInternalOverride
+	- NestedCalldataArrayAbiReencodingSizeValidation
+	- SignedImmutables
+	- ABIDecodeTwoDimensionalArrayMemory
+	- KeccakCaching.
+It is used by:
+	- ^0.8.0 (contracts/DebitaLendOfferFactory.sol#1)
+	- ^0.8.0 (contracts/DebitaProxyContract.sol#1)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Parameter DLOImplementation.initialize(address,bool,bool[],bool,uint256[],uint256,uint256,uint256,address,address,address[],address[],uint256[],address,uint256)._LTVs (contracts/DebitaLendOfferFactory.sol#35) is not in mixedCase
+Parameter DLOImplementation.initialize(address,bool,bool[],bool,uint256[],uint256,uint256,uint256,address,address,address[],address[],uint256[],address,uint256)._oracles_Collateral (contracts/DebitaLendOfferFactory.sol#42) is not in mixedCase
+Parameter DLOImplementation.initialize(address,bool,bool[],bool,uint256[],uint256,uint256,uint256,address,address,address[],address[],uint256[],address,uint256)._oracleID_Principle (contracts/DebitaLendOfferFactory.sol#44) is not in mixedCase
+Parameter DLOFactory.createLendOrder(bool,bool[],bool,uint256[],uint256,uint256,uint256,address[],address,address[],uint256[],address,uint256)._perpetual (contracts/DebitaLendOfferFactory.sol#125) is not in mixedCase
+Parameter DLOFactory.createLendOrder(bool,bool[],bool,uint256[],uint256,uint256,uint256,address[],address,address[],uint256[],address,uint256)._oraclesActivated (contracts/DebitaLendOfferFactory.sol#126) is not in mixedCase
+Parameter DLOFactory.createLendOrder(bool,bool[],bool,uint256[],uint256,uint256,uint256,address[],address,address[],uint256[],address,uint256)._lonelyLender (contracts/DebitaLendOfferFactory.sol#127) is not in mixedCase
+Parameter DLOFactory.createLendOrder(bool,bool[],bool,uint256[],uint256,uint256,uint256,address[],address,address[],uint256[],address,uint256)._LTVs (contracts/DebitaLendOfferFactory.sol#128) is not in mixedCase
+Parameter DLOFactory.createLendOrder(bool,bool[],bool,uint256[],uint256,uint256,uint256,address[],address,address[],uint256[],address,uint256)._apr (contracts/DebitaLendOfferFactory.sol#129) is not in mixedCase
+Parameter DLOFactory.createLendOrder(bool,bool[],bool,uint256[],uint256,uint256,uint256,address[],address,address[],uint256[],address,uint256)._maxDuration (contracts/DebitaLendOfferFactory.sol#130) is not in mixedCase
+Parameter DLOFactory.createLendOrder(bool,bool[],bool,uint256[],uint256,uint256,uint256,address[],address,address[],uint256[],address,uint256)._minDuration (contracts/DebitaLendOfferFactory.sol#131) is not in mixedCase
+Parameter DLOFactory.createLendOrder(bool,bool[],bool,uint256[],uint256,uint256,uint256,address[],address,address[],uint256[],address,uint256)._acceptedCollaterals (contracts/DebitaLendOfferFactory.sol#132) is not in mixedCase
+Parameter DLOFactory.createLendOrder(bool,bool[],bool,uint256[],uint256,uint256,uint256,address[],address,address[],uint256[],address,uint256)._principle (contracts/DebitaLendOfferFactory.sol#133) is not in mixedCase
+Parameter DLOFactory.createLendOrder(bool,bool[],bool,uint256[],uint256,uint256,uint256,address[],address,address[],uint256[],address,uint256)._oracles_Collateral (contracts/DebitaLendOfferFactory.sol#134) is not in mixedCase
+Parameter DLOFactory.createLendOrder(bool,bool[],bool,uint256[],uint256,uint256,uint256,address[],address,address[],uint256[],address,uint256)._ratio (contracts/DebitaLendOfferFactory.sol#135) is not in mixedCase
+Parameter DLOFactory.createLendOrder(bool,bool[],bool,uint256[],uint256,uint256,uint256,address[],address,address[],uint256[],address,uint256)._oracleID_Principle (contracts/DebitaLendOfferFactory.sol#136) is not in mixedCase
+Parameter DLOFactory.createLendOrder(bool,bool[],bool,uint256[],uint256,uint256,uint256,address[],address,address[],uint256[],address,uint256)._startedLendingAmount (contracts/DebitaLendOfferFactory.sol#137) is not in mixedCase
+Parameter DLOFactory.deleteOrder(address)._lendOrder (contracts/DebitaLendOfferFactory.sol#207) is not in mixedCase
+Parameter DLOFactory.setAggregatorContract(address)._aggregatorContract (contracts/DebitaLendOfferFactory.sol#245) is not in mixedCase
+Parameter DLOFactory.emitUpdate(address)._lendOrder (contracts/DebitaLendOfferFactory.sol#251) is not in mixedCase
+Parameter DLOFactory.emitDelete(address)._lendOrder (contracts/DebitaLendOfferFactory.sol#267) is not in mixedCase
+Variable DLOFactory.LendOrderIndex (contracts/DebitaLendOfferFactory.sol#88) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Detectors:
+DLOFactory.implementationContract (contracts/DebitaLendOfferFactory.sol#93) should be immutable 
+DLOFactory.owner (contracts/DebitaLendOfferFactory.sol#94) should be immutable 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-immutable
+INFO:Detectors:
+DebitaV3Aggregator.matchOffersV3(address[],uint256[],uint256[],address,address[],uint256[],uint256[],uint256[]) (contracts/DebitaV3Aggregator.sol#274-647) performs a multiplication on the result of a division:
+	- percentage = ((borrowInfo.duration * feePerDay) / 86400) (contracts/DebitaV3Aggregator.sol#391)
+	- feeToPay = (amountPerPrinciple[i_scope_4] * percentage) / 10000 (contracts/DebitaV3Aggregator.sol#544)
+DebitaV3Aggregator.matchOffersV3(address[],uint256[],uint256[],address,address[],uint256[],uint256[],uint256[]) (contracts/DebitaV3Aggregator.sol#274-647) performs a multiplication on the result of a division:
+	- feeToPay = (amountPerPrinciple[i_scope_4] * percentage) / 10000 (contracts/DebitaV3Aggregator.sol#544)
+	- feeToConnector = (feeToPay * feeCONNECTOR) / 10000 (contracts/DebitaV3Aggregator.sol#545)
+DebitaV3Aggregator.matchOffersV3(address[],uint256[],uint256[],address,address[],uint256[],uint256[],uint256[]) (contracts/DebitaV3Aggregator.sol#274-647) performs a multiplication on the result of a division:
+	- ratio_scope_3 = (maxRatio * porcentageOfRatioPerLendOrder[i_scope_0]) / 10000 (contracts/DebitaV3Aggregator.sol#462)
+	- userUsedCollateral = (lendAmountPerOrder[i_scope_0] * (10 ** decimalsCollateral)) / ratio_scope_3 (contracts/DebitaV3Aggregator.sol#467-468)
+	- newWeightedAverage = (ratio_scope_3 * userUsedCollateral) / (m_amountCollateralPerPrinciple + userUsedCollateral) (contracts/DebitaV3Aggregator.sol#487-488)
+DebitaV3Aggregator.matchOffersV3(address[],uint256[],uint256[],address,address[],uint256[],uint256[],uint256[]) (contracts/DebitaV3Aggregator.sol#274-647) performs a multiplication on the result of a division:
+	- fullRatioPerLending = (priceCollateral_LendOrder * 10 ** 8) / pricePrinciple_scope_1 (contracts/DebitaV3Aggregator.sol#451-452)
+	- maxValue = (fullRatioPerLending * lendInfo.maxLTVs[collateralIndex]) / 10000 (contracts/DebitaV3Aggregator.sol#453-454)
+DebitaV3Aggregator.matchOffersV3(address[],uint256[],uint256[],address,address[],uint256[],uint256[],uint256[]) (contracts/DebitaV3Aggregator.sol#274-647) performs a multiplication on the result of a division:
+	- maxValue = (fullRatioPerLending * lendInfo.maxLTVs[collateralIndex]) / 10000 (contracts/DebitaV3Aggregator.sol#453-454)
+	- maxRatio = (maxValue * (10 ** principleDecimals_scope_2)) / (10 ** 8) (contracts/DebitaV3Aggregator.sol#457)
+DebitaV3Aggregator.matchOffersV3(address[],uint256[],uint256[],address,address[],uint256[],uint256[],uint256[]) (contracts/DebitaV3Aggregator.sol#274-647) performs a multiplication on the result of a division:
+	- ValuePrincipleFullLTVPerCollateral = (priceCollateral_BorrowOrder * 10 ** 8) / pricePrinciple (contracts/DebitaV3Aggregator.sol#350-351)
+	- value = (ValuePrincipleFullLTVPerCollateral * borrowInfo.LTVs[indexForPrinciple_BorrowOrder[i]]) / 10000 (contracts/DebitaV3Aggregator.sol#354-355)
+DebitaV3Aggregator.matchOffersV3(address[],uint256[],uint256[],address,address[],uint256[],uint256[],uint256[]) (contracts/DebitaV3Aggregator.sol#274-647) performs a multiplication on the result of a division:
+	- value = (ValuePrincipleFullLTVPerCollateral * borrowInfo.LTVs[indexForPrinciple_BorrowOrder[i]]) / 10000 (contracts/DebitaV3Aggregator.sol#354-355)
+	- ratio = (value * (10 ** principleDecimals)) / (10 ** 8) (contracts/DebitaV3Aggregator.sol#361)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#divide-before-multiply
+INFO:Detectors:
+DebitaV3Aggregator.matchOffersV3(address[],uint256[],uint256[],address,address[],uint256[],uint256[],uint256[]).priceCollateral_BorrowOrder (contracts/DebitaV3Aggregator.sol#306) is a local variable never initialized
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#uninitialized-local-variables
+INFO:Detectors:
+DebitaV3Aggregator.changeOwner(address).owner (contracts/DebitaV3Aggregator.sol#682) shadows:
+	- DebitaV3Aggregator.owner (contracts/DebitaV3Aggregator.sol#198) (state variable)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#local-variable-shadowing
+INFO:Detectors:
+DebitaV3Aggregator.setNewFee(uint256) (contracts/DebitaV3Aggregator.sol#658-662) should emit an event for: 
+	- feePerDay = _fee (contracts/DebitaV3Aggregator.sol#661) 
+DebitaV3Aggregator.setNewMaxFee(uint256) (contracts/DebitaV3Aggregator.sol#664-668) should emit an event for: 
+	- maxFEE = _fee (contracts/DebitaV3Aggregator.sol#667) 
+DebitaV3Aggregator.setNewMinFee(uint256) (contracts/DebitaV3Aggregator.sol#670-674) should emit an event for: 
+	- minFEE = _fee (contracts/DebitaV3Aggregator.sol#673) 
+DebitaV3Aggregator.setNewFeeConnector(uint256) (contracts/DebitaV3Aggregator.sol#676-680) should emit an event for: 
+	- feeCONNECTOR = _fee (contracts/DebitaV3Aggregator.sol#679) 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-events-arithmetic
+INFO:Detectors:
+DebitaV3Aggregator.constructor(address,address,address,address,address,address)._DLOFactory (contracts/DebitaV3Aggregator.sol#218) lacks a zero-check on :
+		- s_DLOFactory = _DLOFactory (contracts/DebitaV3Aggregator.sol#225)
+DebitaV3Aggregator.constructor(address,address,address,address,address,address)._DBOFactory (contracts/DebitaV3Aggregator.sol#219) lacks a zero-check on :
+		- s_DBOFactory = _DBOFactory (contracts/DebitaV3Aggregator.sol#226)
+DebitaV3Aggregator.constructor(address,address,address,address,address,address)._Incentives (contracts/DebitaV3Aggregator.sol#220) lacks a zero-check on :
+		- s_Incentives = _Incentives (contracts/DebitaV3Aggregator.sol#227)
+DebitaV3Aggregator.constructor(address,address,address,address,address,address)._OwnershipContract (contracts/DebitaV3Aggregator.sol#221) lacks a zero-check on :
+		- s_OwnershipContract = _OwnershipContract (contracts/DebitaV3Aggregator.sol#228)
+DebitaV3Aggregator.constructor(address,address,address,address,address,address)._auctionFactory (contracts/DebitaV3Aggregator.sol#222) lacks a zero-check on :
+		- s_AuctionFactory = _auctionFactory (contracts/DebitaV3Aggregator.sol#231)
+DebitaV3Aggregator.constructor(address,address,address,address,address,address).loanImplementation (contracts/DebitaV3Aggregator.sol#223) lacks a zero-check on :
+		- s_LoanImplementation = loanImplementation (contracts/DebitaV3Aggregator.sol#232)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-zero-address-validation
+INFO:Detectors:
+DebitaV3Aggregator.getPriceFrom(address,address) (contracts/DebitaV3Aggregator.sol#721-727) has external calls inside a loop: IOracle(_oracle).getThePrice(_token) (contracts/DebitaV3Aggregator.sol#726)
+DebitaV3Aggregator.matchOffersV3(address[],uint256[],uint256[],address,address[],uint256[],uint256[],uint256[]) (contracts/DebitaV3Aggregator.sol#274-647) has external calls inside a loop: principleDecimals = ERC20(principles[i]).decimals() (contracts/DebitaV3Aggregator.sol#348)
+DebitaV3Aggregator.matchOffersV3(address[],uint256[],uint256[],address,address[],uint256[],uint256[],uint256[]) (contracts/DebitaV3Aggregator.sol#274-647) has external calls inside a loop: require(bool,string)(dloFactory.isLendOrderLegit(lendOrders[i_scope_0]),Invalid lend order) (contracts/DebitaV3Aggregator.sol#398-401)
+DebitaV3Aggregator.matchOffersV3(address[],uint256[],uint256[],address,address[],uint256[],uint256[],uint256[]) (contracts/DebitaV3Aggregator.sol#274-647) has external calls inside a loop: lendInfo = DLOImplementation(lendOrders[i_scope_0]).getLendInfo() (contracts/DebitaV3Aggregator.sol#403-405)
+DebitaV3Aggregator.matchOffersV3(address[],uint256[],uint256[],address,address[],uint256[],uint256[],uint256[]) (contracts/DebitaV3Aggregator.sol#274-647) has external calls inside a loop: principleDecimals_scope_2 = ERC20(principles[principleIndex]).decimals() (contracts/DebitaV3Aggregator.sol#455-456)
+DebitaV3Aggregator.matchOffersV3(address[],uint256[],uint256[],address,address[],uint256[],uint256[],uint256[]) (contracts/DebitaV3Aggregator.sol#274-647) has external calls inside a loop: lendID = IOwnerships(s_OwnershipContract).mint(lendInfo.owner) (contracts/DebitaV3Aggregator.sol#502)
+DebitaV3Aggregator.matchOffersV3(address[],uint256[],uint256[],address,address[],uint256[],uint256[],uint256[]) (contracts/DebitaV3Aggregator.sol#274-647) has external calls inside a loop: DLOImplementation(lendOrders[i_scope_0]).acceptLendingOffer(lendAmountPerOrder[i_scope_0]) (contracts/DebitaV3Aggregator.sol#520-522)
+DebitaV3Aggregator.getAllLoans(uint256,uint256) (contracts/DebitaV3Aggregator.sol#693-719) has external calls inside a loop: loans[i] = loan.getLoanData() (contracts/DebitaV3Aggregator.sol#714)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation/#calls-inside-a-loop
+INFO:Detectors:
+Reentrancy in DebitaV3Aggregator.matchOffersV3(address[],uint256[],uint256[],address,address[],uint256[],uint256[],uint256[]) (contracts/DebitaV3Aggregator.sol#274-647):
+	External calls:
+	- lendID = IOwnerships(s_OwnershipContract).mint(lendInfo.owner) (contracts/DebitaV3Aggregator.sol#502)
+	- DLOImplementation(lendOrders[i_scope_0]).acceptLendingOffer(lendAmountPerOrder[i_scope_0]) (contracts/DebitaV3Aggregator.sol#520-522)
+	State variables written after the call(s):
+	- getLoanIdByOwnershipID[lendID] = loanID (contracts/DebitaV3Aggregator.sol#518)
+Reentrancy in DebitaV3Aggregator.matchOffersV3(address[],uint256[],uint256[],address,address[],uint256[],uint256[],uint256[]) (contracts/DebitaV3Aggregator.sol#274-647):
+	External calls:
+	- lendID = IOwnerships(s_OwnershipContract).mint(lendInfo.owner) (contracts/DebitaV3Aggregator.sol#502)
+	- DLOImplementation(lendOrders[i_scope_0]).acceptLendingOffer(lendAmountPerOrder[i_scope_0]) (contracts/DebitaV3Aggregator.sol#520-522)
+	- borrowID = IOwnerships(s_OwnershipContract).mint(borrowInfo.owner) (contracts/DebitaV3Aggregator.sol#577)
+	- DBOImplementation(borrowOrder).acceptBorrowOffer(1) (contracts/DebitaV3Aggregator.sol#573-575)
+	- DBOImplementation(borrowOrder).acceptBorrowOffer(amountOfCollateral) (contracts/DebitaV3Aggregator.sol#573-575)
+	- deployedLoan.initialize(borrowInfo.collateral,principles,borrowInfo.isNFT,borrowInfo.receiptID,1,borrowInfo.valuableAssetAmount,amountOfCollateral,borrowInfo.valuableAsset,borrowInfo.duration,amountPerPrinciple,borrowID,offers,s_OwnershipContract,feeInterestLender,feeAddress) (contracts/DebitaV3Aggregator.sol#587-603)
+	- deployedLoan.initialize(borrowInfo.collateral,principles,borrowInfo.isNFT,borrowInfo.receiptID,amountOfCollateral,borrowInfo.valuableAssetAmount,amountOfCollateral,borrowInfo.valuableAsset,borrowInfo.duration,amountPerPrinciple,borrowID,offers,s_OwnershipContract,feeInterestLender,feeAddress) (contracts/DebitaV3Aggregator.sol#587-603)
+	State variables written after the call(s):
+	- getAddressById[loanID] = address(deployedLoan) (contracts/DebitaV3Aggregator.sol#605)
+	- isSenderALoan[address(deployedLoan)] = true (contracts/DebitaV3Aggregator.sol#606)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-2
+INFO:Detectors:
+DebitaV3Aggregator.changeOwner(address) (contracts/DebitaV3Aggregator.sol#682-686) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(deployedTime + 21600 > block.timestamp,6 hours passed) (contracts/DebitaV3Aggregator.sol#684)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#block-timestamp
+INFO:Detectors:
+DebitaProxyContract.constructor(address) (contracts/DebitaProxyContract.sol#5-12) uses assembly
+	- INLINE ASM (contracts/DebitaProxyContract.sol#9-11)
+DebitaProxyContract._implementation() (contracts/DebitaProxyContract.sol#13-23) uses assembly
+	- INLINE ASM (contracts/DebitaProxyContract.sol#19-21)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#assembly-usage
+INFO:Detectors:
+DebitaV3Aggregator.matchOffersV3(address[],uint256[],uint256[],address,address[],uint256[],uint256[],uint256[]) (contracts/DebitaV3Aggregator.sol#274-647) has a high cyclomatic complexity (15).
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#cyclomatic-complexity
+INFO:Detectors:
+Version constraint ^0.8.0 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- DataLocationChangeInInternalOverride
+	- NestedCalldataArrayAbiReencodingSizeValidation
+	- SignedImmutables
+	- ABIDecodeTwoDimensionalArrayMemory
+	- KeccakCaching.
+It is used by:
+	- ^0.8.0 (contracts/DebitaProxyContract.sol#1)
+	- ^0.8.0 (contracts/DebitaV3Aggregator.sol#1)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Struct DebitaV3Loan.infoOfOffers (contracts/DebitaV3Aggregator.sol#49-63) is not in CapWords
+Parameter DebitaV3Loan.initialize(address,address[],bool,uint256,uint256,uint256,uint256,address,uint256,uint256[],uint256,DebitaV3Loan.infoOfOffers[],address,uint256,address)._NftID (contracts/DebitaV3Aggregator.sol#89) is not in mixedCase
+Parameter DebitaV3Loan.initialize(address,address[],bool,uint256,uint256,uint256,uint256,address,uint256,uint256[],uint256,DebitaV3Loan.infoOfOffers[],address,uint256,address).m_OwnershipContract (contracts/DebitaV3Aggregator.sol#98) is not in mixedCase
+Struct IReceipt.receiptInstance (contracts/DebitaV3Aggregator.sol#120-128) is not in CapWords
+Parameter DebitaV3Aggregator.matchOffersV3(address[],uint256[],uint256[],address,address[],uint256[],uint256[],uint256[]).indexForPrinciple_BorrowOrder (contracts/DebitaV3Aggregator.sol#280) is not in mixedCase
+Parameter DebitaV3Aggregator.matchOffersV3(address[],uint256[],uint256[],address,address[],uint256[],uint256[],uint256[]).indexForCollateral_LendOrder (contracts/DebitaV3Aggregator.sol#281) is not in mixedCase
+Parameter DebitaV3Aggregator.matchOffersV3(address[],uint256[],uint256[],address,address[],uint256[],uint256[],uint256[]).indexPrinciple_LendOrder (contracts/DebitaV3Aggregator.sol#282) is not in mixedCase
+Parameter DebitaV3Aggregator.statusCreateNewOffers(bool)._newStatus (contracts/DebitaV3Aggregator.sol#649) is not in mixedCase
+Parameter DebitaV3Aggregator.setValidNFTCollateral(address,bool)._collateral (contracts/DebitaV3Aggregator.sol#654) is not in mixedCase
+Parameter DebitaV3Aggregator.setNewFee(uint256)._fee (contracts/DebitaV3Aggregator.sol#658) is not in mixedCase
+Parameter DebitaV3Aggregator.setNewMaxFee(uint256)._fee (contracts/DebitaV3Aggregator.sol#664) is not in mixedCase
+Parameter DebitaV3Aggregator.setNewMinFee(uint256)._fee (contracts/DebitaV3Aggregator.sol#670) is not in mixedCase
+Parameter DebitaV3Aggregator.setNewFeeConnector(uint256)._fee (contracts/DebitaV3Aggregator.sol#676) is not in mixedCase
+Parameter DebitaV3Aggregator.setOracleEnabled(address,bool)._oracle (contracts/DebitaV3Aggregator.sol#688) is not in mixedCase
+Parameter DebitaV3Aggregator.getPriceFrom(address,address)._oracle (contracts/DebitaV3Aggregator.sol#722) is not in mixedCase
+Parameter DebitaV3Aggregator.getPriceFrom(address,address)._token (contracts/DebitaV3Aggregator.sol#723) is not in mixedCase
+Variable DebitaV3Aggregator.s_DLOFactory (contracts/DebitaV3Aggregator.sol#190) is not in mixedCase
+Variable DebitaV3Aggregator.s_DBOFactory (contracts/DebitaV3Aggregator.sol#191) is not in mixedCase
+Variable DebitaV3Aggregator.s_Incentives (contracts/DebitaV3Aggregator.sol#192) is not in mixedCase
+Variable DebitaV3Aggregator.s_OwnershipContract (contracts/DebitaV3Aggregator.sol#193) is not in mixedCase
+Variable DebitaV3Aggregator.s_LoanImplementation (contracts/DebitaV3Aggregator.sol#194) is not in mixedCase
+Variable DebitaV3Aggregator.s_AuctionFactory (contracts/DebitaV3Aggregator.sol#195) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Detectors:
+DebitaV3Aggregator.feeInterestLender (contracts/DebitaV3Aggregator.sol#204) should be constant 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-constant
+INFO:Detectors:
+DebitaV3Aggregator.deployedTime (contracts/DebitaV3Aggregator.sol#199) should be immutable 
+DebitaV3Aggregator.feeAddress (contracts/DebitaV3Aggregator.sol#197) should be immutable 
+DebitaV3Aggregator.owner (contracts/DebitaV3Aggregator.sol#198) should be immutable 
+DebitaV3Aggregator.s_AuctionFactory (contracts/DebitaV3Aggregator.sol#195) should be immutable 
+DebitaV3Aggregator.s_DBOFactory (contracts/DebitaV3Aggregator.sol#191) should be immutable 
+DebitaV3Aggregator.s_DLOFactory (contracts/DebitaV3Aggregator.sol#190) should be immutable 
+DebitaV3Aggregator.s_Incentives (contracts/DebitaV3Aggregator.sol#192) should be immutable 
+DebitaV3Aggregator.s_LoanImplementation (contracts/DebitaV3Aggregator.sol#194) should be immutable 
+DebitaV3Aggregator.s_OwnershipContract (contracts/DebitaV3Aggregator.sol#193) should be immutable 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-immutable
+INFO:Detectors:
+DBOImplementation.onlyAfterTimeOut() (contracts/DebitaBorrowOffer-Implementation.sol#74-80) uses a dangerous strict equality:
+	- require(bool,string)(lastUpdate == 0 || (block.timestamp - lastUpdate) > 60,Offer has been updated in the last minute) (contracts/DebitaBorrowOffer-Implementation.sol#75-78)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities
+INFO:Detectors:
+Reentrancy in DBOImplementation.acceptBorrowOffer(uint256) (contracts/DebitaBorrowOffer-Implementation.sol#137-183):
+	External calls:
+	- IERC721(m_borrowInformation.collateral).transferFrom(address(this),aggregatorContract,m_borrowInformation.receiptID) (contracts/DebitaBorrowOffer-Implementation.sol#151-155)
+	State variables written after the call(s):
+	- borrowInformation.availableAmount = 0 (contracts/DebitaBorrowOffer-Implementation.sol#177)
+	DBOImplementation.borrowInformation (contracts/DebitaBorrowOffer-Implementation.sol#61) can be used in cross function reentrancies:
+	- DBOImplementation.borrowInformation (contracts/DebitaBorrowOffer-Implementation.sol#61)
+	- DBOImplementation.getBorrowInfo() (contracts/DebitaBorrowOffer-Implementation.sol#220-230)
+	- DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256) (contracts/DebitaBorrowOffer-Implementation.sol#82-132)
+	- DBOImplementation.onlyOwner() (contracts/DebitaBorrowOffer-Implementation.sol#63-66)
+	- DBOImplementation.updateBorrowOrder(uint256,uint256,uint256[],uint256[]) (contracts/DebitaBorrowOffer-Implementation.sol#232-252)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-1
+INFO:Detectors:
+DBOFactory.constructor(address)._implementationContract (contracts/DebitaBorrowOffer-Factory.sol#51) lacks a zero-check on :
+		- implementationContract = _implementationContract (contracts/DebitaBorrowOffer-Factory.sol#53)
+DBOFactory.setAggregatorContract(address)._aggregatorContract (contracts/DebitaBorrowOffer-Factory.sol#201) lacks a zero-check on :
+		- aggregatorContract = _aggregatorContract (contracts/DebitaBorrowOffer-Factory.sol#204)
+DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256)._aggregatorContract (contracts/DebitaBorrowOffer-Implementation.sol#83) lacks a zero-check on :
+		- aggregatorContract = _aggregatorContract (contracts/DebitaBorrowOffer-Implementation.sol#98)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-zero-address-validation
+INFO:Detectors:
+DBOFactory.getActiveBorrowOrders(uint256,uint256) (contracts/DebitaBorrowOffer-Factory.sol#179-199) has external calls inside a loop: borrowInfo = DBOImplementation(order).getBorrowInfo() (contracts/DebitaBorrowOffer-Factory.sol#193-195)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation/#calls-inside-a-loop
+INFO:Detectors:
+Reentrancy in DBOImplementation.acceptBorrowOffer(uint256) (contracts/DebitaBorrowOffer-Implementation.sol#137-183):
+	External calls:
+	- IERC721(m_borrowInformation.collateral).transferFrom(address(this),aggregatorContract,m_borrowInformation.receiptID) (contracts/DebitaBorrowOffer-Implementation.sol#151-155)
+	State variables written after the call(s):
+	- isActive = false (contracts/DebitaBorrowOffer-Implementation.sol#168)
+Reentrancy in DBOFactory.createBorrowOrder(bool[],uint256[],uint256,uint256,address[],address,bool,uint256,address[],uint256[],address,uint256) (contracts/DebitaBorrowOffer-Factory.sol#75-157):
+	External calls:
+	- borrowOffer.initialize(aggregatorContract,msg.sender,_acceptedPrinciples,_collateral,_oraclesActivated,_isNFT,_LTVs,_maxInterestRate,_duration,_receiptID,_oracleIDS_Principles,_ratio,_oracleID_Collateral,_collateralAmount) (contracts/DebitaBorrowOffer-Factory.sol#108-123)
+	State variables written after the call(s):
+	- isBorrowOrderLegit[address(borrowOffer)] = true (contracts/DebitaBorrowOffer-Factory.sol#124)
+Reentrancy in DBOFactory.createBorrowOrder(bool[],uint256[],uint256,uint256,address[],address,bool,uint256,address[],uint256[],address,uint256) (contracts/DebitaBorrowOffer-Factory.sol#75-157):
+	External calls:
+	- borrowOffer.initialize(aggregatorContract,msg.sender,_acceptedPrinciples,_collateral,_oraclesActivated,_isNFT,_LTVs,_maxInterestRate,_duration,_receiptID,_oracleIDS_Principles,_ratio,_oracleID_Collateral,_collateralAmount) (contracts/DebitaBorrowOffer-Factory.sol#108-123)
+	- IERC721(_collateral).transferFrom(msg.sender,address(borrowOffer),_receiptID) (contracts/DebitaBorrowOffer-Factory.sol#126-130)
+	State variables written after the call(s):
+	- activeOrdersCount ++ (contracts/DebitaBorrowOffer-Factory.sol#141)
+	- allActiveBorrowOrders[activeOrdersCount] = address(borrowOffer) (contracts/DebitaBorrowOffer-Factory.sol#140)
+	- borrowOrderIndex[address(borrowOffer)] = activeOrdersCount (contracts/DebitaBorrowOffer-Factory.sol#139)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-2
+INFO:Detectors:
+Reentrancy in DBOFactory.createBorrowOrder(bool[],uint256[],uint256,uint256,address[],address,bool,uint256,address[],uint256[],address,uint256) (contracts/DebitaBorrowOffer-Factory.sol#75-157):
+	External calls:
+	- borrowOffer.initialize(aggregatorContract,msg.sender,_acceptedPrinciples,_collateral,_oraclesActivated,_isNFT,_LTVs,_maxInterestRate,_duration,_receiptID,_oracleIDS_Principles,_ratio,_oracleID_Collateral,_collateralAmount) (contracts/DebitaBorrowOffer-Factory.sol#108-123)
+	- IERC721(_collateral).transferFrom(msg.sender,address(borrowOffer),_receiptID) (contracts/DebitaBorrowOffer-Factory.sol#126-130)
+	Event emitted after the call(s):
+	- BorrowOrderCreated(address(borrowOffer),msg.sender,_maxInterestRate,_duration,_LTVs,_ratio,_collateralAmount,true) (contracts/DebitaBorrowOffer-Factory.sol#146-155)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-3
+INFO:Detectors:
+DebitaProxyContract.constructor(address) (contracts/DebitaProxyContract.sol#5-12) uses assembly
+	- INLINE ASM (contracts/DebitaProxyContract.sol#9-11)
+DebitaProxyContract._implementation() (contracts/DebitaProxyContract.sol#13-23) uses assembly
+	- INLINE ASM (contracts/DebitaProxyContract.sol#19-21)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#assembly-usage
+INFO:Detectors:
+Version constraint ^0.8.0 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- DataLocationChangeInInternalOverride
+	- NestedCalldataArrayAbiReencodingSizeValidation
+	- SignedImmutables
+	- ABIDecodeTwoDimensionalArrayMemory
+	- KeccakCaching.
+It is used by:
+	- ^0.8.0 (contracts/DebitaBorrowOffer-Factory.sol#1)
+	- ^0.8.0 (contracts/DebitaBorrowOffer-Implementation.sol#1)
+	- ^0.8.0 (contracts/DebitaProxyContract.sol#1)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+DBOFactory (contracts/DebitaBorrowOffer-Factory.sol#10-238) should inherit from IDBOFactory (contracts/DebitaBorrowOffer-Implementation.sol#27-31)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-inheritance
+INFO:Detectors:
+Parameter DBOFactory.createBorrowOrder(bool[],uint256[],uint256,uint256,address[],address,bool,uint256,address[],uint256[],address,uint256)._oraclesActivated (contracts/DebitaBorrowOffer-Factory.sol#76) is not in mixedCase
+Parameter DBOFactory.createBorrowOrder(bool[],uint256[],uint256,uint256,address[],address,bool,uint256,address[],uint256[],address,uint256)._LTVs (contracts/DebitaBorrowOffer-Factory.sol#77) is not in mixedCase
+Parameter DBOFactory.createBorrowOrder(bool[],uint256[],uint256,uint256,address[],address,bool,uint256,address[],uint256[],address,uint256)._maxInterestRate (contracts/DebitaBorrowOffer-Factory.sol#78) is not in mixedCase
+Parameter DBOFactory.createBorrowOrder(bool[],uint256[],uint256,uint256,address[],address,bool,uint256,address[],uint256[],address,uint256)._duration (contracts/DebitaBorrowOffer-Factory.sol#79) is not in mixedCase
+Parameter DBOFactory.createBorrowOrder(bool[],uint256[],uint256,uint256,address[],address,bool,uint256,address[],uint256[],address,uint256)._acceptedPrinciples (contracts/DebitaBorrowOffer-Factory.sol#80) is not in mixedCase
+Parameter DBOFactory.createBorrowOrder(bool[],uint256[],uint256,uint256,address[],address,bool,uint256,address[],uint256[],address,uint256)._collateral (contracts/DebitaBorrowOffer-Factory.sol#81) is not in mixedCase
+Parameter DBOFactory.createBorrowOrder(bool[],uint256[],uint256,uint256,address[],address,bool,uint256,address[],uint256[],address,uint256)._isNFT (contracts/DebitaBorrowOffer-Factory.sol#82) is not in mixedCase
+Parameter DBOFactory.createBorrowOrder(bool[],uint256[],uint256,uint256,address[],address,bool,uint256,address[],uint256[],address,uint256)._receiptID (contracts/DebitaBorrowOffer-Factory.sol#83) is not in mixedCase
+Parameter DBOFactory.createBorrowOrder(bool[],uint256[],uint256,uint256,address[],address,bool,uint256,address[],uint256[],address,uint256)._oracleIDS_Principles (contracts/DebitaBorrowOffer-Factory.sol#84) is not in mixedCase
+Parameter DBOFactory.createBorrowOrder(bool[],uint256[],uint256,uint256,address[],address,bool,uint256,address[],uint256[],address,uint256)._ratio (contracts/DebitaBorrowOffer-Factory.sol#85) is not in mixedCase
+Parameter DBOFactory.createBorrowOrder(bool[],uint256[],uint256,uint256,address[],address,bool,uint256,address[],uint256[],address,uint256)._oracleID_Collateral (contracts/DebitaBorrowOffer-Factory.sol#86) is not in mixedCase
+Parameter DBOFactory.createBorrowOrder(bool[],uint256[],uint256,uint256,address[],address,bool,uint256,address[],uint256[],address,uint256)._collateralAmount (contracts/DebitaBorrowOffer-Factory.sol#87) is not in mixedCase
+Parameter DBOFactory.deleteBorrowOrder(address)._borrowOrder (contracts/DebitaBorrowOffer-Factory.sol#162) is not in mixedCase
+Parameter DBOFactory.setAggregatorContract(address)._aggregatorContract (contracts/DebitaBorrowOffer-Factory.sol#201) is not in mixedCase
+Parameter DBOFactory.emitDelete(address)._borrowOrder (contracts/DebitaBorrowOffer-Factory.sol#207) is not in mixedCase
+Parameter DBOFactory.emitUpdate(address)._borrowOrder (contracts/DebitaBorrowOffer-Factory.sol#223) is not in mixedCase
+Struct NFR.receiptInstance (contracts/DebitaBorrowOffer-Implementation.sol#12-20) is not in CapWords
+Parameter DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256)._aggregatorContract (contracts/DebitaBorrowOffer-Implementation.sol#83) is not in mixedCase
+Parameter DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256)._owner (contracts/DebitaBorrowOffer-Implementation.sol#84) is not in mixedCase
+Parameter DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256)._acceptedPrinciples (contracts/DebitaBorrowOffer-Implementation.sol#85) is not in mixedCase
+Parameter DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256)._collateral (contracts/DebitaBorrowOffer-Implementation.sol#86) is not in mixedCase
+Parameter DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256)._oraclesActivated (contracts/DebitaBorrowOffer-Implementation.sol#87) is not in mixedCase
+Parameter DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256)._isNFT (contracts/DebitaBorrowOffer-Implementation.sol#88) is not in mixedCase
+Parameter DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256)._LTVs (contracts/DebitaBorrowOffer-Implementation.sol#89) is not in mixedCase
+Parameter DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256)._maxApr (contracts/DebitaBorrowOffer-Implementation.sol#90) is not in mixedCase
+Parameter DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256)._duration (contracts/DebitaBorrowOffer-Implementation.sol#91) is not in mixedCase
+Parameter DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256)._receiptID (contracts/DebitaBorrowOffer-Implementation.sol#92) is not in mixedCase
+Parameter DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256)._oracleIDS_Principles (contracts/DebitaBorrowOffer-Implementation.sol#93) is not in mixedCase
+Parameter DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256)._ratio (contracts/DebitaBorrowOffer-Implementation.sol#94) is not in mixedCase
+Parameter DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256)._oracleID_Collateral (contracts/DebitaBorrowOffer-Implementation.sol#95) is not in mixedCase
+Parameter DBOImplementation.initialize(address,address,address[],address,bool[],bool,uint256[],uint256,uint256,uint256,address[],uint256[],address,uint256)._startedBorrowAmount (contracts/DebitaBorrowOffer-Implementation.sol#96) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Detectors:
+DBOFactory.implementationContract (contracts/DebitaBorrowOffer-Factory.sol#48) should be immutable 
+DBOFactory.owner (contracts/DebitaBorrowOffer-Factory.sol#49) should be immutable 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-immutable
+INFO:Detectors:
+DLOImplementation.onlyAfterTimeOut() (contracts/DebitaLendOffer-Implementation.sol#57-63) uses a dangerous strict equality:
+	- require(bool,string)(lastUpdate == 0 || (block.timestamp - lastUpdate) > 60,Offer has been updated in the last minute) (contracts/DebitaLendOffer-Implementation.sol#58-61)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities
+INFO:Detectors:
+DLOImplementation.initialize(address,bool,bool[],bool,uint256[],uint256,uint256,uint256,address,address,address[],address[],uint256[],address,uint256)._aggregatorContract (contracts/DebitaLendOffer-Implementation.sol#66) lacks a zero-check on :
+		- aggregatorContract = _aggregatorContract (contracts/DebitaLendOffer-Implementation.sol#82)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-zero-address-validation
+INFO:Detectors:
+DLOImplementation.changePerpetual(bool) (contracts/DebitaLendOffer-Implementation.sol#178-188) compares to a boolean constant:
+	-_perpetual == false && lendInformation.availableAmount == 0 (contracts/DebitaLendOffer-Implementation.sol#182)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#boolean-equality
+INFO:Detectors:
+Version constraint ^0.8.0 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- DataLocationChangeInInternalOverride
+	- NestedCalldataArrayAbiReencodingSizeValidation
+	- SignedImmutables
+	- ABIDecodeTwoDimensionalArrayMemory
+	- KeccakCaching.
+It is used by:
+	- ^0.8.0 (contracts/DebitaLendOffer-Implementation.sol#1)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Parameter DLOImplementation.initialize(address,bool,bool[],bool,uint256[],uint256,uint256,uint256,address,address,address[],address[],uint256[],address,uint256)._aggregatorContract (contracts/DebitaLendOffer-Implementation.sol#66) is not in mixedCase
+Parameter DLOImplementation.initialize(address,bool,bool[],bool,uint256[],uint256,uint256,uint256,address,address,address[],address[],uint256[],address,uint256)._perpetual (contracts/DebitaLendOffer-Implementation.sol#67) is not in mixedCase
+Parameter DLOImplementation.initialize(address,bool,bool[],bool,uint256[],uint256,uint256,uint256,address,address,address[],address[],uint256[],address,uint256)._oraclesActivated (contracts/DebitaLendOffer-Implementation.sol#68) is not in mixedCase
+Parameter DLOImplementation.initialize(address,bool,bool[],bool,uint256[],uint256,uint256,uint256,address,address,address[],address[],uint256[],address,uint256)._lonelyLender (contracts/DebitaLendOffer-Implementation.sol#69) is not in mixedCase
+Parameter DLOImplementation.initialize(address,bool,bool[],bool,uint256[],uint256,uint256,uint256,address,address,address[],address[],uint256[],address,uint256)._maxLTVs (contracts/DebitaLendOffer-Implementation.sol#70) is not in mixedCase
+Parameter DLOImplementation.initialize(address,bool,bool[],bool,uint256[],uint256,uint256,uint256,address,address,address[],address[],uint256[],address,uint256)._apr (contracts/DebitaLendOffer-Implementation.sol#71) is not in mixedCase
+Parameter DLOImplementation.initialize(address,bool,bool[],bool,uint256[],uint256,uint256,uint256,address,address,address[],address[],uint256[],address,uint256)._maxDuration (contracts/DebitaLendOffer-Implementation.sol#72) is not in mixedCase
+Parameter DLOImplementation.initialize(address,bool,bool[],bool,uint256[],uint256,uint256,uint256,address,address,address[],address[],uint256[],address,uint256)._minDuration (contracts/DebitaLendOffer-Implementation.sol#73) is not in mixedCase
+Parameter DLOImplementation.initialize(address,bool,bool[],bool,uint256[],uint256,uint256,uint256,address,address,address[],address[],uint256[],address,uint256)._owner (contracts/DebitaLendOffer-Implementation.sol#74) is not in mixedCase
+Parameter DLOImplementation.initialize(address,bool,bool[],bool,uint256[],uint256,uint256,uint256,address,address,address[],address[],uint256[],address,uint256)._principle (contracts/DebitaLendOffer-Implementation.sol#75) is not in mixedCase
+Parameter DLOImplementation.initialize(address,bool,bool[],bool,uint256[],uint256,uint256,uint256,address,address,address[],address[],uint256[],address,uint256)._acceptedCollaterals (contracts/DebitaLendOffer-Implementation.sol#76) is not in mixedCase
+Parameter DLOImplementation.initialize(address,bool,bool[],bool,uint256[],uint256,uint256,uint256,address,address,address[],address[],uint256[],address,uint256)._oracleIDS_Collateral (contracts/DebitaLendOffer-Implementation.sol#77) is not in mixedCase
+Parameter DLOImplementation.initialize(address,bool,bool[],bool,uint256[],uint256,uint256,uint256,address,address,address[],address[],uint256[],address,uint256)._ratio (contracts/DebitaLendOffer-Implementation.sol#78) is not in mixedCase
+Parameter DLOImplementation.initialize(address,bool,bool[],bool,uint256[],uint256,uint256,uint256,address,address,address[],address[],uint256[],address,uint256)._oracleID_Principle (contracts/DebitaLendOffer-Implementation.sol#79) is not in mixedCase
+Parameter DLOImplementation.initialize(address,bool,bool[],bool,uint256[],uint256,uint256,uint256,address,address,address[],address[],uint256[],address,uint256)._startedLendingAmount (contracts/DebitaLendOffer-Implementation.sol#80) is not in mixedCase
+Parameter DLOImplementation.changePerpetual(bool)._perpetual (contracts/DebitaLendOffer-Implementation.sol#178) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Detectors:
+DebitaProxyContract.constructor(address) (contracts/DebitaProxyContract.sol#5-12) uses assembly
+	- INLINE ASM (contracts/DebitaProxyContract.sol#9-11)
+DebitaProxyContract._implementation() (contracts/DebitaProxyContract.sol#13-23) uses assembly
+	- INLINE ASM (contracts/DebitaProxyContract.sol#19-21)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#assembly-usage
+INFO:Detectors:
+Version constraint ^0.8.0 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- DataLocationChangeInInternalOverride
+	- NestedCalldataArrayAbiReencodingSizeValidation
+	- SignedImmutables
+	- ABIDecodeTwoDimensionalArrayMemory
+	- KeccakCaching.
+It is used by:
+	- ^0.8.0 (contracts/DebitaProxyContract.sol#1)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Slither:./contracts/ analyzed (116 contracts with 100 detectors), 317 result(s) found

@@ -1,0 +1,88 @@
+'forge config --json' running
+Could not detect solc version from Foundry config. Falling back to system version...
+'solc --version' running
+'solc @openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/ erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/ forge-std/=lib/forge-std/src/ halmos-cheatcodes/=lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/ openzeppelin-contracts/=lib/openzeppelin-contracts/ ./src/marketplaces/streams.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize-runs 200 --evm-version cancun --allow-paths .,/home/web/Desktop/Tmp/2025-03-pinlink-rwa-tokenized-depin-marketplace/marketplace-contracts/src/marketplaces' running
+'forge config --json' running
+Could not detect solc version from Foundry config. Falling back to system version...
+'solc --version' running
+'solc @openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/ erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/ forge-std/=lib/forge-std/src/ halmos-cheatcodes/=lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/ openzeppelin-contracts/=lib/openzeppelin-contracts/ ./src/marketplaces/pinlinkShop.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize-runs 200 --evm-version cancun --allow-paths .,/home/web/Desktop/Tmp/2025-03-pinlink-rwa-tokenized-depin-marketplace/marketplace-contracts/src/marketplaces' running
+INFO:Detectors:
+StreamHandler.isDrippingPeriodFinished(RewardsStream) (src/marketplaces/streams.sol#60-62) uses timestamp for comparisons
+	Dangerous comparisons:
+	- block.timestamp > self.lastDepositTimestamp + self.drippingPeriod (src/marketplaces/streams.sol#61)
+StreamHandler.globalRewardsPerStaked(RewardsStream) (src/marketplaces/streams.sol#112-128) uses timestamp for comparisons
+	Dangerous comparisons:
+	- (timeSinceDeposit > _drippingDuration) (src/marketplaces/streams.sol#122-124)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#block-timestamp
+INFO:Detectors:
+PinlinkShop.constructor(address,address,address).pin_ (src/marketplaces/pinlinkShop.sol#148) lacks a zero-check on :
+		- PIN = pin_ (src/marketplaces/pinlinkShop.sol#149)
+PinlinkShop.constructor(address,address,address).rewardToken_ (src/marketplaces/pinlinkShop.sol#148) lacks a zero-check on :
+		- REWARDS_TOKEN = rewardToken_ (src/marketplaces/pinlinkShop.sol#150)
+PinlinkShop.constructor(address,address,address).pinOracle_ (src/marketplaces/pinlinkShop.sol#148) lacks a zero-check on :
+		- oracle = pinOracle_ (src/marketplaces/pinlinkShop.sol#152)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-zero-address-validation
+INFO:Detectors:
+Reentrancy in PinlinkShop.depositAndList(address,uint256,uint256,uint256,uint256) (src/marketplaces/pinlinkShop.sol#368-377):
+	External calls:
+	- _deposit(fractionalAssets,tokenId,amount) (src/marketplaces/pinlinkShop.sol#375)
+		- IFractionalAssets(fractionalAssets).safeTransferFrom(msg.sender,address(this),tokenId,amount,) (src/marketplaces/pinlinkShop.sol#531)
+	State variables written after the call(s):
+	- listingId = _list(fractionalAssets,tokenId,amount,usdPricePerFraction,deadline) (src/marketplaces/pinlinkShop.sol#376)
+		- _listedBalances[fractionalAssets][tokenId][msg.sender] += amount (src/marketplaces/pinlinkShop.sol#517)
+	- listingId = _list(fractionalAssets,tokenId,amount,usdPricePerFraction,deadline) (src/marketplaces/pinlinkShop.sol#376)
+		- _listings[listingId] = Listing({fractionalAssets:fractionalAssets,tokenId:tokenId,seller:msg.sender,amount:amount,usdPricePerFraction:usdPricePerFraction,deadline:deadline}) (src/marketplaces/pinlinkShop.sol#508-515)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-2
+INFO:Detectors:
+Reentrancy in PinlinkShop.depositAndList(address,uint256,uint256,uint256,uint256) (src/marketplaces/pinlinkShop.sol#368-377):
+	External calls:
+	- _deposit(fractionalAssets,tokenId,amount) (src/marketplaces/pinlinkShop.sol#375)
+		- IFractionalAssets(fractionalAssets).safeTransferFrom(msg.sender,address(this),tokenId,amount,) (src/marketplaces/pinlinkShop.sol#531)
+	Event emitted after the call(s):
+	- Listed(listingId,msg.sender,tokenId,fractionalAssets,amount,usdPricePerFraction,deadline) (src/marketplaces/pinlinkShop.sol#519)
+		- listingId = _list(fractionalAssets,tokenId,amount,usdPricePerFraction,deadline) (src/marketplaces/pinlinkShop.sol#376)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-3
+INFO:Detectors:
+PinlinkShop.modifyListing(bytes32,uint256,uint256) (src/marketplaces/pinlinkShop.sol#269-282) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,error)(newDeadline > block.timestamp,revert DeadlineHasExpiredAlready()()) (src/marketplaces/pinlinkShop.sol#278)
+PinlinkShop.purchase(bytes32,uint256,uint256) (src/marketplaces/pinlinkShop.sol#288-325) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,error)(block.timestamp < listing.deadline,revert ListingDeadlineExpired()()) (src/marketplaces/pinlinkShop.sol#300)
+PinlinkShop.getQuoteInTokens(bytes32,uint256) (src/marketplaces/pinlinkShop.sol#395-409) uses timestamp for comparisons
+	Dangerous comparisons:
+	- _listings[listingId].deadline < block.timestamp (src/marketplaces/pinlinkShop.sol#402)
+PinlinkShop._list(address,uint256,uint256,uint256,uint256) (src/marketplaces/pinlinkShop.sol#489-520) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,error)(deadline > block.timestamp,revert DeadlineHasExpiredAlready()()) (src/marketplaces/pinlinkShop.sol#501)
+StreamHandler.isDrippingPeriodFinished(RewardsStream) (src/marketplaces/streams.sol#60-62) uses timestamp for comparisons
+	Dangerous comparisons:
+	- block.timestamp > self.lastDepositTimestamp + self.drippingPeriod (src/marketplaces/streams.sol#61)
+StreamHandler.globalRewardsPerStaked(RewardsStream) (src/marketplaces/streams.sol#112-128) uses timestamp for comparisons
+	Dangerous comparisons:
+	- (timeSinceDeposit > _drippingDuration) (src/marketplaces/streams.sol#122-124)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#block-timestamp
+INFO:Detectors:
+Version constraint >=0.6.2 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- NestedCalldataArrayAbiReencodingSizeValidation
+	- ABIDecodeTwoDimensionalArrayMemory
+	- KeccakCaching
+	- EmptyByteArrayCopy
+	- DynamicArrayCleanup
+	- MissingEscapingInFormatting
+	- ArraySliceDynamicallyEncodedBaseType
+	- ImplicitConstructorCallvalueCheck
+	- TupleAssignmentMultiStackSlotComponents
+	- MemoryArrayCreationOverflow.
+It is used by:
+	- >=0.6.2 (lib/forge-std/src/interfaces/IERC1155.sol#2)
+	- >=0.6.2 (lib/forge-std/src/interfaces/IERC165.sol#2)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Variable PinlinkShop.PIN (src/marketplaces/pinlinkShop.sol#49) is not in mixedCase
+Variable PinlinkShop.REWARDS_TOKEN (src/marketplaces/pinlinkShop.sol#52) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Slither:./src/marketplaces/ analyzed (17 contracts with 100 detectors), 16 result(s) found

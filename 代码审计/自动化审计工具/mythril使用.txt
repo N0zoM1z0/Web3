@@ -1,0 +1,9 @@
+mythril可以检测一些溢出、权限等问题，能弥补slither的不足
+
+pipx install mythril --force --verbose
+
+要用remapping
+
+myth analyze ./src/*.sol --solc-json solc_remappings.json --execution-timeout 60 -t 3
+
+但也不是没给都能成功

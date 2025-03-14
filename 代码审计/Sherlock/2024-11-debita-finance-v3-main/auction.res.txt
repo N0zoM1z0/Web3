@@ -1,0 +1,193 @@
+'forge config --json' running
+'/home/web/.solc-select/artifacts/solc-0.8.20/solc-0.8.20 --version' running
+'/home/web/.solc-select/artifacts/solc-0.8.20/solc-0.8.20 @pythnetwork/pyth-sdk-solidity/=node_modules/@pythnetwork/pyth-sdk-solidity/ @openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/ @contracts/=contracts/ @aerodrome/=lib/contracts/contracts/ forge-std/=lib/forge-std/src/ @chainlink/=lib/foundry-chainlink-toolkit/ @redstone-finance/evm-connector/dist/contracts/=lib/redstone-oracles-monorepo/packages/evm-connector/contracts/ @opengsn/=lib/contracts/lib/gsn/packages/ @uniswap/v3-core/=lib/contracts/lib/v3-core/ chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/contracts/src/v0.6/vendor/@arbitrum/nitro-contracts/src/ contracts/=lib/contracts/contracts/ ds-test/=lib/contracts/lib/ds-test/src/ erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/ foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/ gsn/=lib/contracts/lib/ halmos-cheatcodes/=lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/ openzeppelin-contracts/=lib/openzeppelin-contracts/ redstone-oracles-monorepo/=lib/redstone-oracles-monorepo/ utils/=lib/contracts/test/utils/ v3-core/=lib/contracts/lib/v3-core/ ./contracts/auctions/AuctionFactory.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --via-ir --evm-version shanghai --allow-paths .,/home/web/Desktop/Tmp/2024-11-debita-finance-v3/Debita-V3-Contracts/contracts/auctions' running
+Compilation warnings/errors on ./contracts/auctions/AuctionFactory.sol:
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> contracts/auctions/AuctionFactory.sol
+
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> contracts/auctions/Auction.sol
+
+Warning: This declaration shadows an existing declaration.
+   --> contracts/auctions/AuctionFactory.sol:218:26:
+    |
+218 |     function changeOwner(address owner) public {
+    |                          ^^^^^^^^^^^^^
+Note: The shadowed declaration is here:
+  --> contracts/auctions/AuctionFactory.sol:37:5:
+   |
+37 |     address owner; // owner of the contract
+   |     ^^^^^^^^^^^^^
+
+Warning: Function state mutability can be restricted to view
+   --> contracts/auctions/AuctionFactory.sol:218:5:
+    |
+218 |     function changeOwner(address owner) public {
+    |     ^ (Relevant source part starts here and spans across multiple lines).
+
+
+'forge config --json' running
+'/home/web/.solc-select/artifacts/solc-0.8.20/solc-0.8.20 --version' running
+'/home/web/.solc-select/artifacts/solc-0.8.20/solc-0.8.20 @pythnetwork/pyth-sdk-solidity/=node_modules/@pythnetwork/pyth-sdk-solidity/ @openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/ @contracts/=contracts/ @aerodrome/=lib/contracts/contracts/ forge-std/=lib/forge-std/src/ @chainlink/=lib/foundry-chainlink-toolkit/ @redstone-finance/evm-connector/dist/contracts/=lib/redstone-oracles-monorepo/packages/evm-connector/contracts/ @opengsn/=lib/contracts/lib/gsn/packages/ @uniswap/v3-core/=lib/contracts/lib/v3-core/ chainlink-brownie-contracts/=lib/foundry-chainlink-toolkit/lib/chainlink-brownie-contracts/contracts/src/v0.6/vendor/@arbitrum/nitro-contracts/src/ contracts/=lib/contracts/contracts/ ds-test/=lib/contracts/lib/ds-test/src/ erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/ foundry-chainlink-toolkit/=lib/foundry-chainlink-toolkit/ gsn/=lib/contracts/lib/ halmos-cheatcodes/=lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/ openzeppelin-contracts/=lib/openzeppelin-contracts/ redstone-oracles-monorepo/=lib/redstone-oracles-monorepo/ utils/=lib/contracts/test/utils/ v3-core/=lib/contracts/lib/v3-core/ ./contracts/auctions/Auction.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --via-ir --evm-version shanghai --allow-paths .,/home/web/Desktop/Tmp/2024-11-debita-finance-v3/Debita-V3-Contracts/contracts/auctions' running
+Compilation warnings/errors on ./contracts/auctions/Auction.sol:
+Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
+--> contracts/auctions/Auction.sol
+
+
+INFO:Detectors:
+auctionFactoryDebita.changePublicAuctionFee(uint256) (contracts/auctions/AuctionFactory.sol#203-207) contains a tautology or contradiction:
+	- require(bool,string)(_fee <= 100 && _fee >= 0,Invalid fee) (contracts/auctions/AuctionFactory.sol#205)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#tautology-or-contradiction
+INFO:Detectors:
+auctionFactoryDebita.changeOwner(address).owner (contracts/auctions/AuctionFactory.sol#218) shadows:
+	- auctionFactoryDebita.owner (contracts/auctions/AuctionFactory.sol#37) (state variable)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#local-variable-shadowing
+INFO:Detectors:
+auctionFactoryDebita.setFloorPriceForLiquidations(uint256) (contracts/auctions/AuctionFactory.sol#192-196) should emit an event for: 
+	- FloorPricePercentage = _ratio (contracts/auctions/AuctionFactory.sol#195) 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-events-arithmetic
+INFO:Detectors:
+DutchAuction_veNFT.constructor(uint256,address,address,address,uint256,uint256,uint256,bool).owner (contracts/auctions/Auction.sol#68) lacks a zero-check on :
+		- s_ownerOfAuction = owner (contracts/auctions/Auction.sol#100)
+auctionFactoryDebita.setAggregator(address)._aggregator (contracts/auctions/AuctionFactory.sol#209) lacks a zero-check on :
+		- aggregator = _aggregator (contracts/auctions/AuctionFactory.sol#211)
+auctionFactoryDebita.setFeeAddress(address)._feeAddress (contracts/auctions/AuctionFactory.sol#214) lacks a zero-check on :
+		- feeAddress = _feeAddress (contracts/auctions/AuctionFactory.sol#215)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-zero-address-validation
+INFO:Detectors:
+auctionFactoryDebita.getActiveAuctionOrders(uint256,uint256) (contracts/auctions/AuctionFactory.sol#117-137) has external calls inside a loop: AuctionInfo = DutchAuction_veNFT(order).getAuctionData() (contracts/auctions/AuctionFactory.sol#132-133)
+auctionFactoryDebita.getHistoricalAuctions(uint256,uint256) (contracts/auctions/AuctionFactory.sol#167-186) has external calls inside a loop: AuctionInfo = DutchAuction_veNFT(order).getAuctionData() (contracts/auctions/AuctionFactory.sol#181-182)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation/#calls-inside-a-loop
+INFO:Detectors:
+Reentrancy in auctionFactoryDebita.createAuction(uint256,address,address,uint256,uint256,uint256) (contracts/auctions/AuctionFactory.sol#68-110):
+	External calls:
+	- IERC721(_veNFTAddress).safeTransferFrom(msg.sender,address(_createdAuction),_veNFTID,) (contracts/auctions/AuctionFactory.sol#93-98)
+	State variables written after the call(s):
+	- AuctionOrderIndex[address(_createdAuction)] = activeOrdersCount (contracts/auctions/AuctionFactory.sol#101)
+	- activeOrdersCount ++ (contracts/auctions/AuctionFactory.sol#103)
+	- allActiveAuctionOrders[activeOrdersCount] = address(_createdAuction) (contracts/auctions/AuctionFactory.sol#102)
+	- historicalAuctions.push(address(_createdAuction)) (contracts/auctions/AuctionFactory.sol#104)
+	- isAuction[address(_createdAuction)] = true (contracts/auctions/AuctionFactory.sol#105)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-2
+INFO:Detectors:
+Reentrancy in auctionFactoryDebita.createAuction(uint256,address,address,uint256,uint256,uint256) (contracts/auctions/AuctionFactory.sol#68-110):
+	External calls:
+	- IERC721(_veNFTAddress).safeTransferFrom(msg.sender,address(_createdAuction),_veNFTID,) (contracts/auctions/AuctionFactory.sol#93-98)
+	Event emitted after the call(s):
+	- createdAuction(address(_createdAuction),msg.sender) (contracts/auctions/AuctionFactory.sol#108)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-3
+INFO:Detectors:
+DutchAuction_veNFT.editFloorPrice(uint256) (contracts/auctions/Auction.sol#192-226) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(s_CurrentAuction.floorAmount > curedNewFloorAmount,New floor lower) (contracts/auctions/Auction.sol#197-200)
+	- (m_currentAuction.initialBlock + discountedTime) < block.timestamp (contracts/auctions/Auction.sol#210)
+DutchAuction_veNFT.getCurrentPrice() (contracts/auctions/Auction.sol#228-246) uses timestamp for comparisons
+	Dangerous comparisons:
+	- (decreasedAmount > (m_currentAuction.initAmount - floorPrice)) (contracts/auctions/Auction.sol#236-239)
+auctionFactoryDebita.changeOwner(address) (contracts/auctions/AuctionFactory.sol#218-222) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(deployedTime + 21600 > block.timestamp,6 hours passed) (contracts/auctions/AuctionFactory.sol#220)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#block-timestamp
+INFO:Detectors:
+Version constraint ^0.8.0 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- DataLocationChangeInInternalOverride
+	- NestedCalldataArrayAbiReencodingSizeValidation
+	- SignedImmutables
+	- ABIDecodeTwoDimensionalArrayMemory
+	- KeccakCaching.
+It is used by:
+	- ^0.8.0 (contracts/auctions/Auction.sol#1)
+	- ^0.8.0 (contracts/auctions/AuctionFactory.sol#1)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Contract debitaLoan (contracts/auctions/Auction.sol#9-11) is not in CapWords
+Contract auctionFactory (contracts/auctions/Auction.sol#13-29) is not in CapWords
+Function auctionFactory._deleteAuctionOrder(address) (contracts/auctions/Auction.sol#28) is not in mixedCase
+Contract DutchAuction_veNFT (contracts/auctions/Auction.sol#31-251) is not in CapWords
+Struct DutchAuction_veNFT.dutchAuction_INFO (contracts/auctions/Auction.sol#32-47) is not in CapWords
+Variable DutchAuction_veNFT.s_CurrentAuction (contracts/auctions/Auction.sol#49) is not in mixedCase
+Variable DutchAuction_veNFT.s_ownerOfAuction (contracts/auctions/Auction.sol#50) is not in mixedCase
+Contract auctionFactoryDebita (contracts/auctions/AuctionFactory.sol#10-239) is not in CapWords
+Event auctionFactoryDebita.createdAuction(address,address) (contracts/auctions/AuctionFactory.sol#11-14) is not in CapWords
+Event auctionFactoryDebita.auctionEdited(address,address) (contracts/auctions/AuctionFactory.sol#15-18) is not in CapWords
+Event auctionFactoryDebita.auctionEnded(address,address) (contracts/auctions/AuctionFactory.sol#19) is not in CapWords
+Parameter auctionFactoryDebita.createAuction(uint256,address,address,uint256,uint256,uint256)._veNFTID (contracts/auctions/AuctionFactory.sol#69) is not in mixedCase
+Parameter auctionFactoryDebita.createAuction(uint256,address,address,uint256,uint256,uint256)._veNFTAddress (contracts/auctions/AuctionFactory.sol#70) is not in mixedCase
+Parameter auctionFactoryDebita.createAuction(uint256,address,address,uint256,uint256,uint256)._initAmount (contracts/auctions/AuctionFactory.sol#72) is not in mixedCase
+Parameter auctionFactoryDebita.createAuction(uint256,address,address,uint256,uint256,uint256)._floorAmount (contracts/auctions/AuctionFactory.sol#73) is not in mixedCase
+Parameter auctionFactoryDebita.createAuction(uint256,address,address,uint256,uint256,uint256)._duration (contracts/auctions/AuctionFactory.sol#74) is not in mixedCase
+Function auctionFactoryDebita._deleteAuctionOrder(address) (contracts/auctions/AuctionFactory.sol#145-160) is not in mixedCase
+Parameter auctionFactoryDebita._deleteAuctionOrder(address)._AuctionOrder (contracts/auctions/AuctionFactory.sol#145) is not in mixedCase
+Parameter auctionFactoryDebita.setFloorPriceForLiquidations(uint256)._ratio (contracts/auctions/AuctionFactory.sol#192) is not in mixedCase
+Parameter auctionFactoryDebita.changeAuctionFee(uint256)._fee (contracts/auctions/AuctionFactory.sol#198) is not in mixedCase
+Parameter auctionFactoryDebita.changePublicAuctionFee(uint256)._fee (contracts/auctions/AuctionFactory.sol#203) is not in mixedCase
+Parameter auctionFactoryDebita.setAggregator(address)._aggregator (contracts/auctions/AuctionFactory.sol#209) is not in mixedCase
+Parameter auctionFactoryDebita.setFeeAddress(address)._feeAddress (contracts/auctions/AuctionFactory.sol#214) is not in mixedCase
+Parameter auctionFactoryDebita.emitAuctionDeleted(address,address)._auctionAddress (contracts/auctions/AuctionFactory.sol#225) is not in mixedCase
+Parameter auctionFactoryDebita.emitAuctionEdited(address,address)._auctionAddress (contracts/auctions/AuctionFactory.sol#232) is not in mixedCase
+Variable auctionFactoryDebita.AuctionOrderIndex (contracts/auctions/AuctionFactory.sol#25) is not in mixedCase
+Variable auctionFactoryDebita.FloorPricePercentage (contracts/auctions/AuctionFactory.sol#33) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Detectors:
+DutchAuction_veNFT.decimalsDifference (contracts/auctions/Auction.sol#52) is never used in DutchAuction_veNFT (contracts/auctions/Auction.sol#31-251)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#unused-state-variable
+INFO:Detectors:
+DutchAuction_veNFT.decimalsDifference (contracts/auctions/Auction.sol#52) should be constant 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-constant
+INFO:Detectors:
+DutchAuction_veNFT.factory (contracts/auctions/Auction.sol#51) should be immutable 
+DutchAuction_veNFT.s_ownerOfAuction (contracts/auctions/Auction.sol#50) should be immutable 
+auctionFactoryDebita.deployedTime (contracts/auctions/AuctionFactory.sol#36) should be immutable 
+auctionFactoryDebita.owner (contracts/auctions/AuctionFactory.sol#37) should be immutable 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-immutable
+INFO:Detectors:
+DutchAuction_veNFT.constructor(uint256,address,address,address,uint256,uint256,uint256,bool).owner (contracts/auctions/Auction.sol#68) lacks a zero-check on :
+		- s_ownerOfAuction = owner (contracts/auctions/Auction.sol#100)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-zero-address-validation
+INFO:Detectors:
+DutchAuction_veNFT.editFloorPrice(uint256) (contracts/auctions/Auction.sol#192-226) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(s_CurrentAuction.floorAmount > curedNewFloorAmount,New floor lower) (contracts/auctions/Auction.sol#197-200)
+	- (m_currentAuction.initialBlock + discountedTime) < block.timestamp (contracts/auctions/Auction.sol#210)
+DutchAuction_veNFT.getCurrentPrice() (contracts/auctions/Auction.sol#228-246) uses timestamp for comparisons
+	Dangerous comparisons:
+	- (decreasedAmount > (m_currentAuction.initAmount - floorPrice)) (contracts/auctions/Auction.sol#236-239)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#block-timestamp
+INFO:Detectors:
+Version constraint ^0.8.0 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- DataLocationChangeInInternalOverride
+	- NestedCalldataArrayAbiReencodingSizeValidation
+	- SignedImmutables
+	- ABIDecodeTwoDimensionalArrayMemory
+	- KeccakCaching.
+It is used by:
+	- ^0.8.0 (contracts/auctions/Auction.sol#1)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Contract debitaLoan (contracts/auctions/Auction.sol#9-11) is not in CapWords
+Contract auctionFactory (contracts/auctions/Auction.sol#13-29) is not in CapWords
+Function auctionFactory._deleteAuctionOrder(address) (contracts/auctions/Auction.sol#28) is not in mixedCase
+Contract DutchAuction_veNFT (contracts/auctions/Auction.sol#31-251) is not in CapWords
+Struct DutchAuction_veNFT.dutchAuction_INFO (contracts/auctions/Auction.sol#32-47) is not in CapWords
+Variable DutchAuction_veNFT.s_CurrentAuction (contracts/auctions/Auction.sol#49) is not in mixedCase
+Variable DutchAuction_veNFT.s_ownerOfAuction (contracts/auctions/Auction.sol#50) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Detectors:
+DutchAuction_veNFT.decimalsDifference (contracts/auctions/Auction.sol#52) is never used in DutchAuction_veNFT (contracts/auctions/Auction.sol#31-251)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#unused-state-variable
+INFO:Detectors:
+DutchAuction_veNFT.decimalsDifference (contracts/auctions/Auction.sol#52) should be constant 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-constant
+INFO:Detectors:
+DutchAuction_veNFT.factory (contracts/auctions/Auction.sol#51) should be immutable 
+DutchAuction_veNFT.s_ownerOfAuction (contracts/auctions/Auction.sol#50) should be immutable 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-immutable
+INFO:Slither:./contracts/auctions/ analyzed (94 contracts with 100 detectors), 62 result(s) found

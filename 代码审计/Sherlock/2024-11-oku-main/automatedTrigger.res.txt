@@ -1,0 +1,941 @@
+'solc --version' running
+'solc ./automatedTrigger/OracleLess.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --via-ir --optimize --allow-paths .,/home/web/Desktop/Web3/Web3-Project/代码审计/Sherlock/2024-11-oku-main/oku-custom-order-types/contracts/automatedTrigger' running
+'solc --version' running
+'solc ./automatedTrigger/IAutomation.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --via-ir --optimize --allow-paths .,/home/web/Desktop/Web3/Web3-Project/代码审计/Sherlock/2024-11-oku-main/oku-custom-order-types/contracts/automatedTrigger' running
+'solc --version' running
+'solc ./automatedTrigger/AutomationMaster.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --via-ir --optimize --allow-paths .,/home/web/Desktop/Web3/Web3-Project/代码审计/Sherlock/2024-11-oku-main/oku-custom-order-types/contracts/automatedTrigger' running
+'solc --version' running
+'solc ./automatedTrigger/Bracket.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --via-ir --optimize --allow-paths .,/home/web/Desktop/Web3/Web3-Project/代码审计/Sherlock/2024-11-oku-main/oku-custom-order-types/contracts/automatedTrigger' running
+'solc --version' running
+'solc ./automatedTrigger/StopLimit.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --via-ir --optimize --allow-paths .,/home/web/Desktop/Web3/Web3-Project/代码审计/Sherlock/2024-11-oku-main/oku-custom-order-types/contracts/automatedTrigger' running
+INFO:Detectors:
+OracleLess.procureTokens(IERC20,uint256,address,bool,bytes) (automatedTrigger/OracleLess.sol#259-282) uses arbitrary from in transferFrom: token.safeTransferFrom(owner,address(this),amount) (automatedTrigger/OracleLess.sol#280)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#arbitrary-from-in-transferfrom
+INFO:Detectors:
+Reentrancy in OracleLess._modifyOrder(uint96,IERC20,uint256,uint256,address,bool,bool,bytes) (automatedTrigger/OracleLess.sol#171-225):
+	External calls:
+	- procureTokens(order.tokenIn,amountInDelta,order.recipient,permit,permitPayload) (automatedTrigger/OracleLess.sol#192-198)
+		- returndata = address(token).functionCall(data,SafeERC20: low-level call failed) (interfaces/openzeppelin/SafeERC20.sol#122)
+		- permit2.permit(owner,payload.permitSingle,payload.signature) (automatedTrigger/OracleLess.sol#272)
+		- (success,returndata) = target.call{value: value}(data) (interfaces/openzeppelin/Address.sol#135)
+		- permit2.transferFrom(owner,address(this),uint160(amount),address(token)) (automatedTrigger/OracleLess.sol#273-278)
+		- token.safeTransferFrom(owner,address(this),amount) (automatedTrigger/OracleLess.sol#280)
+	- order.tokenIn.safeTransfer(order.recipient,amountInDelta) (automatedTrigger/OracleLess.sol#208)
+	External calls sending eth:
+	- procureTokens(order.tokenIn,amountInDelta,order.recipient,permit,permitPayload) (automatedTrigger/OracleLess.sol#192-198)
+		- (success,returndata) = target.call{value: value}(data) (interfaces/openzeppelin/Address.sol#135)
+	State variables written after the call(s):
+	- orders[orderId] = newOrder (automatedTrigger/OracleLess.sol#224)
+	OracleLess.orders (automatedTrigger/OracleLess.sol#17) can be used in cross function reentrancies:
+	- OracleLess._modifyOrder(uint96,IERC20,uint256,uint256,address,bool,bool,bytes) (automatedTrigger/OracleLess.sol#171-225)
+	- OracleLess.adminCancelOrder(uint96) (automatedTrigger/OracleLess.sol#69-72)
+	- OracleLess.cancelOrder(uint96) (automatedTrigger/OracleLess.sol#74-78)
+	- OracleLess.createOrder(IERC20,IERC20,uint256,uint256,address,uint16,bool,bytes) (automatedTrigger/OracleLess.sol#38-67)
+	- OracleLess.fillOrder(uint96,uint96,address,bytes) (automatedTrigger/OracleLess.sol#103-148)
+	- OracleLess.getPendingOrders() (automatedTrigger/OracleLess.sol#26-36)
+	- OracleLess.orders (automatedTrigger/OracleLess.sol#17)
+Reentrancy in OracleLess.fillOrder(uint96,uint96,address,bytes) (automatedTrigger/OracleLess.sol#103-148):
+	External calls:
+	- (amountOut,tokenInRefund) = execute(target,txData,order) (automatedTrigger/OracleLess.sol#118-122)
+		- returndata = address(token).functionCall(data,SafeERC20: low-level call failed) (interfaces/openzeppelin/SafeERC20.sol#122)
+		- order.tokenIn.safeApprove(target,order.amountIn) (automatedTrigger/OracleLess.sol#237)
+		- (success,returndata) = target.call{value: value}(data) (interfaces/openzeppelin/Address.sol#135)
+		- (success,reason) = target.call(txData) (automatedTrigger/OracleLess.sol#240)
+	External calls sending eth:
+	- (amountOut,tokenInRefund) = execute(target,txData,order) (automatedTrigger/OracleLess.sol#118-122)
+		- (success,returndata) = target.call{value: value}(data) (interfaces/openzeppelin/Address.sol#135)
+	State variables written after the call(s):
+	- pendingOrderIds = ArrayMutation.removeFromArray(pendingOrderIdx,pendingOrderIds) (automatedTrigger/OracleLess.sol#126-129)
+	OracleLess.pendingOrderIds (automatedTrigger/OracleLess.sol#15) can be used in cross function reentrancies:
+	- OracleLess._cancelOrder(IOracleLess.Order) (automatedTrigger/OracleLess.sol#150-169)
+	- OracleLess.createOrder(IERC20,IERC20,uint256,uint256,address,uint16,bool,bytes) (automatedTrigger/OracleLess.sol#38-67)
+	- OracleLess.fillOrder(uint96,uint96,address,bytes) (automatedTrigger/OracleLess.sol#103-148)
+	- OracleLess.getPendingOrders() (automatedTrigger/OracleLess.sol#26-36)
+	- OracleLess.pendingOrderIds (automatedTrigger/OracleLess.sol#15)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities
+INFO:Detectors:
+AutomationMaster.getMinAmountReceived(uint256,IERC20,IERC20,uint96) (automatedTrigger/AutomationMaster.sol#100-120) performs a multiplication on the result of a division:
+	- fairAmountOut = (adjustedAmountIn * exchangeRate) / 1e8 (automatedTrigger/AutomationMaster.sol#116)
+	- (fairAmountOut * (10000 - slippageBips)) / 10000 (automatedTrigger/AutomationMaster.sol#119)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#divide-before-multiply
+INFO:Detectors:
+OracleLess.procureTokens(IERC20,uint256,address,bool,bytes).owner (automatedTrigger/OracleLess.sol#262) shadows:
+	- Ownable.owner() (interfaces/openzeppelin/Ownable.sol#43-45) (function)
+IPermit2.permitTransferFrom(IPermit2.PermitTransferFrom,IPermit2.SignatureTransferDetails,address,bytes).permit (interfaces/uniswapV3/IPermit2.sol#57) shadows:
+	- IPermit2.permit(address,IPermit2.PermitSingle,bytes) (interfaces/uniswapV3/IPermit2.sol#90-94) (function)
+UniswapV3Pool.positions(bytes32).liquidity (interfaces/uniswapV3/UniswapV3Pool.sol#119) shadows:
+	- UniswapV3Pool.liquidity() (interfaces/uniswapV3/UniswapV3Pool.sol#85) (function)
+UniswapV3Pool.protocolFees().token0 (interfaces/uniswapV3/UniswapV3Pool.sol#126) shadows:
+	- UniswapV3Pool.token0() (interfaces/uniswapV3/UniswapV3Pool.sol#176) (function)
+UniswapV3Pool.protocolFees().token1 (interfaces/uniswapV3/UniswapV3Pool.sol#126) shadows:
+	- UniswapV3Pool.token1() (interfaces/uniswapV3/UniswapV3Pool.sol#178) (function)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#local-variable-shadowing
+INFO:Detectors:
+AutomationMaster.setMinOrderSize(uint256) (automatedTrigger/AutomationMaster.sol#57-59) should emit an event for: 
+	- minOrderSize = usdValue (automatedTrigger/AutomationMaster.sol#58) 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-events-arithmetic
+INFO:Detectors:
+Reentrancy in OracleLess.createOrder(IERC20,IERC20,uint256,uint256,address,uint16,bool,bytes) (automatedTrigger/OracleLess.sol#38-67):
+	External calls:
+	- procureTokens(tokenIn,amountIn,recipient,permit,permitPayload) (automatedTrigger/OracleLess.sol#49)
+		- returndata = address(token).functionCall(data,SafeERC20: low-level call failed) (interfaces/openzeppelin/SafeERC20.sol#122)
+		- permit2.permit(owner,payload.permitSingle,payload.signature) (automatedTrigger/OracleLess.sol#272)
+		- (success,returndata) = target.call{value: value}(data) (interfaces/openzeppelin/Address.sol#135)
+		- permit2.transferFrom(owner,address(this),uint160(amount),address(token)) (automatedTrigger/OracleLess.sol#273-278)
+		- token.safeTransferFrom(owner,address(this),amount) (automatedTrigger/OracleLess.sol#280)
+	External calls sending eth:
+	- procureTokens(tokenIn,amountIn,recipient,permit,permitPayload) (automatedTrigger/OracleLess.sol#49)
+		- (success,returndata) = target.call{value: value}(data) (interfaces/openzeppelin/Address.sol#135)
+	State variables written after the call(s):
+	- orders[orderId] = Order({orderId:orderId,tokenIn:tokenIn,tokenOut:tokenOut,amountIn:amountIn,minAmountOut:minAmountOut,recipient:recipient,feeBips:feeBips}) (automatedTrigger/OracleLess.sol#53-61)
+	- pendingOrderIds.push(orderId) (automatedTrigger/OracleLess.sol#64)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-2
+INFO:Detectors:
+Reentrancy in OracleLess._cancelOrder(IOracleLess.Order) (automatedTrigger/OracleLess.sol#150-169):
+	External calls:
+	- order.tokenIn.safeTransfer(order.recipient,order.amountIn) (automatedTrigger/OracleLess.sol#160)
+	Event emitted after the call(s):
+	- OrderCancelled(order.orderId) (automatedTrigger/OracleLess.sol#163)
+Reentrancy in OracleLess.createOrder(IERC20,IERC20,uint256,uint256,address,uint16,bool,bytes) (automatedTrigger/OracleLess.sol#38-67):
+	External calls:
+	- procureTokens(tokenIn,amountIn,recipient,permit,permitPayload) (automatedTrigger/OracleLess.sol#49)
+		- returndata = address(token).functionCall(data,SafeERC20: low-level call failed) (interfaces/openzeppelin/SafeERC20.sol#122)
+		- permit2.permit(owner,payload.permitSingle,payload.signature) (automatedTrigger/OracleLess.sol#272)
+		- (success,returndata) = target.call{value: value}(data) (interfaces/openzeppelin/Address.sol#135)
+		- permit2.transferFrom(owner,address(this),uint160(amount),address(token)) (automatedTrigger/OracleLess.sol#273-278)
+		- token.safeTransferFrom(owner,address(this),amount) (automatedTrigger/OracleLess.sol#280)
+	External calls sending eth:
+	- procureTokens(tokenIn,amountIn,recipient,permit,permitPayload) (automatedTrigger/OracleLess.sol#49)
+		- (success,returndata) = target.call{value: value}(data) (interfaces/openzeppelin/Address.sol#135)
+	Event emitted after the call(s):
+	- OrderCreated(orderId) (automatedTrigger/OracleLess.sol#66)
+Reentrancy in OracleLess.modifyOrder(uint96,IERC20,uint256,uint256,address,bool,bool,bytes) (automatedTrigger/OracleLess.sol#80-101):
+	External calls:
+	- _modifyOrder(orderId,_tokenOut,amountInDelta,_minAmountOut,_recipient,increasePosition,permit,permitPayload) (automatedTrigger/OracleLess.sol#90-99)
+		- returndata = address(token).functionCall(data,SafeERC20: low-level call failed) (interfaces/openzeppelin/SafeERC20.sol#122)
+		- permit2.permit(owner,payload.permitSingle,payload.signature) (automatedTrigger/OracleLess.sol#272)
+		- (success,returndata) = target.call{value: value}(data) (interfaces/openzeppelin/Address.sol#135)
+		- permit2.transferFrom(owner,address(this),uint160(amount),address(token)) (automatedTrigger/OracleLess.sol#273-278)
+		- token.safeTransferFrom(owner,address(this),amount) (automatedTrigger/OracleLess.sol#280)
+		- order.tokenIn.safeTransfer(order.recipient,amountInDelta) (automatedTrigger/OracleLess.sol#208)
+	External calls sending eth:
+	- _modifyOrder(orderId,_tokenOut,amountInDelta,_minAmountOut,_recipient,increasePosition,permit,permitPayload) (automatedTrigger/OracleLess.sol#90-99)
+		- (success,returndata) = target.call{value: value}(data) (interfaces/openzeppelin/Address.sol#135)
+	Event emitted after the call(s):
+	- OrderModified(orderId) (automatedTrigger/OracleLess.sol#100)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-3
+INFO:Detectors:
+ERC20.permit(address,address,uint256,uint256,uint8,bytes32,bytes32) (interfaces/openzeppelin/ERC20.sol#116-160) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(deadline >= block.timestamp,PERMIT_DEADLINE_EXPIRED) (interfaces/openzeppelin/ERC20.sol#125)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#block-timestamp
+INFO:Detectors:
+Address._revert(bytes,string) (interfaces/openzeppelin/Address.sol#231-243) uses assembly
+	- INLINE ASM (interfaces/openzeppelin/Address.sol#236-239)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#assembly-usage
+INFO:Detectors:
+7 different versions of Solidity are used:
+	- Version constraint ^0.8.19 is used by:
+		-^0.8.19 (automatedTrigger/AutomationMaster.sol#2)
+		-^0.8.19 (automatedTrigger/IAutomation.sol#2)
+		-^0.8.19 (automatedTrigger/OracleLess.sol#2)
+		-^0.8.19 (interfaces/uniswapV3/IPermit2.sol#2)
+	- Version constraint ^0.8.0 is used by:
+		-^0.8.0 (interfaces/chainlink/AutomationCompatibleInterface.sol#2)
+		-^0.8.0 (interfaces/openzeppelin/Context.sol#4)
+		-^0.8.0 (interfaces/openzeppelin/IERC20.sol#4)
+		-^0.8.0 (interfaces/openzeppelin/IERC20Permit.sol#4)
+		-^0.8.0 (interfaces/openzeppelin/Ownable.sol#4)
+		-^0.8.0 (interfaces/openzeppelin/SafeERC20.sol#4)
+	- Version constraint ^0.8.1 is used by:
+		-^0.8.1 (interfaces/openzeppelin/Address.sol#4)
+	- Version constraint >=0.8.0 is used by:
+		->=0.8.0 (interfaces/openzeppelin/ERC20.sol#2)
+	- Version constraint ^0.8.20 is used by:
+		-^0.8.20 (interfaces/openzeppelin/ReentrancyGuard.sol#4)
+	- Version constraint ^0.8.16 is used by:
+		-^0.8.16 (interfaces/uniswapV3/UniswapV3Pool.sol#2)
+	- Version constraint ^0.8.9 is used by:
+		-^0.8.9 (libraries/ArrayMutation.sol#2)
+		-^0.8.9 (oracle/IOracleRelay.sol#2)
+		-^0.8.9 (oracle/IPythRelay.sol#2)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#different-pragma-directives-are-used
+INFO:Detectors:
+Context._msgData() (interfaces/openzeppelin/Context.sol#21-23) is never used and should be removed
+ERC20._burn(address,uint256) (interfaces/openzeppelin/ERC20.sol#195-205) is never used and should be removed
+ERC20._mint(address,uint256) (interfaces/openzeppelin/ERC20.sol#183-193) is never used and should be removed
+ReentrancyGuard._nonReentrantAfter() (interfaces/openzeppelin/ReentrancyGuard.sol#74-78) is never used and should be removed
+ReentrancyGuard._nonReentrantBefore() (interfaces/openzeppelin/ReentrancyGuard.sol#64-72) is never used and should be removed
+ReentrancyGuard._reentrancyGuardEntered() (interfaces/openzeppelin/ReentrancyGuard.sol#84-86) is never used and should be removed
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dead-code
+INFO:Detectors:
+Version constraint ^0.8.19 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- VerbatimInvalidDeduplication
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess.
+It is used by:
+	- ^0.8.19 (automatedTrigger/AutomationMaster.sol#2)
+	- ^0.8.19 (automatedTrigger/IAutomation.sol#2)
+	- ^0.8.19 (automatedTrigger/OracleLess.sol#2)
+	- ^0.8.19 (interfaces/uniswapV3/IPermit2.sol#2)
+Version constraint ^0.8.0 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- DataLocationChangeInInternalOverride
+	- NestedCalldataArrayAbiReencodingSizeValidation
+	- SignedImmutables
+	- ABIDecodeTwoDimensionalArrayMemory
+	- KeccakCaching.
+It is used by:
+	- ^0.8.0 (interfaces/chainlink/AutomationCompatibleInterface.sol#2)
+	- ^0.8.0 (interfaces/openzeppelin/Context.sol#4)
+	- ^0.8.0 (interfaces/openzeppelin/IERC20.sol#4)
+	- ^0.8.0 (interfaces/openzeppelin/IERC20Permit.sol#4)
+	- ^0.8.0 (interfaces/openzeppelin/Ownable.sol#4)
+	- ^0.8.0 (interfaces/openzeppelin/SafeERC20.sol#4)
+Version constraint ^0.8.1 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- DataLocationChangeInInternalOverride
+	- NestedCalldataArrayAbiReencodingSizeValidation
+	- SignedImmutables
+	- ABIDecodeTwoDimensionalArrayMemory
+	- KeccakCaching.
+It is used by:
+	- ^0.8.1 (interfaces/openzeppelin/Address.sol#4)
+Version constraint >=0.8.0 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- DataLocationChangeInInternalOverride
+	- NestedCalldataArrayAbiReencodingSizeValidation
+	- SignedImmutables
+	- ABIDecodeTwoDimensionalArrayMemory
+	- KeccakCaching.
+It is used by:
+	- >=0.8.0 (interfaces/openzeppelin/ERC20.sol#2)
+Version constraint ^0.8.20 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- VerbatimInvalidDeduplication
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess.
+It is used by:
+	- ^0.8.20 (interfaces/openzeppelin/ReentrancyGuard.sol#4)
+Version constraint ^0.8.16 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- VerbatimInvalidDeduplication
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- StorageWriteRemovalBeforeConditionalTermination.
+It is used by:
+	- ^0.8.16 (interfaces/uniswapV3/UniswapV3Pool.sol#2)
+Version constraint ^0.8.9 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- VerbatimInvalidDeduplication
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- DataLocationChangeInInternalOverride
+	- NestedCalldataArrayAbiReencodingSizeValidation.
+It is used by:
+	- ^0.8.9 (libraries/ArrayMutation.sol#2)
+	- ^0.8.9 (oracle/IOracleRelay.sol#2)
+	- ^0.8.9 (oracle/IPythRelay.sol#2)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Low level call in OracleLess.execute(address,bytes,IOracleLess.Order) (automatedTrigger/OracleLess.sol#227-257):
+	- (success,reason) = target.call(txData) (automatedTrigger/OracleLess.sol#240)
+Low level call in Address.sendValue(address,uint256) (interfaces/openzeppelin/Address.sol#64-69):
+	- (success,None) = recipient.call{value: amount}() (interfaces/openzeppelin/Address.sol#67)
+Low level call in Address.functionCallWithValue(address,bytes,uint256,string) (interfaces/openzeppelin/Address.sol#128-137):
+	- (success,returndata) = target.call{value: value}(data) (interfaces/openzeppelin/Address.sol#135)
+Low level call in Address.functionStaticCall(address,bytes,string) (interfaces/openzeppelin/Address.sol#155-162):
+	- (success,returndata) = target.staticcall(data) (interfaces/openzeppelin/Address.sol#160)
+Low level call in Address.functionDelegateCall(address,bytes,string) (interfaces/openzeppelin/Address.sol#180-187):
+	- (success,returndata) = target.delegatecall(data) (interfaces/openzeppelin/Address.sol#185)
+Low level call in SafeERC20._callOptionalReturnBool(IERC20,bytes) (interfaces/openzeppelin/SafeERC20.sol#134-142):
+	- (success,returndata) = address(token).call(data) (interfaces/openzeppelin/SafeERC20.sol#139)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#low-level-calls
+INFO:Detectors:
+Parameter AutomationMaster.registerOracle(IERC20[],IPythRelay[])._tokens (automatedTrigger/AutomationMaster.sol#42) is not in mixedCase
+Parameter AutomationMaster.registerOracle(IERC20[],IPythRelay[])._oracles (automatedTrigger/AutomationMaster.sol#43) is not in mixedCase
+Parameter AutomationMaster.setMaxPendingOrders(uint16)._max (automatedTrigger/AutomationMaster.sol#52) is not in mixedCase
+Variable AutomationMaster.STOP_LIMIT_CONTRACT (automatedTrigger/AutomationMaster.sol#24) is not in mixedCase
+Variable AutomationMaster.BRACKET_CONTRACT (automatedTrigger/AutomationMaster.sol#25) is not in mixedCase
+Function IAutomationMaster.STOP_LIMIT_CONTRACT() (automatedTrigger/IAutomation.sol#69) is not in mixedCase
+Parameter OracleLess.modifyOrder(uint96,IERC20,uint256,uint256,address,bool,bool,bytes)._tokenOut (automatedTrigger/OracleLess.sol#82) is not in mixedCase
+Parameter OracleLess.modifyOrder(uint96,IERC20,uint256,uint256,address,bool,bool,bytes)._minAmountOut (automatedTrigger/OracleLess.sol#84) is not in mixedCase
+Parameter OracleLess.modifyOrder(uint96,IERC20,uint256,uint256,address,bool,bool,bytes)._recipient (automatedTrigger/OracleLess.sol#85) is not in mixedCase
+Variable OracleLess.MASTER (automatedTrigger/OracleLess.sol#12) is not in mixedCase
+Function ERC20.DOMAIN_SEPARATOR() (interfaces/openzeppelin/ERC20.sol#162-164) is not in mixedCase
+Variable ERC20.INITIAL_CHAIN_ID (interfaces/openzeppelin/ERC20.sol#41) is not in mixedCase
+Variable ERC20.INITIAL_DOMAIN_SEPARATOR (interfaces/openzeppelin/ERC20.sol#43) is not in mixedCase
+Function IERC20Permit.DOMAIN_SEPARATOR() (interfaces/openzeppelin/IERC20Permit.sol#89) is not in mixedCase
+Function IPermit2.DOMAIN_SEPARATOR() (interfaces/uniswapV3/IPermit2.sol#32) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Detectors:
+AutomationMaster (automatedTrigger/AutomationMaster.sol#14-192) does not implement functions:
+	- IAutomationMaster.oracles(IERC20) (automatedTrigger/IAutomation.sol#70)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#unimplemented-functions
+INFO:Detectors:
+Loop condition i < pendingOrderIds.length (automatedTrigger/OracleLess.sol#32) should use cached array length instead of referencing `length` member of the storage array.
+ Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#cache-array-length
+INFO:Detectors:
+IPermit2.permitTransferFrom(IPermit2.PermitTransferFrom,IPermit2.SignatureTransferDetails,address,bytes).permit (interfaces/uniswapV3/IPermit2.sol#57) shadows:
+	- IPermit2.permit(address,IPermit2.PermitSingle,bytes) (interfaces/uniswapV3/IPermit2.sol#90-94) (function)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#local-variable-shadowing
+INFO:Detectors:
+3 different versions of Solidity are used:
+	- Version constraint ^0.8.19 is used by:
+		-^0.8.19 (automatedTrigger/IAutomation.sol#2)
+		-^0.8.19 (interfaces/uniswapV3/IPermit2.sol#2)
+	- Version constraint ^0.8.0 is used by:
+		-^0.8.0 (interfaces/chainlink/AutomationCompatibleInterface.sol#2)
+		-^0.8.0 (interfaces/openzeppelin/IERC20.sol#4)
+	- Version constraint ^0.8.9 is used by:
+		-^0.8.9 (oracle/IOracleRelay.sol#2)
+		-^0.8.9 (oracle/IPythRelay.sol#2)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#different-pragma-directives-are-used
+INFO:Detectors:
+Version constraint ^0.8.19 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- VerbatimInvalidDeduplication
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess.
+It is used by:
+	- ^0.8.19 (automatedTrigger/IAutomation.sol#2)
+	- ^0.8.19 (interfaces/uniswapV3/IPermit2.sol#2)
+Version constraint ^0.8.0 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- DataLocationChangeInInternalOverride
+	- NestedCalldataArrayAbiReencodingSizeValidation
+	- SignedImmutables
+	- ABIDecodeTwoDimensionalArrayMemory
+	- KeccakCaching.
+It is used by:
+	- ^0.8.0 (interfaces/chainlink/AutomationCompatibleInterface.sol#2)
+	- ^0.8.0 (interfaces/openzeppelin/IERC20.sol#4)
+Version constraint ^0.8.9 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- VerbatimInvalidDeduplication
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- DataLocationChangeInInternalOverride
+	- NestedCalldataArrayAbiReencodingSizeValidation.
+It is used by:
+	- ^0.8.9 (oracle/IOracleRelay.sol#2)
+	- ^0.8.9 (oracle/IPythRelay.sol#2)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Function IAutomationMaster.STOP_LIMIT_CONTRACT() (automatedTrigger/IAutomation.sol#69) is not in mixedCase
+Function IPermit2.DOMAIN_SEPARATOR() (interfaces/uniswapV3/IPermit2.sol#32) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Detectors:
+AutomationMaster.getMinAmountReceived(uint256,IERC20,IERC20,uint96) (automatedTrigger/AutomationMaster.sol#100-120) performs a multiplication on the result of a division:
+	- fairAmountOut = (adjustedAmountIn * exchangeRate) / 1e8 (automatedTrigger/AutomationMaster.sol#116)
+	- (fairAmountOut * (10000 - slippageBips)) / 10000 (automatedTrigger/AutomationMaster.sol#119)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#divide-before-multiply
+INFO:Detectors:
+IPermit2.permitTransferFrom(IPermit2.PermitTransferFrom,IPermit2.SignatureTransferDetails,address,bytes).permit (interfaces/uniswapV3/IPermit2.sol#57) shadows:
+	- IPermit2.permit(address,IPermit2.PermitSingle,bytes) (interfaces/uniswapV3/IPermit2.sol#90-94) (function)
+UniswapV3Pool.positions(bytes32).liquidity (interfaces/uniswapV3/UniswapV3Pool.sol#119) shadows:
+	- UniswapV3Pool.liquidity() (interfaces/uniswapV3/UniswapV3Pool.sol#85) (function)
+UniswapV3Pool.protocolFees().token0 (interfaces/uniswapV3/UniswapV3Pool.sol#126) shadows:
+	- UniswapV3Pool.token0() (interfaces/uniswapV3/UniswapV3Pool.sol#176) (function)
+UniswapV3Pool.protocolFees().token1 (interfaces/uniswapV3/UniswapV3Pool.sol#126) shadows:
+	- UniswapV3Pool.token1() (interfaces/uniswapV3/UniswapV3Pool.sol#178) (function)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#local-variable-shadowing
+INFO:Detectors:
+AutomationMaster.setMinOrderSize(uint256) (automatedTrigger/AutomationMaster.sol#57-59) should emit an event for: 
+	- minOrderSize = usdValue (automatedTrigger/AutomationMaster.sol#58) 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-events-arithmetic
+INFO:Detectors:
+ERC20.permit(address,address,uint256,uint256,uint8,bytes32,bytes32) (interfaces/openzeppelin/ERC20.sol#116-160) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(deadline >= block.timestamp,PERMIT_DEADLINE_EXPIRED) (interfaces/openzeppelin/ERC20.sol#125)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#block-timestamp
+INFO:Detectors:
+Address._revert(bytes,string) (interfaces/openzeppelin/Address.sol#231-243) uses assembly
+	- INLINE ASM (interfaces/openzeppelin/Address.sol#236-239)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#assembly-usage
+INFO:Detectors:
+6 different versions of Solidity are used:
+	- Version constraint ^0.8.19 is used by:
+		-^0.8.19 (automatedTrigger/AutomationMaster.sol#2)
+		-^0.8.19 (automatedTrigger/IAutomation.sol#2)
+		-^0.8.19 (interfaces/uniswapV3/IPermit2.sol#2)
+	- Version constraint ^0.8.0 is used by:
+		-^0.8.0 (interfaces/chainlink/AutomationCompatibleInterface.sol#2)
+		-^0.8.0 (interfaces/openzeppelin/Context.sol#4)
+		-^0.8.0 (interfaces/openzeppelin/IERC20.sol#4)
+		-^0.8.0 (interfaces/openzeppelin/IERC20Permit.sol#4)
+		-^0.8.0 (interfaces/openzeppelin/Ownable.sol#4)
+		-^0.8.0 (interfaces/openzeppelin/SafeERC20.sol#4)
+	- Version constraint ^0.8.1 is used by:
+		-^0.8.1 (interfaces/openzeppelin/Address.sol#4)
+	- Version constraint >=0.8.0 is used by:
+		->=0.8.0 (interfaces/openzeppelin/ERC20.sol#2)
+	- Version constraint ^0.8.16 is used by:
+		-^0.8.16 (interfaces/uniswapV3/UniswapV3Pool.sol#2)
+	- Version constraint ^0.8.9 is used by:
+		-^0.8.9 (libraries/ArrayMutation.sol#2)
+		-^0.8.9 (oracle/IOracleRelay.sol#2)
+		-^0.8.9 (oracle/IPythRelay.sol#2)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#different-pragma-directives-are-used
+INFO:Detectors:
+Context._msgData() (interfaces/openzeppelin/Context.sol#21-23) is never used and should be removed
+ERC20._burn(address,uint256) (interfaces/openzeppelin/ERC20.sol#195-205) is never used and should be removed
+ERC20._mint(address,uint256) (interfaces/openzeppelin/ERC20.sol#183-193) is never used and should be removed
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dead-code
+INFO:Detectors:
+Version constraint ^0.8.19 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- VerbatimInvalidDeduplication
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess.
+It is used by:
+	- ^0.8.19 (automatedTrigger/AutomationMaster.sol#2)
+	- ^0.8.19 (automatedTrigger/IAutomation.sol#2)
+	- ^0.8.19 (interfaces/uniswapV3/IPermit2.sol#2)
+Version constraint ^0.8.0 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- DataLocationChangeInInternalOverride
+	- NestedCalldataArrayAbiReencodingSizeValidation
+	- SignedImmutables
+	- ABIDecodeTwoDimensionalArrayMemory
+	- KeccakCaching.
+It is used by:
+	- ^0.8.0 (interfaces/chainlink/AutomationCompatibleInterface.sol#2)
+	- ^0.8.0 (interfaces/openzeppelin/Context.sol#4)
+	- ^0.8.0 (interfaces/openzeppelin/IERC20.sol#4)
+	- ^0.8.0 (interfaces/openzeppelin/IERC20Permit.sol#4)
+	- ^0.8.0 (interfaces/openzeppelin/Ownable.sol#4)
+	- ^0.8.0 (interfaces/openzeppelin/SafeERC20.sol#4)
+Version constraint ^0.8.1 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- DataLocationChangeInInternalOverride
+	- NestedCalldataArrayAbiReencodingSizeValidation
+	- SignedImmutables
+	- ABIDecodeTwoDimensionalArrayMemory
+	- KeccakCaching.
+It is used by:
+	- ^0.8.1 (interfaces/openzeppelin/Address.sol#4)
+Version constraint >=0.8.0 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- DataLocationChangeInInternalOverride
+	- NestedCalldataArrayAbiReencodingSizeValidation
+	- SignedImmutables
+	- ABIDecodeTwoDimensionalArrayMemory
+	- KeccakCaching.
+It is used by:
+	- >=0.8.0 (interfaces/openzeppelin/ERC20.sol#2)
+Version constraint ^0.8.16 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- VerbatimInvalidDeduplication
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- StorageWriteRemovalBeforeConditionalTermination.
+It is used by:
+	- ^0.8.16 (interfaces/uniswapV3/UniswapV3Pool.sol#2)
+Version constraint ^0.8.9 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- VerbatimInvalidDeduplication
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- DataLocationChangeInInternalOverride
+	- NestedCalldataArrayAbiReencodingSizeValidation.
+It is used by:
+	- ^0.8.9 (libraries/ArrayMutation.sol#2)
+	- ^0.8.9 (oracle/IOracleRelay.sol#2)
+	- ^0.8.9 (oracle/IPythRelay.sol#2)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Low level call in Address.sendValue(address,uint256) (interfaces/openzeppelin/Address.sol#64-69):
+	- (success,None) = recipient.call{value: amount}() (interfaces/openzeppelin/Address.sol#67)
+Low level call in Address.functionCallWithValue(address,bytes,uint256,string) (interfaces/openzeppelin/Address.sol#128-137):
+	- (success,returndata) = target.call{value: value}(data) (interfaces/openzeppelin/Address.sol#135)
+Low level call in Address.functionStaticCall(address,bytes,string) (interfaces/openzeppelin/Address.sol#155-162):
+	- (success,returndata) = target.staticcall(data) (interfaces/openzeppelin/Address.sol#160)
+Low level call in Address.functionDelegateCall(address,bytes,string) (interfaces/openzeppelin/Address.sol#180-187):
+	- (success,returndata) = target.delegatecall(data) (interfaces/openzeppelin/Address.sol#185)
+Low level call in SafeERC20._callOptionalReturnBool(IERC20,bytes) (interfaces/openzeppelin/SafeERC20.sol#134-142):
+	- (success,returndata) = address(token).call(data) (interfaces/openzeppelin/SafeERC20.sol#139)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#low-level-calls
+INFO:Detectors:
+Parameter AutomationMaster.registerOracle(IERC20[],IPythRelay[])._tokens (automatedTrigger/AutomationMaster.sol#42) is not in mixedCase
+Parameter AutomationMaster.registerOracle(IERC20[],IPythRelay[])._oracles (automatedTrigger/AutomationMaster.sol#43) is not in mixedCase
+Parameter AutomationMaster.setMaxPendingOrders(uint16)._max (automatedTrigger/AutomationMaster.sol#52) is not in mixedCase
+Variable AutomationMaster.STOP_LIMIT_CONTRACT (automatedTrigger/AutomationMaster.sol#24) is not in mixedCase
+Variable AutomationMaster.BRACKET_CONTRACT (automatedTrigger/AutomationMaster.sol#25) is not in mixedCase
+Function IAutomationMaster.STOP_LIMIT_CONTRACT() (automatedTrigger/IAutomation.sol#69) is not in mixedCase
+Function ERC20.DOMAIN_SEPARATOR() (interfaces/openzeppelin/ERC20.sol#162-164) is not in mixedCase
+Variable ERC20.INITIAL_CHAIN_ID (interfaces/openzeppelin/ERC20.sol#41) is not in mixedCase
+Variable ERC20.INITIAL_DOMAIN_SEPARATOR (interfaces/openzeppelin/ERC20.sol#43) is not in mixedCase
+Function IERC20Permit.DOMAIN_SEPARATOR() (interfaces/openzeppelin/IERC20Permit.sol#89) is not in mixedCase
+Function IPermit2.DOMAIN_SEPARATOR() (interfaces/uniswapV3/IPermit2.sol#32) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Detectors:
+AutomationMaster (automatedTrigger/AutomationMaster.sol#14-192) does not implement functions:
+	- IAutomationMaster.oracles(IERC20) (automatedTrigger/IAutomation.sol#70)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#unimplemented-functions
+INFO:Detectors:
+Bracket.modifyOrder(uint96,uint256,uint256,uint256,IERC20,address,uint16,uint16,bool,bool,bytes) (automatedTrigger/Bracket.sol#216-297) uses arbitrary from in transferFrom: order.tokenIn.safeTransferFrom(order.recipient,address(this),amountInDelta) (automatedTrigger/Bracket.sol#250-254)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#arbitrary-from-in-transferfrom
+INFO:Detectors:
+Reentrancy in Bracket.performUpkeep(bytes) (automatedTrigger/Bracket.sol#85-145):
+	External calls:
+	- (swapAmountOut,tokenInRefund) = execute(data.target,data.txData,order.amountIn,order.tokenIn,order.tokenOut,bips) (automatedTrigger/Bracket.sol#108-115)
+		- returndata = address(token).functionCall(data,SafeERC20: low-level call failed) (interfaces/openzeppelin/SafeERC20.sol#122)
+		- tokenIn.safeApprove(target,amountIn) (automatedTrigger/Bracket.sol#539)
+		- (success,returndata) = target.call{value: value}(data) (interfaces/openzeppelin/Address.sol#135)
+		- (success,result) = target.call(txData) (automatedTrigger/Bracket.sol#542)
+	External calls sending eth:
+	- (swapAmountOut,tokenInRefund) = execute(data.target,data.txData,order.amountIn,order.tokenIn,order.tokenOut,bips) (automatedTrigger/Bracket.sol#108-115)
+		- (success,returndata) = target.call{value: value}(data) (interfaces/openzeppelin/Address.sol#135)
+	State variables written after the call(s):
+	- pendingOrderIds = ArrayMutation.removeFromArray(data.pendingOrderIdx,pendingOrderIds) (automatedTrigger/Bracket.sol#119-122)
+	Bracket.pendingOrderIds (automatedTrigger/Bracket.sol#25) can be used in cross function reentrancies:
+	- Bracket._cancelOrder(IBracket.Order) (automatedTrigger/Bracket.sol#501-520)
+	- Bracket.checkUpkeep(bytes) (automatedTrigger/Bracket.sol#39-76)
+	- Bracket.getPendingOrders() (automatedTrigger/Bracket.sol#34-36)
+	- Bracket.pendingOrderIds (automatedTrigger/Bracket.sol#25)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities
+INFO:Detectors:
+Bracket._cancelOrder(IBracket.Order) (automatedTrigger/Bracket.sol#501-520) uses a dangerous strict equality:
+	- pendingOrderIds[i] == order.orderId (automatedTrigger/Bracket.sol#503)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities
+INFO:Detectors:
+Reentrancy in Bracket.modifyOrder(uint96,uint256,uint256,uint256,IERC20,address,uint16,uint16,bool,bool,bytes) (automatedTrigger/Bracket.sol#216-297):
+	External calls:
+	- handlePermit(order.recipient,permitPayload,uint160(amountInDelta),address(order.tokenIn)) (automatedTrigger/Bracket.sol#242-247)
+		- permit2.permit(owner,payload.permitSingle,payload.signature) (automatedTrigger/Bracket.sol#582)
+		- permit2.transferFrom(owner,address(this),amount,token) (automatedTrigger/Bracket.sol#583)
+	- order.tokenIn.safeTransferFrom(order.recipient,address(this),amountInDelta) (automatedTrigger/Bracket.sol#250-254)
+	- order.tokenIn.safeTransfer(order.recipient,amountInDelta) (automatedTrigger/Bracket.sol#267)
+	State variables written after the call(s):
+	- orders[orderId] = newOrder (automatedTrigger/Bracket.sol#296)
+	Bracket.orders (automatedTrigger/Bracket.sol#27) can be used in cross function reentrancies:
+	- Bracket.adminCancelOrder(uint96) (automatedTrigger/Bracket.sol#302-305)
+	- Bracket.cancelOrder(uint96) (automatedTrigger/Bracket.sol#309-313)
+	- Bracket.checkUpkeep(bytes) (automatedTrigger/Bracket.sol#39-76)
+	- Bracket.orders (automatedTrigger/Bracket.sol#27)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-1
+INFO:Detectors:
+Bracket.procureTokens(IERC20,uint256,address,bool,bytes).owner (automatedTrigger/Bracket.sol#318) shadows:
+	- Ownable.owner() (interfaces/openzeppelin/Ownable.sol#43-45) (function)
+Bracket.handlePermit(address,bytes,uint160,address).owner (automatedTrigger/Bracket.sol#572) shadows:
+	- Ownable.owner() (interfaces/openzeppelin/Ownable.sol#43-45) (function)
+IPermit2.permitTransferFrom(IPermit2.PermitTransferFrom,IPermit2.SignatureTransferDetails,address,bytes).permit (interfaces/uniswapV3/IPermit2.sol#57) shadows:
+	- IPermit2.permit(address,IPermit2.PermitSingle,bytes) (interfaces/uniswapV3/IPermit2.sol#90-94) (function)
+UniswapV3Pool.positions(bytes32).liquidity (interfaces/uniswapV3/UniswapV3Pool.sol#119) shadows:
+	- UniswapV3Pool.liquidity() (interfaces/uniswapV3/UniswapV3Pool.sol#85) (function)
+UniswapV3Pool.protocolFees().token0 (interfaces/uniswapV3/UniswapV3Pool.sol#126) shadows:
+	- UniswapV3Pool.token0() (interfaces/uniswapV3/UniswapV3Pool.sol#176) (function)
+UniswapV3Pool.protocolFees().token1 (interfaces/uniswapV3/UniswapV3Pool.sol#126) shadows:
+	- UniswapV3Pool.token1() (interfaces/uniswapV3/UniswapV3Pool.sol#178) (function)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#local-variable-shadowing
+INFO:Detectors:
+Bracket.checkInRange(IBracket.Order) (automatedTrigger/Bracket.sol#587-614) has external calls inside a loop: exchangeRate = MASTER.getExchangeRate(order.tokenIn,order.tokenOut) (automatedTrigger/Bracket.sol#594)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation/#calls-inside-a-loop
+INFO:Detectors:
+Reentrancy in Bracket._createOrderWithSwap(IAutomation.SwapParams,uint256,uint256,uint96,IERC20,IERC20,address,uint16,uint16,uint16) (automatedTrigger/Bracket.sol#401-442):
+	External calls:
+	- (swapAmountOut,tokenInRefund) = execute(swapParams.swapTarget,swapParams.txData,swapParams.swapAmountIn,swapParams.swapTokenIn,tokenIn,swapParams.swapSlippage) (automatedTrigger/Bracket.sol#416-423)
+		- returndata = address(token).functionCall(data,SafeERC20: low-level call failed) (interfaces/openzeppelin/SafeERC20.sol#122)
+		- tokenIn.safeApprove(target,amountIn) (automatedTrigger/Bracket.sol#539)
+		- (success,returndata) = target.call{value: value}(data) (interfaces/openzeppelin/Address.sol#135)
+		- (success,result) = target.call(txData) (automatedTrigger/Bracket.sol#542)
+	External calls sending eth:
+	- (swapAmountOut,tokenInRefund) = execute(swapParams.swapTarget,swapParams.txData,swapParams.swapAmountIn,swapParams.swapTokenIn,tokenIn,swapParams.swapSlippage) (automatedTrigger/Bracket.sol#416-423)
+		- (success,returndata) = target.call{value: value}(data) (interfaces/openzeppelin/Address.sol#135)
+	State variables written after the call(s):
+	- _createOrder(takeProfit,stopPrice,swapAmountOut,existingOrderId,tokenIn,tokenOut,recipient,feeBips,takeProfitSlippage,stopSlippage) (automatedTrigger/Bracket.sol#425-436)
+		- orders[existingOrderId] = Order({orderId:existingOrderId,takeProfit:takeProfit,stopPrice:stopPrice,amountIn:amountIn,tokenIn:tokenIn,tokenOut:tokenOut,recipient:recipient,takeProfitSlippage:takeProfitSlippage,feeBips:feeBips,stopSlippage:stopSlippage,direction:MASTER.getExchangeRate(tokenIn,tokenOut) > takeProfit}) (automatedTrigger/Bracket.sol#481-493)
+	- _createOrder(takeProfit,stopPrice,swapAmountOut,existingOrderId,tokenIn,tokenOut,recipient,feeBips,takeProfitSlippage,stopSlippage) (automatedTrigger/Bracket.sol#425-436)
+		- pendingOrderIds.push(existingOrderId) (automatedTrigger/Bracket.sol#496)
+Reentrancy in Bracket._initializeOrder(bytes,uint256,uint256,uint256,uint96,IERC20,IERC20,address,uint16,uint16,uint16,bool,bytes) (automatedTrigger/Bracket.sol#340-399):
+	External calls:
+	- procureTokens(swapParams.swapTokenIn,swapParams.swapAmountIn,msg.sender,permit,permitPayload) (automatedTrigger/Bracket.sol#362-368)
+		- returndata = address(token).functionCall(data,SafeERC20: low-level call failed) (interfaces/openzeppelin/SafeERC20.sol#122)
+		- permit2.permit(owner,payload.permitSingle,payload.signature) (automatedTrigger/Bracket.sol#328)
+		- (success,returndata) = target.call{value: value}(data) (interfaces/openzeppelin/Address.sol#135)
+		- permit2.transferFrom(owner,address(this),uint160(amount),address(token)) (automatedTrigger/Bracket.sol#329-334)
+		- token.safeTransferFrom(owner,address(this),amount) (automatedTrigger/Bracket.sol#336)
+	- _createOrderWithSwap(swapParams,takeProfit,stopPrice,existingOrderId,tokenIn,tokenOut,recipient,feeBips,takeProfitSlippage,stopSlippage) (automatedTrigger/Bracket.sol#370-381)
+		- returndata = address(token).functionCall(data,SafeERC20: low-level call failed) (interfaces/openzeppelin/SafeERC20.sol#122)
+		- tokenIn.safeApprove(target,amountIn) (automatedTrigger/Bracket.sol#539)
+		- (success,returndata) = target.call{value: value}(data) (interfaces/openzeppelin/Address.sol#135)
+		- (success,result) = target.call(txData) (automatedTrigger/Bracket.sol#542)
+		- swapParams.swapTokenIn.safeTransfer(recipient,tokenInRefund) (automatedTrigger/Bracket.sol#440)
+	External calls sending eth:
+	- procureTokens(swapParams.swapTokenIn,swapParams.swapAmountIn,msg.sender,permit,permitPayload) (automatedTrigger/Bracket.sol#362-368)
+		- (success,returndata) = target.call{value: value}(data) (interfaces/openzeppelin/Address.sol#135)
+	- _createOrderWithSwap(swapParams,takeProfit,stopPrice,existingOrderId,tokenIn,tokenOut,recipient,feeBips,takeProfitSlippage,stopSlippage) (automatedTrigger/Bracket.sol#370-381)
+		- (success,returndata) = target.call{value: value}(data) (interfaces/openzeppelin/Address.sol#135)
+	State variables written after the call(s):
+	- _createOrderWithSwap(swapParams,takeProfit,stopPrice,existingOrderId,tokenIn,tokenOut,recipient,feeBips,takeProfitSlippage,stopSlippage) (automatedTrigger/Bracket.sol#370-381)
+		- orders[existingOrderId] = Order({orderId:existingOrderId,takeProfit:takeProfit,stopPrice:stopPrice,amountIn:amountIn,tokenIn:tokenIn,tokenOut:tokenOut,recipient:recipient,takeProfitSlippage:takeProfitSlippage,feeBips:feeBips,stopSlippage:stopSlippage,direction:MASTER.getExchangeRate(tokenIn,tokenOut) > takeProfit}) (automatedTrigger/Bracket.sol#481-493)
+Reentrancy in Bracket._initializeOrder(bytes,uint256,uint256,uint256,uint96,IERC20,IERC20,address,uint16,uint16,uint16,bool,bytes) (automatedTrigger/Bracket.sol#340-399):
+	External calls:
+	- procureTokens(tokenIn,amountIn,msg.sender,permit,permitPayload) (automatedTrigger/Bracket.sol#384)
+		- returndata = address(token).functionCall(data,SafeERC20: low-level call failed) (interfaces/openzeppelin/SafeERC20.sol#122)
+		- permit2.permit(owner,payload.permitSingle,payload.signature) (automatedTrigger/Bracket.sol#328)
+		- (success,returndata) = target.call{value: value}(data) (interfaces/openzeppelin/Address.sol#135)
+		- permit2.transferFrom(owner,address(this),uint160(amount),address(token)) (automatedTrigger/Bracket.sol#329-334)
+		- token.safeTransferFrom(owner,address(this),amount) (automatedTrigger/Bracket.sol#336)
+	External calls sending eth:
+	- procureTokens(tokenIn,amountIn,msg.sender,permit,permitPayload) (automatedTrigger/Bracket.sol#384)
+		- (success,returndata) = target.call{value: value}(data) (interfaces/openzeppelin/Address.sol#135)
+	State variables written after the call(s):
+	- _createOrder(takeProfit,stopPrice,amountIn,existingOrderId,tokenIn,tokenOut,recipient,feeBips,takeProfitSlippage,stopSlippage) (automatedTrigger/Bracket.sol#386-397)
+		- orders[existingOrderId] = Order({orderId:existingOrderId,takeProfit:takeProfit,stopPrice:stopPrice,amountIn:amountIn,tokenIn:tokenIn,tokenOut:tokenOut,recipient:recipient,takeProfitSlippage:takeProfitSlippage,feeBips:feeBips,stopSlippage:stopSlippage,direction:MASTER.getExchangeRate(tokenIn,tokenOut) > takeProfit}) (automatedTrigger/Bracket.sol#481-493)
+	- _createOrder(takeProfit,stopPrice,amountIn,existingOrderId,tokenIn,tokenOut,recipient,feeBips,takeProfitSlippage,stopSlippage) (automatedTrigger/Bracket.sol#386-397)
+		- pendingOrderIds.push(existingOrderId) (automatedTrigger/Bracket.sol#496)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-2
+INFO:Detectors:
+Reentrancy in Bracket._cancelOrder(IBracket.Order) (automatedTrigger/Bracket.sol#501-520):
+	External calls:
+	- order.tokenIn.safeTransfer(order.recipient,order.amountIn) (automatedTrigger/Bracket.sol#511)
+	Event emitted after the call(s):
+	- OrderCancelled(order.orderId) (automatedTrigger/Bracket.sol#514)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-3
+INFO:Detectors:
+Address._revert(bytes,string) (interfaces/openzeppelin/Address.sol#231-243) uses assembly
+	- INLINE ASM (interfaces/openzeppelin/Address.sol#236-239)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#assembly-usage
+INFO:Detectors:
+7 different versions of Solidity are used:
+	- Version constraint ^0.8.20 is used by:
+		-^0.8.20 (automatedTrigger/Bracket.sol#2)
+		-^0.8.20 (interfaces/openzeppelin/ReentrancyGuard.sol#4)
+	- Version constraint ^0.8.19 is used by:
+		-^0.8.19 (automatedTrigger/IAutomation.sol#2)
+		-^0.8.19 (interfaces/uniswapV3/IPermit2.sol#2)
+	- Version constraint ^0.8.0 is used by:
+		-^0.8.0 (interfaces/chainlink/AutomationCompatibleInterface.sol#2)
+		-^0.8.0 (interfaces/openzeppelin/Context.sol#4)
+		-^0.8.0 (interfaces/openzeppelin/IERC20.sol#4)
+		-^0.8.0 (interfaces/openzeppelin/IERC20Permit.sol#4)
+		-^0.8.0 (interfaces/openzeppelin/Ownable.sol#4)
+		-^0.8.0 (interfaces/openzeppelin/SafeERC20.sol#4)
+	- Version constraint ^0.8.1 is used by:
+		-^0.8.1 (interfaces/openzeppelin/Address.sol#4)
+	- Version constraint >=0.7.5 is used by:
+		->=0.7.5 (interfaces/uniswapV3/ISwapRouter02.sol#2)
+	- Version constraint ^0.8.16 is used by:
+		-^0.8.16 (interfaces/uniswapV3/UniswapV3Pool.sol#2)
+	- Version constraint ^0.8.9 is used by:
+		-^0.8.9 (libraries/ArrayMutation.sol#2)
+		-^0.8.9 (oracle/IOracleRelay.sol#2)
+		-^0.8.9 (oracle/IPythRelay.sol#2)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#different-pragma-directives-are-used
+INFO:Detectors:
+Context._msgData() (interfaces/openzeppelin/Context.sol#21-23) is never used and should be removed
+ReentrancyGuard._reentrancyGuardEntered() (interfaces/openzeppelin/ReentrancyGuard.sol#84-86) is never used and should be removed
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dead-code
+INFO:Detectors:
+Version constraint ^0.8.20 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- VerbatimInvalidDeduplication
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess.
+It is used by:
+	- ^0.8.20 (automatedTrigger/Bracket.sol#2)
+	- ^0.8.20 (interfaces/openzeppelin/ReentrancyGuard.sol#4)
+Version constraint ^0.8.19 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- VerbatimInvalidDeduplication
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess.
+It is used by:
+	- ^0.8.19 (automatedTrigger/IAutomation.sol#2)
+	- ^0.8.19 (interfaces/uniswapV3/IPermit2.sol#2)
+Version constraint ^0.8.0 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- DataLocationChangeInInternalOverride
+	- NestedCalldataArrayAbiReencodingSizeValidation
+	- SignedImmutables
+	- ABIDecodeTwoDimensionalArrayMemory
+	- KeccakCaching.
+It is used by:
+	- ^0.8.0 (interfaces/chainlink/AutomationCompatibleInterface.sol#2)
+	- ^0.8.0 (interfaces/openzeppelin/Context.sol#4)
+	- ^0.8.0 (interfaces/openzeppelin/IERC20.sol#4)
+	- ^0.8.0 (interfaces/openzeppelin/IERC20Permit.sol#4)
+	- ^0.8.0 (interfaces/openzeppelin/Ownable.sol#4)
+	- ^0.8.0 (interfaces/openzeppelin/SafeERC20.sol#4)
+Version constraint ^0.8.1 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- DataLocationChangeInInternalOverride
+	- NestedCalldataArrayAbiReencodingSizeValidation
+	- SignedImmutables
+	- ABIDecodeTwoDimensionalArrayMemory
+	- KeccakCaching.
+It is used by:
+	- ^0.8.1 (interfaces/openzeppelin/Address.sol#4)
+Version constraint >=0.7.5 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- DataLocationChangeInInternalOverride
+	- NestedCalldataArrayAbiReencodingSizeValidation
+	- SignedImmutables
+	- ABIDecodeTwoDimensionalArrayMemory
+	- KeccakCaching.
+It is used by:
+	- >=0.7.5 (interfaces/uniswapV3/ISwapRouter02.sol#2)
+Version constraint ^0.8.16 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- VerbatimInvalidDeduplication
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- StorageWriteRemovalBeforeConditionalTermination.
+It is used by:
+	- ^0.8.16 (interfaces/uniswapV3/UniswapV3Pool.sol#2)
+Version constraint ^0.8.9 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- VerbatimInvalidDeduplication
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- DataLocationChangeInInternalOverride
+	- NestedCalldataArrayAbiReencodingSizeValidation.
+It is used by:
+	- ^0.8.9 (libraries/ArrayMutation.sol#2)
+	- ^0.8.9 (oracle/IOracleRelay.sol#2)
+	- ^0.8.9 (oracle/IPythRelay.sol#2)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Low level call in Bracket.execute(address,bytes,uint256,IERC20,IERC20,uint16) (automatedTrigger/Bracket.sol#526-568):
+	- (success,result) = target.call(txData) (automatedTrigger/Bracket.sol#542)
+Low level call in Address.sendValue(address,uint256) (interfaces/openzeppelin/Address.sol#64-69):
+	- (success,None) = recipient.call{value: amount}() (interfaces/openzeppelin/Address.sol#67)
+Low level call in Address.functionCallWithValue(address,bytes,uint256,string) (interfaces/openzeppelin/Address.sol#128-137):
+	- (success,returndata) = target.call{value: value}(data) (interfaces/openzeppelin/Address.sol#135)
+Low level call in Address.functionStaticCall(address,bytes,string) (interfaces/openzeppelin/Address.sol#155-162):
+	- (success,returndata) = target.staticcall(data) (interfaces/openzeppelin/Address.sol#160)
+Low level call in Address.functionDelegateCall(address,bytes,string) (interfaces/openzeppelin/Address.sol#180-187):
+	- (success,returndata) = target.delegatecall(data) (interfaces/openzeppelin/Address.sol#185)
+Low level call in SafeERC20._callOptionalReturnBool(IERC20,bytes) (interfaces/openzeppelin/SafeERC20.sol#134-142):
+	- (success,returndata) = address(token).call(data) (interfaces/openzeppelin/SafeERC20.sol#139)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#low-level-calls
+INFO:Detectors:
+Parameter Bracket.modifyOrder(uint96,uint256,uint256,uint256,IERC20,address,uint16,uint16,bool,bool,bytes)._takeProfit (automatedTrigger/Bracket.sol#218) is not in mixedCase
+Parameter Bracket.modifyOrder(uint96,uint256,uint256,uint256,IERC20,address,uint16,uint16,bool,bool,bytes)._stopPrice (automatedTrigger/Bracket.sol#219) is not in mixedCase
+Parameter Bracket.modifyOrder(uint96,uint256,uint256,uint256,IERC20,address,uint16,uint16,bool,bool,bytes)._tokenOut (automatedTrigger/Bracket.sol#221) is not in mixedCase
+Parameter Bracket.modifyOrder(uint96,uint256,uint256,uint256,IERC20,address,uint16,uint16,bool,bool,bytes)._recipient (automatedTrigger/Bracket.sol#222) is not in mixedCase
+Parameter Bracket.modifyOrder(uint96,uint256,uint256,uint256,IERC20,address,uint16,uint16,bool,bool,bytes)._takeProfitSlippage (automatedTrigger/Bracket.sol#223) is not in mixedCase
+Parameter Bracket.modifyOrder(uint96,uint256,uint256,uint256,IERC20,address,uint16,uint16,bool,bool,bytes)._stopSlippage (automatedTrigger/Bracket.sol#224) is not in mixedCase
+Variable Bracket.MASTER (automatedTrigger/Bracket.sol#22) is not in mixedCase
+Function IAutomationMaster.STOP_LIMIT_CONTRACT() (automatedTrigger/IAutomation.sol#69) is not in mixedCase
+Function IERC20Permit.DOMAIN_SEPARATOR() (interfaces/openzeppelin/IERC20Permit.sol#89) is not in mixedCase
+Function IPermit2.DOMAIN_SEPARATOR() (interfaces/uniswapV3/IPermit2.sol#32) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Detectors:
+Loop condition i < pendingOrderIds.length (automatedTrigger/Bracket.sol#47) should use cached array length instead of referencing `length` member of the storage array.
+ Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#cache-array-length
+INFO:Detectors:
+StopLimit.createOrder(uint256,uint256,uint256,uint256,IERC20,IERC20,address,uint16,uint16,uint16,uint16,bool,bool,bytes) (automatedTrigger/StopLimit.sol#146-188) uses arbitrary from in transferFrom: tokenIn.safeTransferFrom(recipient,address(this),amountIn) (automatedTrigger/StopLimit.sol#171)
+StopLimit.modifyOrder(uint96,uint256,uint256,uint256,uint256,IERC20,address,uint16,uint16,uint16,bool,bool,bool,bytes) (automatedTrigger/StopLimit.sol#191-284) uses arbitrary from in transferFrom: order.tokenIn.safeTransferFrom(order.recipient,address(this),_amountInDelta) (automatedTrigger/StopLimit.sol#226-230)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#arbitrary-from-in-transferfrom
+INFO:Detectors:
+Reentrancy in StopLimit.modifyOrder(uint96,uint256,uint256,uint256,uint256,IERC20,address,uint16,uint16,uint16,bool,bool,bool,bytes) (automatedTrigger/StopLimit.sol#191-284):
+	External calls:
+	- handlePermit(order.recipient,permitPayload,uint160(_amountInDelta),address(order.tokenIn)) (automatedTrigger/StopLimit.sol#218-223)
+		- permit2.permit(owner,payload.permitSingle,payload.signature) (automatedTrigger/StopLimit.sol#391)
+		- permit2.transferFrom(owner,address(this),amount,token) (automatedTrigger/StopLimit.sol#392)
+	- order.tokenIn.safeTransferFrom(order.recipient,address(this),_amountInDelta) (automatedTrigger/StopLimit.sol#226-230)
+	- order.tokenIn.safeTransfer(order.recipient,_amountInDelta) (automatedTrigger/StopLimit.sol#243)
+	State variables written after the call(s):
+	- orders[orderId] = newOrder (automatedTrigger/StopLimit.sol#283)
+	StopLimit.orders (automatedTrigger/StopLimit.sol#23) can be used in cross function reentrancies:
+	- StopLimit._cancelOrder(uint96) (automatedTrigger/StopLimit.sol#358-377)
+	- StopLimit.cancelOrder(uint96) (automatedTrigger/StopLimit.sol#294-298)
+	- StopLimit.checkUpkeep(bytes) (automatedTrigger/StopLimit.sol#40-73)
+	- StopLimit.orders (automatedTrigger/StopLimit.sol#23)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-1
+INFO:Detectors:
+StopLimit.performUpkeep(bytes).swapPayload (automatedTrigger/StopLimit.sol#106) is a local variable never initialized
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#uninitialized-local-variables
+INFO:Detectors:
+StopLimit.handlePermit(address,bytes,uint160,address).owner (automatedTrigger/StopLimit.sol#381) shadows:
+	- Ownable.owner() (interfaces/openzeppelin/Ownable.sol#43-45) (function)
+IPermit2.permitTransferFrom(IPermit2.PermitTransferFrom,IPermit2.SignatureTransferDetails,address,bytes).permit (interfaces/uniswapV3/IPermit2.sol#57) shadows:
+	- IPermit2.permit(address,IPermit2.PermitSingle,bytes) (interfaces/uniswapV3/IPermit2.sol#90-94) (function)
+UniswapV3Pool.positions(bytes32).liquidity (interfaces/uniswapV3/UniswapV3Pool.sol#119) shadows:
+	- UniswapV3Pool.liquidity() (interfaces/uniswapV3/UniswapV3Pool.sol#85) (function)
+UniswapV3Pool.protocolFees().token0 (interfaces/uniswapV3/UniswapV3Pool.sol#126) shadows:
+	- UniswapV3Pool.token0() (interfaces/uniswapV3/UniswapV3Pool.sol#176) (function)
+UniswapV3Pool.protocolFees().token1 (interfaces/uniswapV3/UniswapV3Pool.sol#126) shadows:
+	- UniswapV3Pool.token1() (interfaces/uniswapV3/UniswapV3Pool.sol#178) (function)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#local-variable-shadowing
+INFO:Detectors:
+StopLimit.checkInRange(IStopLimit.Order) (automatedTrigger/StopLimit.sol#414-427) has external calls inside a loop: exchangeRate = MASTER.getExchangeRate(order.tokenIn,order.tokenOut) (automatedTrigger/StopLimit.sol#417)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation/#calls-inside-a-loop
+INFO:Detectors:
+Reentrancy in StopLimit.createOrder(uint256,uint256,uint256,uint256,IERC20,IERC20,address,uint16,uint16,uint16,uint16,bool,bool,bytes) (automatedTrigger/StopLimit.sol#146-188):
+	External calls:
+	- handlePermit(recipient,permitPayload,uint160(amountIn),address(tokenIn)) (automatedTrigger/StopLimit.sol#163-168)
+		- permit2.permit(owner,payload.permitSingle,payload.signature) (automatedTrigger/StopLimit.sol#391)
+		- permit2.transferFrom(owner,address(this),amount,token) (automatedTrigger/StopLimit.sol#392)
+	- tokenIn.safeTransferFrom(recipient,address(this),amountIn) (automatedTrigger/StopLimit.sol#171)
+	State variables written after the call(s):
+	- _createOrder(stopLimitPrice,takeProfit,stopPrice,amountIn,tokenIn,tokenOut,recipient,feeBips,takeProfitSlippage,stopSlippage,swapSlippage,swapOnFill) (automatedTrigger/StopLimit.sol#174-187)
+		- orders[orderId] = Order({orderId:orderId,stopLimitPrice:stopLimitPrice,stopPrice:stopPrice,takeProfit:takeProfit,amountIn:amountIn,tokenIn:tokenIn,tokenOut:tokenOut,takeProfitSlippage:takeProfitSlippage,feeBips:feeBips,stopSlippage:stopSlippage,swapSlippage:swapSlippage,recipient:recipient,direction:MASTER.getExchangeRate(tokenIn,tokenOut) > stopLimitPrice,swapOnFill:swapOnFill}) (automatedTrigger/StopLimit.sol#336-352)
+	- _createOrder(stopLimitPrice,takeProfit,stopPrice,amountIn,tokenIn,tokenOut,recipient,feeBips,takeProfitSlippage,stopSlippage,swapSlippage,swapOnFill) (automatedTrigger/StopLimit.sol#174-187)
+		- pendingOrderIds.push(uint96(orderId)) (automatedTrigger/StopLimit.sol#353)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-2
+INFO:Detectors:
+Reentrancy in StopLimit._cancelOrder(uint96) (automatedTrigger/StopLimit.sol#358-377):
+	External calls:
+	- order.tokenIn.safeTransfer(order.recipient,order.amountIn) (automatedTrigger/StopLimit.sol#367)
+	Event emitted after the call(s):
+	- OrderCancelled(orderId) (automatedTrigger/StopLimit.sol#370)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-3
+INFO:Detectors:
+Address._revert(bytes,string) (interfaces/openzeppelin/Address.sol#231-243) uses assembly
+	- INLINE ASM (interfaces/openzeppelin/Address.sol#236-239)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#assembly-usage
+INFO:Detectors:
+6 different versions of Solidity are used:
+	- Version constraint ^0.8.19 is used by:
+		-^0.8.19 (automatedTrigger/IAutomation.sol#2)
+		-^0.8.19 (interfaces/uniswapV3/IPermit2.sol#2)
+	- Version constraint ^0.8.20 is used by:
+		-^0.8.20 (automatedTrigger/StopLimit.sol#2)
+		-^0.8.20 (interfaces/openzeppelin/ReentrancyGuard.sol#4)
+	- Version constraint ^0.8.0 is used by:
+		-^0.8.0 (interfaces/chainlink/AutomationCompatibleInterface.sol#2)
+		-^0.8.0 (interfaces/openzeppelin/Context.sol#4)
+		-^0.8.0 (interfaces/openzeppelin/IERC20.sol#4)
+		-^0.8.0 (interfaces/openzeppelin/IERC20Permit.sol#4)
+		-^0.8.0 (interfaces/openzeppelin/Ownable.sol#4)
+		-^0.8.0 (interfaces/openzeppelin/SafeERC20.sol#4)
+	- Version constraint ^0.8.1 is used by:
+		-^0.8.1 (interfaces/openzeppelin/Address.sol#4)
+	- Version constraint ^0.8.16 is used by:
+		-^0.8.16 (interfaces/uniswapV3/UniswapV3Pool.sol#2)
+	- Version constraint ^0.8.9 is used by:
+		-^0.8.9 (libraries/ArrayMutation.sol#2)
+		-^0.8.9 (oracle/IOracleRelay.sol#2)
+		-^0.8.9 (oracle/IPythRelay.sol#2)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#different-pragma-directives-are-used
+INFO:Detectors:
+Context._msgData() (interfaces/openzeppelin/Context.sol#21-23) is never used and should be removed
+ReentrancyGuard._reentrancyGuardEntered() (interfaces/openzeppelin/ReentrancyGuard.sol#84-86) is never used and should be removed
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dead-code
+INFO:Detectors:
+Version constraint ^0.8.19 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- VerbatimInvalidDeduplication
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess.
+It is used by:
+	- ^0.8.19 (automatedTrigger/IAutomation.sol#2)
+	- ^0.8.19 (interfaces/uniswapV3/IPermit2.sol#2)
+Version constraint ^0.8.20 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- VerbatimInvalidDeduplication
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess.
+It is used by:
+	- ^0.8.20 (automatedTrigger/StopLimit.sol#2)
+	- ^0.8.20 (interfaces/openzeppelin/ReentrancyGuard.sol#4)
+Version constraint ^0.8.0 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- DataLocationChangeInInternalOverride
+	- NestedCalldataArrayAbiReencodingSizeValidation
+	- SignedImmutables
+	- ABIDecodeTwoDimensionalArrayMemory
+	- KeccakCaching.
+It is used by:
+	- ^0.8.0 (interfaces/chainlink/AutomationCompatibleInterface.sol#2)
+	- ^0.8.0 (interfaces/openzeppelin/Context.sol#4)
+	- ^0.8.0 (interfaces/openzeppelin/IERC20.sol#4)
+	- ^0.8.0 (interfaces/openzeppelin/IERC20Permit.sol#4)
+	- ^0.8.0 (interfaces/openzeppelin/Ownable.sol#4)
+	- ^0.8.0 (interfaces/openzeppelin/SafeERC20.sol#4)
+Version constraint ^0.8.1 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- DataLocationChangeInInternalOverride
+	- NestedCalldataArrayAbiReencodingSizeValidation
+	- SignedImmutables
+	- ABIDecodeTwoDimensionalArrayMemory
+	- KeccakCaching.
+It is used by:
+	- ^0.8.1 (interfaces/openzeppelin/Address.sol#4)
+Version constraint ^0.8.16 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- VerbatimInvalidDeduplication
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- StorageWriteRemovalBeforeConditionalTermination.
+It is used by:
+	- ^0.8.16 (interfaces/uniswapV3/UniswapV3Pool.sol#2)
+Version constraint ^0.8.9 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- VerbatimInvalidDeduplication
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- DataLocationChangeInInternalOverride
+	- NestedCalldataArrayAbiReencodingSizeValidation.
+It is used by:
+	- ^0.8.9 (libraries/ArrayMutation.sol#2)
+	- ^0.8.9 (oracle/IOracleRelay.sol#2)
+	- ^0.8.9 (oracle/IPythRelay.sol#2)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Low level call in Address.sendValue(address,uint256) (interfaces/openzeppelin/Address.sol#64-69):
+	- (success,None) = recipient.call{value: amount}() (interfaces/openzeppelin/Address.sol#67)
+Low level call in Address.functionCallWithValue(address,bytes,uint256,string) (interfaces/openzeppelin/Address.sol#128-137):
+	- (success,returndata) = target.call{value: value}(data) (interfaces/openzeppelin/Address.sol#135)
+Low level call in Address.functionStaticCall(address,bytes,string) (interfaces/openzeppelin/Address.sol#155-162):
+	- (success,returndata) = target.staticcall(data) (interfaces/openzeppelin/Address.sol#160)
+Low level call in Address.functionDelegateCall(address,bytes,string) (interfaces/openzeppelin/Address.sol#180-187):
+	- (success,returndata) = target.delegatecall(data) (interfaces/openzeppelin/Address.sol#185)
+Low level call in SafeERC20._callOptionalReturnBool(IERC20,bytes) (interfaces/openzeppelin/SafeERC20.sol#134-142):
+	- (success,returndata) = address(token).call(data) (interfaces/openzeppelin/SafeERC20.sol#139)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#low-level-calls
+INFO:Detectors:
+Function IAutomationMaster.STOP_LIMIT_CONTRACT() (automatedTrigger/IAutomation.sol#69) is not in mixedCase
+Parameter StopLimit.modifyOrder(uint96,uint256,uint256,uint256,uint256,IERC20,address,uint16,uint16,uint16,bool,bool,bool,bytes)._stopLimitPrice (automatedTrigger/StopLimit.sol#193) is not in mixedCase
+Parameter StopLimit.modifyOrder(uint96,uint256,uint256,uint256,uint256,IERC20,address,uint16,uint16,uint16,bool,bool,bool,bytes)._takeProfit (automatedTrigger/StopLimit.sol#194) is not in mixedCase
+Parameter StopLimit.modifyOrder(uint96,uint256,uint256,uint256,uint256,IERC20,address,uint16,uint16,uint16,bool,bool,bool,bytes)._stopPrice (automatedTrigger/StopLimit.sol#195) is not in mixedCase
+Parameter StopLimit.modifyOrder(uint96,uint256,uint256,uint256,uint256,IERC20,address,uint16,uint16,uint16,bool,bool,bool,bytes)._amountInDelta (automatedTrigger/StopLimit.sol#196) is not in mixedCase
+Parameter StopLimit.modifyOrder(uint96,uint256,uint256,uint256,uint256,IERC20,address,uint16,uint16,uint16,bool,bool,bool,bytes)._tokenOut (automatedTrigger/StopLimit.sol#197) is not in mixedCase
+Parameter StopLimit.modifyOrder(uint96,uint256,uint256,uint256,uint256,IERC20,address,uint16,uint16,uint16,bool,bool,bool,bytes)._recipient (automatedTrigger/StopLimit.sol#198) is not in mixedCase
+Parameter StopLimit.modifyOrder(uint96,uint256,uint256,uint256,uint256,IERC20,address,uint16,uint16,uint16,bool,bool,bool,bytes)._takeProfitSlippage (automatedTrigger/StopLimit.sol#199) is not in mixedCase
+Parameter StopLimit.modifyOrder(uint96,uint256,uint256,uint256,uint256,IERC20,address,uint16,uint16,uint16,bool,bool,bool,bytes)._stopSlippage (automatedTrigger/StopLimit.sol#200) is not in mixedCase
+Parameter StopLimit.modifyOrder(uint96,uint256,uint256,uint256,uint256,IERC20,address,uint16,uint16,uint16,bool,bool,bool,bytes)._swapSlippage (automatedTrigger/StopLimit.sol#201) is not in mixedCase
+Parameter StopLimit.modifyOrder(uint96,uint256,uint256,uint256,uint256,IERC20,address,uint16,uint16,uint16,bool,bool,bool,bytes)._swapOnFill (automatedTrigger/StopLimit.sol#202) is not in mixedCase
+Variable StopLimit.MASTER (automatedTrigger/StopLimit.sol#17) is not in mixedCase
+Variable StopLimit.BRACKET_CONTRACT (automatedTrigger/StopLimit.sol#18) is not in mixedCase
+Function IERC20Permit.DOMAIN_SEPARATOR() (interfaces/openzeppelin/IERC20Permit.sol#89) is not in mixedCase
+Function IPermit2.DOMAIN_SEPARATOR() (interfaces/uniswapV3/IPermit2.sol#32) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Detectors:
+Loop condition i < pendingOrderIds.length (automatedTrigger/StopLimit.sol#48) should use cached array length instead of referencing `length` member of the storage array.
+ Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#cache-array-length
+INFO:Slither:./automatedTrigger/ analyzed (89 contracts with 100 detectors), 181 result(s) found

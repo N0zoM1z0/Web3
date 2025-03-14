@@ -1,0 +1,143 @@
+'forge config --json' running
+'/home/web/.solc-select/artifacts/solc-0.8.28/solc-0.8.28 --version' running
+'/home/web/.solc-select/artifacts/solc-0.8.28/solc-0.8.28 @openzeppelin/contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/contracts/ @openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/ ds-test/=lib/openzeppelin-foundry-upgrades/lib/solidity-stringutils/lib/ds-test/src/ erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/ forge-std/=lib/forge-std/src/ halmos-cheatcodes/=lib/openzeppelin-contracts-upgradeable/lib/halmos-cheatcodes/src/ openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/ openzeppelin-contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/ openzeppelin-foundry-upgrades/=lib/openzeppelin-foundry-upgrades/src/ solidity-stringutils/=lib/openzeppelin-foundry-upgrades/lib/solidity-stringutils/ ./src/Blueprint.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --evm-version cancun --allow-paths .,/home/web/Desktop/Tmp/2025-03-crestal-network/crestal-omni-contracts/src' running
+'forge config --json' running
+'/home/web/.solc-select/artifacts/solc-0.8.28/solc-0.8.28 --version' running
+'/home/web/.solc-select/artifacts/solc-0.8.28/solc-0.8.28 @openzeppelin/contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/contracts/ @openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/ ds-test/=lib/openzeppelin-foundry-upgrades/lib/solidity-stringutils/lib/ds-test/src/ erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/ forge-std/=lib/forge-std/src/ halmos-cheatcodes/=lib/openzeppelin-contracts-upgradeable/lib/halmos-cheatcodes/src/ openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/ openzeppelin-contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/ openzeppelin-foundry-upgrades/=lib/openzeppelin-foundry-upgrades/src/ solidity-stringutils/=lib/openzeppelin-foundry-upgrades/lib/solidity-stringutils/ ./src/EIP712.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --evm-version cancun --allow-paths .,/home/web/Desktop/Tmp/2025-03-crestal-network/crestal-omni-contracts/src' running
+'forge config --json' running
+'/home/web/.solc-select/artifacts/solc-0.8.28/solc-0.8.28 --version' running
+'/home/web/.solc-select/artifacts/solc-0.8.28/solc-0.8.28 @openzeppelin/contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/contracts/ @openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/ ds-test/=lib/openzeppelin-foundry-upgrades/lib/solidity-stringutils/lib/ds-test/src/ erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/ forge-std/=lib/forge-std/src/ halmos-cheatcodes/=lib/openzeppelin-contracts-upgradeable/lib/halmos-cheatcodes/src/ openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/ openzeppelin-contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/ openzeppelin-foundry-upgrades/=lib/openzeppelin-foundry-upgrades/src/ solidity-stringutils/=lib/openzeppelin-foundry-upgrades/lib/solidity-stringutils/ ./src/BlueprintV3.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --evm-version cancun --allow-paths .,/home/web/Desktop/Tmp/2025-03-crestal-network/crestal-omni-contracts/src' running
+'forge config --json' running
+'/home/web/.solc-select/artifacts/solc-0.8.28/solc-0.8.28 --version' running
+'/home/web/.solc-select/artifacts/solc-0.8.28/solc-0.8.28 @openzeppelin/contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/contracts/ @openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/ ds-test/=lib/openzeppelin-foundry-upgrades/lib/solidity-stringutils/lib/ds-test/src/ erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/ forge-std/=lib/forge-std/src/ halmos-cheatcodes/=lib/openzeppelin-contracts-upgradeable/lib/halmos-cheatcodes/src/ openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/ openzeppelin-contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/ openzeppelin-foundry-upgrades/=lib/openzeppelin-foundry-upgrades/src/ solidity-stringutils/=lib/openzeppelin-foundry-upgrades/lib/solidity-stringutils/ ./src/BlueprintCore.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --evm-version cancun --allow-paths .,/home/web/Desktop/Tmp/2025-03-crestal-network/crestal-omni-contracts/src' running
+'forge config --json' running
+'/home/web/.solc-select/artifacts/solc-0.8.28/solc-0.8.28 --version' running
+'/home/web/.solc-select/artifacts/solc-0.8.28/solc-0.8.28 @openzeppelin/contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/contracts/ @openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/ ds-test/=lib/openzeppelin-foundry-upgrades/lib/solidity-stringutils/lib/ds-test/src/ erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/ forge-std/=lib/forge-std/src/ halmos-cheatcodes/=lib/openzeppelin-contracts-upgradeable/lib/halmos-cheatcodes/src/ openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/ openzeppelin-contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/ openzeppelin-foundry-upgrades/=lib/openzeppelin-foundry-upgrades/src/ solidity-stringutils/=lib/openzeppelin-foundry-upgrades/lib/solidity-stringutils/ ./src/BlueprintV1.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --evm-version cancun --allow-paths .,/home/web/Desktop/Tmp/2025-03-crestal-network/crestal-omni-contracts/src' running
+'forge config --json' running
+'/home/web/.solc-select/artifacts/solc-0.8.28/solc-0.8.28 --version' running
+'/home/web/.solc-select/artifacts/solc-0.8.28/solc-0.8.28 @openzeppelin/contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/contracts/ @openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/ ds-test/=lib/openzeppelin-foundry-upgrades/lib/solidity-stringutils/lib/ds-test/src/ erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/ forge-std/=lib/forge-std/src/ halmos-cheatcodes/=lib/openzeppelin-contracts-upgradeable/lib/halmos-cheatcodes/src/ openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/ openzeppelin-contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/ openzeppelin-foundry-upgrades/=lib/openzeppelin-foundry-upgrades/src/ solidity-stringutils/=lib/openzeppelin-foundry-upgrades/lib/solidity-stringutils/ ./src/BlueprintV2.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --evm-version cancun --allow-paths .,/home/web/Desktop/Tmp/2025-03-crestal-network/crestal-omni-contracts/src' running
+'forge config --json' running
+'/home/web/.solc-select/artifacts/solc-0.8.28/solc-0.8.28 --version' running
+'/home/web/.solc-select/artifacts/solc-0.8.28/solc-0.8.28 @openzeppelin/contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/contracts/ @openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/ ds-test/=lib/openzeppelin-foundry-upgrades/lib/solidity-stringutils/lib/ds-test/src/ erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/ forge-std/=lib/forge-std/src/ halmos-cheatcodes/=lib/openzeppelin-contracts-upgradeable/lib/halmos-cheatcodes/src/ openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/ openzeppelin-contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/ openzeppelin-foundry-upgrades/=lib/openzeppelin-foundry-upgrades/src/ solidity-stringutils/=lib/openzeppelin-foundry-upgrades/lib/solidity-stringutils/ ./src/BlueprintV5.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --evm-version cancun --allow-paths .,/home/web/Desktop/Tmp/2025-03-crestal-network/crestal-omni-contracts/src' running
+'forge config --json' running
+'/home/web/.solc-select/artifacts/solc-0.8.28/solc-0.8.28 --version' running
+'/home/web/.solc-select/artifacts/solc-0.8.28/solc-0.8.28 @openzeppelin/contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/contracts/ @openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/ ds-test/=lib/openzeppelin-foundry-upgrades/lib/solidity-stringutils/lib/ds-test/src/ erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/ forge-std/=lib/forge-std/src/ halmos-cheatcodes/=lib/openzeppelin-contracts-upgradeable/lib/halmos-cheatcodes/src/ openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/ openzeppelin-contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/ openzeppelin-foundry-upgrades/=lib/openzeppelin-foundry-upgrades/src/ solidity-stringutils/=lib/openzeppelin-foundry-upgrades/lib/solidity-stringutils/ ./src/Payment.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --evm-version cancun --allow-paths .,/home/web/Desktop/Tmp/2025-03-crestal-network/crestal-omni-contracts/src' running
+'forge config --json' running
+'/home/web/.solc-select/artifacts/solc-0.8.28/solc-0.8.28 --version' running
+'/home/web/.solc-select/artifacts/solc-0.8.28/solc-0.8.28 @openzeppelin/contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/contracts/ @openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/ ds-test/=lib/openzeppelin-foundry-upgrades/lib/solidity-stringutils/lib/ds-test/src/ erc4626-tests/=lib/openzeppelin-contracts-upgradeable/lib/erc4626-tests/ forge-std/=lib/forge-std/src/ halmos-cheatcodes/=lib/openzeppelin-contracts-upgradeable/lib/halmos-cheatcodes/src/ openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/ openzeppelin-contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/ openzeppelin-foundry-upgrades/=lib/openzeppelin-foundry-upgrades/src/ solidity-stringutils/=lib/openzeppelin-foundry-upgrades/lib/solidity-stringutils/ ./src/BlueprintV4.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize --optimize-runs 200 --evm-version cancun --allow-paths .,/home/web/Desktop/Tmp/2025-03-crestal-network/crestal-omni-contracts/src' running
+INFO:Detectors:
+BlueprintCore.createCommonDeploymentRequest(address,bytes32,address,address,string,string) (src/BlueprintCore.sol#326-357) is never used and should be removed
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dead-code
+INFO:Detectors:
+Parameter Blueprint.setFeeCollectionWalletAddress(address)._feeCollectionWalletAddress (src/Blueprint.sol#85) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Detectors:
+BlueprintCore.VERSION (src/BlueprintCore.sol#24) should be constant 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-constant
+INFO:Detectors:
+BlueprintCore.projectIDs (src/BlueprintCore.sol#45) is never initialized. It is used in:
+BlueprintCore.nftContractAddress (src/BlueprintCore.sol#77) is never initialized. It is used in:
+	- BlueprintCore.createAgent(address,bytes32,string,address,string,uint256,address) (src/BlueprintCore.sol#427-477)
+BlueprintCore.feeCollectionWalletAddress (src/BlueprintCore.sol#91) is never initialized. It is used in:
+	- BlueprintCore.createAgent(address,bytes32,string,address,string,uint256,address) (src/BlueprintCore.sol#427-477)
+	- BlueprintCore.updateWorkerDeploymentConfigCommon(address,address,bytes32,bytes32,string) (src/BlueprintCore.sol#628-661)
+	- BlueprintCore.userTopUp(address,uint256) (src/BlueprintCore.sol#751-762)
+BlueprintCore.paymentAddressesMp (src/BlueprintCore.sol#93) is never initialized. It is used in:
+	- BlueprintCore.getPaymentAddresses() (src/BlueprintCore.sol#708-710)
+BlueprintCore.paymentAddressEnableMp (src/BlueprintCore.sol#95) is never initialized. It is used in:
+	- BlueprintCore.createAgent(address,bytes32,string,address,string,uint256,address) (src/BlueprintCore.sol#427-477)
+	- BlueprintCore.updateWorkerDeploymentConfigCommon(address,address,bytes32,bytes32,string) (src/BlueprintCore.sol#628-661)
+	- BlueprintCore.userTopUp(address,uint256) (src/BlueprintCore.sol#751-762)
+BlueprintCore.paymentOpCostMp (src/BlueprintCore.sol#97) is never initialized. It is used in:
+	- BlueprintCore.createAgent(address,bytes32,string,address,string,uint256,address) (src/BlueprintCore.sol#427-477)
+	- BlueprintCore.updateWorkerDeploymentConfigCommon(address,address,bytes32,bytes32,string) (src/BlueprintCore.sol#628-661)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#uninitialized-state-variables
+INFO:Detectors:
+BlueprintCore.createCommonDeploymentRequest(address,bytes32,address,address,string,string) (src/BlueprintCore.sol#326-357) is never used and should be removed
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dead-code
+INFO:Detectors:
+BlueprintCore.requestWorker (src/BlueprintCore.sol#43) is never used in BlueprintCore (src/BlueprintCore.sol#8-763)
+BlueprintCore.workerAddresses (src/BlueprintCore.sol#65) is never used in BlueprintCore (src/BlueprintCore.sol#8-763)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#unused-state-variable
+INFO:Detectors:
+BlueprintCore.VERSION (src/BlueprintCore.sol#24) should be constant 
+BlueprintCore.feeCollectionWalletAddress (src/BlueprintCore.sol#91) should be constant 
+BlueprintCore.nftContractAddress (src/BlueprintCore.sol#77) should be constant 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-constant
+INFO:Detectors:
+Blueprint.createDeploymentRequest(bytes32,address,string,string).deploymentStatus (src/history/BlueprintV1.sol#195) is a local variable never initialized
+Blueprint.createPrivateDeploymentRequest(bytes32,address,address,string,string).deploymentStatus (src/history/BlueprintV1.sol#235) is a local variable never initialized
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#uninitialized-local-variables
+INFO:Detectors:
+Variable Blueprint.VERSION (src/history/BlueprintV1.sol#20) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Detectors:
+Blueprint.factor (src/history/BlueprintV2.sol#21) is never initialized. It is used in:
+	- Blueprint.setReputation(address) (src/history/BlueprintV2.sol#103-119)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#uninitialized-state-variables
+INFO:Detectors:
+Blueprint.deploymentRequest(bytes32,address,address,string,string,uint256) (src/history/BlueprintV2.sol#350-401) uses a dangerous strict equality:
+	- require(bool,string)(projects[projectId].requestDeploymentID == 0,deployment requestID already exists) (src/history/BlueprintV2.sol#370)
+Blueprint.proposalRequest(bytes32,address,string,string) (src/history/BlueprintV2.sol#189-226) uses a dangerous strict equality:
+	- require(bool,string)(projects[projectId].requestProposalID == 0,proposal requestID already exists) (src/history/BlueprintV2.sol#209)
+Blueprint.setProjectId(bytes32) (src/history/BlueprintV2.sol#121-134) uses a dangerous strict equality:
+	- require(bool,string)(projects[projectId].id == 0,projectId already exists) (src/history/BlueprintV2.sol#123)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities
+INFO:Detectors:
+Blueprint.deploymentRequest(bytes32,address,address,string,string,uint256).deploymentStatus (src/history/BlueprintV2.sol#382) is a local variable never initialized
+Blueprint.createMultipleDeploymentRequest(bytes32,address,string[],string).projectDeploymentID (src/history/BlueprintV2.sol#263) is a local variable never initialized
+Blueprint.createMultiplePrivateDeploymentRequest(bytes32,address,address,string[],string).projectDeploymentID (src/history/BlueprintV2.sol#324) is a local variable never initialized
+Blueprint.setProjectId(bytes32).project (src/history/BlueprintV2.sol#125) is a local variable never initialized
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#uninitialized-local-variables
+INFO:Detectors:
+Blueprint.setProjectId(bytes32) (src/history/BlueprintV2.sol#121-134) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(projects[projectId].id == 0,projectId already exists) (src/history/BlueprintV2.sol#123)
+Blueprint.upgradeProject(bytes32) (src/history/BlueprintV2.sol#143-152) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(projects[projectId].id != 0 || projectIDs[projectId] != address(0),projectId does not exist) (src/history/BlueprintV2.sol#145)
+Blueprint.proposalRequest(bytes32,address,string,string) (src/history/BlueprintV2.sol#189-226) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(projects[projectId].id != 0 || projectIDs[projectId] != address(0),projectId does not exist) (src/history/BlueprintV2.sol#199)
+	- require(bool,string)(projects[projectId].requestProposalID == 0,proposal requestID already exists) (src/history/BlueprintV2.sol#209)
+Blueprint.createMultipleDeploymentRequest(bytes32,address,string[],string) (src/history/BlueprintV2.sol#254-284) uses timestamp for comparisons
+	Dangerous comparisons:
+	- projectDeploymentID != 0 (src/history/BlueprintV2.sol#269)
+Blueprint.createMultiplePrivateDeploymentRequest(bytes32,address,address,string[],string) (src/history/BlueprintV2.sol#314-348) uses timestamp for comparisons
+	Dangerous comparisons:
+	- projectDeploymentID != 0 (src/history/BlueprintV2.sol#330)
+Blueprint.deploymentRequest(bytes32,address,address,string,string,uint256) (src/history/BlueprintV2.sol#350-401) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(projects[projectId].id != 0 || projectIDs[projectId] != address(0),projectId does not exist) (src/history/BlueprintV2.sol#359)
+	- require(bool,string)(projects[projectId].requestDeploymentID == 0,deployment requestID already exists) (src/history/BlueprintV2.sol#370)
+Blueprint.submitProofOfDeployment(bytes32,bytes32,string) (src/history/BlueprintV2.sol#451-468) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(projects[projectId].id != 0 || projectIDs[projectId] != address(0),projectId does not exist) (src/history/BlueprintV2.sol#453)
+Blueprint.submitDeploymentRequest(bytes32,bytes32) (src/history/BlueprintV2.sol#470-493) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(projects[projectId].id != 0 || projectIDs[projectId] != address(0),projectId does not exist) (src/history/BlueprintV2.sol#472)
+Blueprint.UpdateWorkerDeploymentConfig(bytes32,bytes32,string) (src/history/BlueprintV2.sol#495-515) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(projects[projectId].id != 0 || projectIDs[projectId] != address(0),projectId does not exist) (src/history/BlueprintV2.sol#499)
+Blueprint.getProjectInfo(bytes32) (src/history/BlueprintV2.sol#538-544) uses timestamp for comparisons
+	Dangerous comparisons:
+	- require(bool,string)(projects[projectId].id != 0,projectId does not exist) (src/history/BlueprintV2.sol#540)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#block-timestamp
+INFO:Detectors:
+Blueprint.deploymentRequest(bytes32,address,address,string,string,uint256) (src/history/BlueprintV2.sol#350-401) has costly operations inside a loop:
+	- totalDeploymentRequest ++ (src/history/BlueprintV2.sol#377)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#costly-operations-inside-a-loop
+INFO:Detectors:
+Function Blueprint.UpdateWorkerDeploymentConfig(bytes32,bytes32,string) (src/history/BlueprintV2.sol#495-515) is not in mixedCase
+Variable Blueprint.VERSION (src/history/BlueprintV2.sol#20) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Detectors:
+Blueprint.factor (src/history/BlueprintV2.sol#21) should be constant 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-constant
+INFO:Detectors:
+BlueprintCore.createCommonDeploymentRequest(address,bytes32,address,address,string,string) (src/BlueprintCore.sol#326-357) is never used and should be removed
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dead-code
+INFO:Detectors:
+Parameter Blueprint.setFeeCollectionWalletAddress(address)._feeCollectionWalletAddress (src/Blueprint.sol#85) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Slither:./src/ analyzed (165 contracts with 100 detectors), 42 result(s) found

@@ -1,0 +1,12 @@
+[submodule "yieldoor/lib/forge-std"]
+	path = yieldoor/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "yieldoor/lib/openzeppelin-contracts"]
+	path = yieldoor/lib/openzeppelin-contracts
+	url = https://github.com/openzeppelin/openzeppelin-contracts
+[submodule "yieldoor/lib/v3-core"]
+	path = yieldoor/lib/v3-core
+	url = https://github.com/Uniswap/v3-core
+[submodule "yieldoor/lib/v3-periphery"]
+	path = yieldoor/lib/v3-periphery
+	url = https://github.com/Uniswap/v3-periphery

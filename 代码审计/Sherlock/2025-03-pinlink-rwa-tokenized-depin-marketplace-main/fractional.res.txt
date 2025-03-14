@@ -1,0 +1,40 @@
+'forge config --json' running
+Could not detect solc version from Foundry config. Falling back to system version...
+'solc --version' running
+'solc @openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/ erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/ forge-std/=lib/forge-std/src/ halmos-cheatcodes/=lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/ openzeppelin-contracts/=lib/openzeppelin-contracts/ ./src/fractional/IFractionalAssets.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize-runs 200 --evm-version cancun --allow-paths .,/home/web/Desktop/Tmp/2025-03-pinlink-rwa-tokenized-depin-marketplace/marketplace-contracts/src/fractional' running
+'forge config --json' running
+Could not detect solc version from Foundry config. Falling back to system version...
+'solc --version' running
+'solc @openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/ erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/ forge-std/=lib/forge-std/src/ halmos-cheatcodes/=lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/ openzeppelin-contracts/=lib/openzeppelin-contracts/ ./src/fractional/FractionalAssets.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize-runs 200 --evm-version cancun --allow-paths .,/home/web/Desktop/Tmp/2025-03-pinlink-rwa-tokenized-depin-marketplace/marketplace-contracts/src/fractional' running
+INFO:Detectors:
+2 different versions of Solidity are used:
+	- Version constraint >=0.6.2 is used by:
+		->=0.6.2 (lib/forge-std/src/interfaces/IERC1155.sol#2)
+		->=0.6.2 (lib/forge-std/src/interfaces/IERC165.sol#2)
+	- Version constraint 0.8.27 is used by:
+		-0.8.27 (src/fractional/IFractionalAssets.sol#2)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#different-pragma-directives-are-used
+INFO:Detectors:
+Version constraint >=0.6.2 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- MissingSideEffectsOnSelectorAccess
+	- AbiReencodingHeadOverflowWithStaticArrayCleanup
+	- DirtyBytesArrayToStorage
+	- NestedCalldataArrayAbiReencodingSizeValidation
+	- ABIDecodeTwoDimensionalArrayMemory
+	- KeccakCaching
+	- EmptyByteArrayCopy
+	- DynamicArrayCleanup
+	- MissingEscapingInFormatting
+	- ArraySliceDynamicallyEncodedBaseType
+	- ImplicitConstructorCallvalueCheck
+	- TupleAssignmentMultiStackSlotComponents
+	- MemoryArrayCreationOverflow.
+It is used by:
+	- >=0.6.2 (lib/forge-std/src/interfaces/IERC1155.sol#2)
+	- >=0.6.2 (lib/forge-std/src/interfaces/IERC165.sol#2)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+FractionalAssets.uri(uint256) (src/fractional/FractionalAssets.sol#41-44) calls abi.encodePacked() with multiple dynamic arguments:
+	- string(abi.encodePacked(_baseURI,Strings.toString(tokenId))) (src/fractional/FractionalAssets.sol#43)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#abi-encodePacked-collision
+INFO:Slither:./src/fractional/ analyzed (28 contracts with 100 detectors), 3 result(s) found

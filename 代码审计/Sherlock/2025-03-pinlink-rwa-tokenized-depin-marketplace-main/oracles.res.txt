@@ -1,0 +1,35 @@
+'forge config --json' running
+Could not detect solc version from Foundry config. Falling back to system version...
+'solc --version' running
+'solc @openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/ erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/ forge-std/=lib/forge-std/src/ halmos-cheatcodes/=lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/ openzeppelin-contracts/=lib/openzeppelin-contracts/ ./src/oracles/DummyOracle.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize-runs 200 --evm-version cancun --allow-paths .,/home/web/Desktop/Tmp/2025-03-pinlink-rwa-tokenized-depin-marketplace/marketplace-contracts/src/oracles' running
+'forge config --json' running
+Could not detect solc version from Foundry config. Falling back to system version...
+'solc --version' running
+'solc @openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/ erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/ forge-std/=lib/forge-std/src/ halmos-cheatcodes/=lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/ openzeppelin-contracts/=lib/openzeppelin-contracts/ ./src/oracles/IPinlinkOracle.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize-runs 200 --evm-version cancun --allow-paths .,/home/web/Desktop/Tmp/2025-03-pinlink-rwa-tokenized-depin-marketplace/marketplace-contracts/src/oracles' running
+'forge config --json' running
+Could not detect solc version from Foundry config. Falling back to system version...
+'solc --version' running
+'solc @openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/ erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/ forge-std/=lib/forge-std/src/ halmos-cheatcodes/=lib/openzeppelin-contracts/lib/halmos-cheatcodes/src/ openzeppelin-contracts/=lib/openzeppelin-contracts/ ./src/oracles/CentralizedOracle.sol --combined-json abi,ast,bin,bin-runtime,srcmap,srcmap-runtime,userdoc,devdoc,hashes --optimize-runs 200 --evm-version cancun --allow-paths .,/home/web/Desktop/Tmp/2025-03-pinlink-rwa-tokenized-depin-marketplace/marketplace-contracts/src/oracles' running
+INFO:Detectors:
+DummyOracle.constructor(address,uint256).token_ (src/oracles/DummyOracle.sol#24) lacks a zero-check on :
+		- TOKEN = token_ (src/oracles/DummyOracle.sol#25)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-zero-address-validation
+INFO:Detectors:
+Variable DummyOracle.TOKEN (src/oracles/DummyOracle.sol#11) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Detectors:
+CentralizedOracle.constructor(address,uint256).token_ (src/oracles/CentralizedOracle.sol#34) lacks a zero-check on :
+		- TOKEN = token_ (src/oracles/CentralizedOracle.sol#35)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-zero-address-validation
+INFO:Detectors:
+CentralizedOracle.convertToUsd(address,uint256) (src/oracles/CentralizedOracle.sol#74-85) uses timestamp for comparisons
+	Dangerous comparisons:
+	- (block.timestamp - lastPriceUpdateTimestamp) > STALENESS_THRESHOLD (src/oracles/CentralizedOracle.sol#78)
+CentralizedOracle.convertFromUsd(address,uint256) (src/oracles/CentralizedOracle.sol#90-101) uses timestamp for comparisons
+	Dangerous comparisons:
+	- (block.timestamp - lastPriceUpdateTimestamp) > STALENESS_THRESHOLD (src/oracles/CentralizedOracle.sol#94)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#block-timestamp
+INFO:Detectors:
+Variable CentralizedOracle.TOKEN (src/oracles/CentralizedOracle.sol#13) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Slither:./src/oracles/ analyzed (13 contracts with 100 detectors), 6 result(s) found

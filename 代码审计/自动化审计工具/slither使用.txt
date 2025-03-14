@@ -1,0 +1,16 @@
+git submodule update --init --progress
+
+forge install
+
+solc-select install 0.8.21
+
+solc-select use 0.8.21
+
+solc ./automatedTrigger/Bracket.sol --bin --via-ir --optimize
+
+slither ./automatedTrigger/ --filter-paths "openzeppelin,forge-std" --solc-args
+ "--via-ir --optimize" > automatedTrigger.res.txt 2>&1
+
+
+
+注意一下，可能需要在contracts目录运行，而不是进入autoxxx目录后再运行
