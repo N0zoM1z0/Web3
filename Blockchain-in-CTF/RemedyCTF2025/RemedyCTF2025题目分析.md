@@ -1,0 +1,5 @@
+# Diamond-Heist
+
+细看了合约，合约将token与vote挂钩，
+
+只需要调用delegate将vault的投票权赋给hexCoins合约的地址，然后用governanceCall调用底层call执行任意命令即可。

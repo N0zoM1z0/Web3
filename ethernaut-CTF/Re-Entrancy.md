@@ -79,7 +79,7 @@ contract reEntrance{
 部署完后，console调用 donate，向攻击合约的地址转点钱：
 
 ```
-await contract.donate("0x86FFC485b32d121e8525f67860F093400EF69879",{value:toWei("0.005")})
+await contract.donate("0x86FFC485b32d121e8525f67860F093400EF69879",{value:toWei("0.5")})
 ```
 
 
@@ -103,3 +103,11 @@ await contract.donate("0x86FFC485b32d121e8525f67860F093400EF69879",{value:toWei(
 可以用 await getBalance(contract.address) 看合约的余额。
 
 emmm。。。
+
+
+
+已经成功了啊。。。![image-20250328130926924](./Re-Entrancy/images/image-20250328130926924.png)
+
+
+
+是不是和foundry写poc时遇到同样的问题，过程中是成功的，但是，最后却失败（即没有拿到token。。。）

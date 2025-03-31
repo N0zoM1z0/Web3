@@ -7,3 +7,12 @@ pipx install mythril --force --verbose
 myth analyze ./src/*.sol --solc-json solc_remappings.json --execution-timeout 60 -t 3
 
 但也不是没给都能成功
+
+remappings.json必须要是这种格式：
+
+{
+    "remappings": [
+        "@openzeppelin/contracts/=lib/openzeppelin-contracts-upgradeable/lib/openzeppelin-contracts/contracts/",
+        "@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/"
+    ]
+}

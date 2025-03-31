@@ -2,6 +2,8 @@ git submodule update --init --progress
 
 forge install
 
+npm install
+
 solc-select install 0.8.21
 
 solc-select use 0.8.21
@@ -10,6 +12,9 @@ solc ./automatedTrigger/Bracket.sol --bin --via-ir --optimize
 
 slither ./automatedTrigger/ --filter-paths "openzeppelin,forge-std" --solc-args
  "--via-ir --optimize" > automatedTrigger.res.txt 2>&1
+ 
+或者直接
+slither .
 
 
 
