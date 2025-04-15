@@ -1,0 +1,10 @@
+{
+    "name": "SharkMarket Dev Container",
+    // "build": {
+    //     "dockerfile": "Dockerfile"
+    // },
+    "image": "sharkmarket:dev",
+    "runArgs": [
+        "--network=host"
+    ]
+}
