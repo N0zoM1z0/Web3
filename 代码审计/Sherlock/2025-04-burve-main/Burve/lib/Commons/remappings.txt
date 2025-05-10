@@ -1,0 +1,6 @@
+@prb/test/=lib/prb-test/src/
+forge-std/=lib/forge-std/src/
+CommonsTestLib/=test/lib/
+@v3-core/=lib/v3-core/contracts/
+@v3-periphery=lib/v3-periphery/contracts/
+@openzeppelin=lib/openzeppelin-contracts

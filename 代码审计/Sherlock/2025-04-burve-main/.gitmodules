@@ -1,0 +1,9 @@
+[submodule "Burve/lib/forge-std"]
+	path = Burve/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "Burve/lib/openzeppelin-contracts"]
+	path = Burve/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
+[submodule "Burve/lib/v3-core"]
+	path = Burve/lib/v3-core
+	url = https://github.com/Uniswap/v3-core

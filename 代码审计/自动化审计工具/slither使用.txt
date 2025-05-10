@@ -18,6 +18,7 @@ slither ./automatedTrigger/ --filter-paths "openzeppelin,forge-std" --solc-args
 或者直接
 slither .
 
+slither . --filter-paths "lib"
 
 
 注意一下，可能需要在contracts目录运行，而不是进入autoxxx目录后再运行

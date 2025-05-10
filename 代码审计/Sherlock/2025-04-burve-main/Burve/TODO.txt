@@ -1,0 +1,10 @@
+Add a test for price transitivity.
+- Add liquidity for one token and give amounts such that the numeraire is in one
+token.
+- Add liquidity without that token to force a new numeraire, but add equivalent
+value. It should get about the same number of shares.
+- We'll need to seed the pool pretty significantly first to ensure slippage on
+that last n-1 deposit isn't a big deal.
+- We can also test this with a lopsided pool and then multiple get price calls.
+- BUSL license 
+- 6 decimal token wrapper

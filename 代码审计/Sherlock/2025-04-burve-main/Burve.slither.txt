@@ -1,0 +1,609 @@
+'forge clean' running (wd: /home/web/Desktop/Tmp/2025-04-burve/Burve)
+'forge config --json' running
+'forge build --build-info --skip */test/** */script/** --force' running (wd: /home/web/Desktop/Tmp/2025-04-burve/Burve)
+INFO:Detectors:
+Burve.uniswapV3MintCallback(uint256,uint256,bytes) (src/single/Burve.sol#819-841) uses arbitrary from in transferFrom: TransferHelper.safeTransferFrom(address(token1),source,address(pool),amount1Owed) (src/single/Burve.sol#835-840)
+Burve.uniswapV3MintCallback(uint256,uint256,bytes) (src/single/Burve.sol#819-841) uses arbitrary from in transferFrom: TransferHelper.safeTransferFrom(address(token0),source,address(pool),amount0Owed) (src/single/Burve.sol#829-834)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#arbitrary-from-in-transferfrom
+INFO:Detectors:
+FullMath.mulDiv(uint256,uint256,uint256) (src/FullMath.sol#17-112) has bitwise-xor operator ^ instead of the exponentiation operator **: 
+	 - inv = (3 * denominator) ^ 2 (src/FullMath.sol#92)
+FullMath.mulDivX256(uint256,uint256,bool) (src/FullMath.sol#133-189) has bitwise-xor operator ^ instead of the exponentiation operator **: 
+	 - inv = (3 * denominator) ^ 2 (src/FullMath.sol#177)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-exponentiation
+INFO:Detectors:
+FullMath.mulDiv(uint256,uint256,uint256) (src/FullMath.sol#17-112) performs a multiplication on the result of a division:
+	- denominator = denominator / twos (src/FullMath.sol#70)
+	- inv = (3 * denominator) ^ 2 (src/FullMath.sol#92)
+FullMath.mulDiv(uint256,uint256,uint256) (src/FullMath.sol#17-112) performs a multiplication on the result of a division:
+	- denominator = denominator / twos (src/FullMath.sol#70)
+	- inv *= 2 - denominator * inv (src/FullMath.sol#96)
+FullMath.mulDiv(uint256,uint256,uint256) (src/FullMath.sol#17-112) performs a multiplication on the result of a division:
+	- denominator = denominator / twos (src/FullMath.sol#70)
+	- inv *= 2 - denominator * inv (src/FullMath.sol#97)
+FullMath.mulDiv(uint256,uint256,uint256) (src/FullMath.sol#17-112) performs a multiplication on the result of a division:
+	- denominator = denominator / twos (src/FullMath.sol#70)
+	- inv *= 2 - denominator * inv (src/FullMath.sol#98)
+FullMath.mulDiv(uint256,uint256,uint256) (src/FullMath.sol#17-112) performs a multiplication on the result of a division:
+	- denominator = denominator / twos (src/FullMath.sol#70)
+	- inv *= 2 - denominator * inv (src/FullMath.sol#99)
+FullMath.mulDiv(uint256,uint256,uint256) (src/FullMath.sol#17-112) performs a multiplication on the result of a division:
+	- denominator = denominator / twos (src/FullMath.sol#70)
+	- inv *= 2 - denominator * inv (src/FullMath.sol#100)
+FullMath.mulDiv(uint256,uint256,uint256) (src/FullMath.sol#17-112) performs a multiplication on the result of a division:
+	- denominator = denominator / twos (src/FullMath.sol#70)
+	- inv *= 2 - denominator * inv (src/FullMath.sol#101)
+FullMath.mulDiv(uint256,uint256,uint256) (src/FullMath.sol#17-112) performs a multiplication on the result of a division:
+	- prod0 = prod0 / twos (src/FullMath.sol#75)
+	- result = prod0 * inv (src/FullMath.sol#109)
+FullMath.mulDivX256(uint256,uint256,bool) (src/FullMath.sol#133-189) performs a multiplication on the result of a division:
+	- denominator = denominator / twos (src/FullMath.sol#164)
+	- inv = (3 * denominator) ^ 2 (src/FullMath.sol#177)
+FullMath.mulDivX256(uint256,uint256,bool) (src/FullMath.sol#133-189) performs a multiplication on the result of a division:
+	- denominator = denominator / twos (src/FullMath.sol#164)
+	- inv *= 2 - denominator * inv (src/FullMath.sol#178)
+FullMath.mulDivX256(uint256,uint256,bool) (src/FullMath.sol#133-189) performs a multiplication on the result of a division:
+	- denominator = denominator / twos (src/FullMath.sol#164)
+	- inv *= 2 - denominator * inv (src/FullMath.sol#179)
+FullMath.mulDivX256(uint256,uint256,bool) (src/FullMath.sol#133-189) performs a multiplication on the result of a division:
+	- denominator = denominator / twos (src/FullMath.sol#164)
+	- inv *= 2 - denominator * inv (src/FullMath.sol#180)
+FullMath.mulDivX256(uint256,uint256,bool) (src/FullMath.sol#133-189) performs a multiplication on the result of a division:
+	- denominator = denominator / twos (src/FullMath.sol#164)
+	- inv *= 2 - denominator * inv (src/FullMath.sol#181)
+FullMath.mulDivX256(uint256,uint256,bool) (src/FullMath.sol#133-189) performs a multiplication on the result of a division:
+	- denominator = denominator / twos (src/FullMath.sol#164)
+	- inv *= 2 - denominator * inv (src/FullMath.sol#182)
+FullMath.mulDivX256(uint256,uint256,bool) (src/FullMath.sol#133-189) performs a multiplication on the result of a division:
+	- denominator = denominator / twos (src/FullMath.sol#164)
+	- inv *= 2 - denominator * inv (src/FullMath.sol#183)
+FullMath.mulDivX256(uint256,uint256,bool) (src/FullMath.sol#133-189) performs a multiplication on the result of a division:
+	- remainder = remainder / twos (src/FullMath.sol#161)
+	- result = remainder * inv (src/FullMath.sol#185)
+TickMath.getSqrtRatioAtTick(int24) (src/single/integrations/uniswap/TickMath.sol#23-54) performs a multiplication on the result of a division:
+	- ratio = (ratio * 0x48a170391f7dc42444e8fa2) >> 128 (src/single/integrations/uniswap/TickMath.sol#46)
+	- ratio = type()(uint256).max / ratio (src/single/integrations/uniswap/TickMath.sol#48)
+TickMath.getSqrtRatioAtTick(int24) (src/single/integrations/uniswap/TickMath.sol#23-54) performs a multiplication on the result of a division:
+	- ratio = (ratio * 0x2216e584f5fa1ea926041bedfe98) >> 128 (src/single/integrations/uniswap/TickMath.sol#45)
+	- ratio = type()(uint256).max / ratio (src/single/integrations/uniswap/TickMath.sol#48)
+TickMath.getSqrtRatioAtTick(int24) (src/single/integrations/uniswap/TickMath.sol#23-54) performs a multiplication on the result of a division:
+	- ratio = (ratio * 0x5d6af8dedb81196699c329225ee604) >> 128 (src/single/integrations/uniswap/TickMath.sol#44)
+	- ratio = type()(uint256).max / ratio (src/single/integrations/uniswap/TickMath.sol#48)
+TickMath.getSqrtRatioAtTick(int24) (src/single/integrations/uniswap/TickMath.sol#23-54) performs a multiplication on the result of a division:
+	- ratio = (ratio * 0x9aa508b5b7a84e1c677de54f3e99bc9) >> 128 (src/single/integrations/uniswap/TickMath.sol#43)
+	- ratio = type()(uint256).max / ratio (src/single/integrations/uniswap/TickMath.sol#48)
+TickMath.getSqrtRatioAtTick(int24) (src/single/integrations/uniswap/TickMath.sol#23-54) performs a multiplication on the result of a division:
+	- ratio = (ratio * 0x31be135f97d08fd981231505542fcfa6) >> 128 (src/single/integrations/uniswap/TickMath.sol#42)
+	- ratio = type()(uint256).max / ratio (src/single/integrations/uniswap/TickMath.sol#48)
+TickMath.getSqrtRatioAtTick(int24) (src/single/integrations/uniswap/TickMath.sol#23-54) performs a multiplication on the result of a division:
+	- ratio = (ratio * 0x70d869a156d2a1b890bb3df62baf32f7) >> 128 (src/single/integrations/uniswap/TickMath.sol#41)
+	- ratio = type()(uint256).max / ratio (src/single/integrations/uniswap/TickMath.sol#48)
+TickMath.getSqrtRatioAtTick(int24) (src/single/integrations/uniswap/TickMath.sol#23-54) performs a multiplication on the result of a division:
+	- ratio = (ratio * 0xa9f746462d870fdf8a65dc1f90e061e5) >> 128 (src/single/integrations/uniswap/TickMath.sol#40)
+	- ratio = type()(uint256).max / ratio (src/single/integrations/uniswap/TickMath.sol#48)
+TickMath.getSqrtRatioAtTick(int24) (src/single/integrations/uniswap/TickMath.sol#23-54) performs a multiplication on the result of a division:
+	- ratio = (ratio * 0xd097f3bdfd2022b8845ad8f792aa5825) >> 128 (src/single/integrations/uniswap/TickMath.sol#39)
+	- ratio = type()(uint256).max / ratio (src/single/integrations/uniswap/TickMath.sol#48)
+TickMath.getSqrtRatioAtTick(int24) (src/single/integrations/uniswap/TickMath.sol#23-54) performs a multiplication on the result of a division:
+	- ratio = (ratio * 0xe7159475a2c29b7443b29c7fa6e889d9) >> 128 (src/single/integrations/uniswap/TickMath.sol#38)
+	- ratio = type()(uint256).max / ratio (src/single/integrations/uniswap/TickMath.sol#48)
+TickMath.getSqrtRatioAtTick(int24) (src/single/integrations/uniswap/TickMath.sol#23-54) performs a multiplication on the result of a division:
+	- ratio = (ratio * 0xf3392b0822b70005940c7a398e4b70f3) >> 128 (src/single/integrations/uniswap/TickMath.sol#37)
+	- ratio = type()(uint256).max / ratio (src/single/integrations/uniswap/TickMath.sol#48)
+TickMath.getSqrtRatioAtTick(int24) (src/single/integrations/uniswap/TickMath.sol#23-54) performs a multiplication on the result of a division:
+	- ratio = (ratio * 0xf987a7253ac413176f2b074cf7815e54) >> 128 (src/single/integrations/uniswap/TickMath.sol#36)
+	- ratio = type()(uint256).max / ratio (src/single/integrations/uniswap/TickMath.sol#48)
+TickMath.getSqrtRatioAtTick(int24) (src/single/integrations/uniswap/TickMath.sol#23-54) performs a multiplication on the result of a division:
+	- ratio = (ratio * 0xfcbe86c7900a88aedcffc83b479aa3a4) >> 128 (src/single/integrations/uniswap/TickMath.sol#35)
+	- ratio = type()(uint256).max / ratio (src/single/integrations/uniswap/TickMath.sol#48)
+TickMath.getSqrtRatioAtTick(int24) (src/single/integrations/uniswap/TickMath.sol#23-54) performs a multiplication on the result of a division:
+	- ratio = (ratio * 0xfe5dee046a99a2a811c461f1969c3053) >> 128 (src/single/integrations/uniswap/TickMath.sol#34)
+	- ratio = type()(uint256).max / ratio (src/single/integrations/uniswap/TickMath.sol#48)
+TickMath.getSqrtRatioAtTick(int24) (src/single/integrations/uniswap/TickMath.sol#23-54) performs a multiplication on the result of a division:
+	- ratio = (ratio * 0xff2ea16466c96a3843ec78b326b52861) >> 128 (src/single/integrations/uniswap/TickMath.sol#33)
+	- ratio = type()(uint256).max / ratio (src/single/integrations/uniswap/TickMath.sol#48)
+TickMath.getSqrtRatioAtTick(int24) (src/single/integrations/uniswap/TickMath.sol#23-54) performs a multiplication on the result of a division:
+	- ratio = (ratio * 0xff973b41fa98c081472e6896dfb254c0) >> 128 (src/single/integrations/uniswap/TickMath.sol#32)
+	- ratio = type()(uint256).max / ratio (src/single/integrations/uniswap/TickMath.sol#48)
+TickMath.getSqrtRatioAtTick(int24) (src/single/integrations/uniswap/TickMath.sol#23-54) performs a multiplication on the result of a division:
+	- ratio = (ratio * 0xffcb9843d60f6159c9db58835c926644) >> 128 (src/single/integrations/uniswap/TickMath.sol#31)
+	- ratio = type()(uint256).max / ratio (src/single/integrations/uniswap/TickMath.sol#48)
+TickMath.getSqrtRatioAtTick(int24) (src/single/integrations/uniswap/TickMath.sol#23-54) performs a multiplication on the result of a division:
+	- ratio = (ratio * 0xffe5caca7e10e4e61c3624eaa0941cd0) >> 128 (src/single/integrations/uniswap/TickMath.sol#30)
+	- ratio = type()(uint256).max / ratio (src/single/integrations/uniswap/TickMath.sol#48)
+TickMath.getSqrtRatioAtTick(int24) (src/single/integrations/uniswap/TickMath.sol#23-54) performs a multiplication on the result of a division:
+	- ratio = (ratio * 0xfff2e50f5f656932ef12357cf3c7fdcc) >> 128 (src/single/integrations/uniswap/TickMath.sol#29)
+	- ratio = type()(uint256).max / ratio (src/single/integrations/uniswap/TickMath.sol#48)
+TickMath.getSqrtRatioAtTick(int24) (src/single/integrations/uniswap/TickMath.sol#23-54) performs a multiplication on the result of a division:
+	- ratio = (ratio * 0xfff97272373d413259a46990580e213a) >> 128 (src/single/integrations/uniswap/TickMath.sol#28)
+	- ratio = type()(uint256).max / ratio (src/single/integrations/uniswap/TickMath.sol#48)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#divide-before-multiply
+INFO:Detectors:
+Burve.burnIsland(uint256) (src/single/Burve.sol#412-432) uses a dangerous strict equality:
+	- islandBurnShares == 0 (src/single/Burve.sol#422)
+Burve.collectAndCalcCompound() (src/single/Burve.sol#848-920) uses a dangerous strict equality:
+	- collected0 == 0 && collected1 == 0 (src/single/Burve.sol#880)
+Burve.collectAndCalcCompound() (src/single/Burve.sol#848-920) uses a dangerous strict equality:
+	- unsafeNominalLiq == uint256(type()(uint128).max) (src/single/Burve.sol#906)
+Burve.collectV3Fees() (src/single/Burve.sol#959-987) uses a dangerous strict equality:
+	- liqInRange == 0 (src/single/Burve.sol#967)
+Burve.compoundV3Ranges() (src/single/Burve.sol#739-815) uses a dangerous strict equality:
+	- compoundedNominalLiq == 0 (src/single/Burve.sol#746)
+Burve.compoundV3Ranges() (src/single/Burve.sol#739-815) uses a dangerous strict equality:
+	- compoundLiq == 0 (src/single/Burve.sol#771)
+Burve.mint(address,uint128,uint160,uint160) (src/single/Burve.sol#226-290) uses a dangerous strict equality:
+	- liqInRange == 0 (src/single/Burve.sol#247)
+Burve.queryValueV3Ranges(uint256) (src/single/Burve.sol#575-681) uses a dangerous strict equality:
+	- shares == 0 (src/single/Burve.sol#578)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities
+INFO:Detectors:
+Reentrancy in Burve.burn(uint256,uint160,uint160) (src/single/Burve.sol#350-407):
+	External calls:
+	- compoundV3Ranges() (src/single/Burve.sol#359)
+		- pool.burn(range.lower,range.upper,0) (src/single/Burve.sol#978)
+		- pool.collect(address(this),range.lower,range.upper,type()(uint128).max,type()(uint128).max) (src/single/Burve.sol#979-985)
+		- pool.mint(address(this),range_scope_1.lower,range_scope_1.upper,compoundLiq_scope_2,abi.encode(address(this))) (src/single/Burve.sol#803-809)
+	State variables written after the call(s):
+	- totalNominalLiq -= burnLiqNominal (src/single/Burve.sol#366)
+	Burve.totalNominalLiq (src/single/Burve.sol#45) can be used in cross function reentrancies:
+	- Burve.burn(uint256,uint160,uint160) (src/single/Burve.sol#350-407)
+	- Burve.collectV3Fees() (src/single/Burve.sol#959-987)
+	- Burve.compoundV3Ranges() (src/single/Burve.sol#739-815)
+	- Burve.getInfo() (src/single/Burve.sol#685-695)
+	- Burve.mint(address,uint128,uint160,uint160) (src/single/Burve.sol#226-290)
+	- Burve.queryValueV3Ranges(uint256) (src/single/Burve.sol#575-681)
+	- Burve.totalNominalLiq (src/single/Burve.sol#45)
+Reentrancy in Burve.burn(uint256,uint160,uint160) (src/single/Burve.sol#350-407):
+	External calls:
+	- compoundV3Ranges() (src/single/Burve.sol#359)
+		- pool.burn(range.lower,range.upper,0) (src/single/Burve.sol#978)
+		- pool.collect(address(this),range.lower,range.upper,type()(uint128).max,type()(uint128).max) (src/single/Burve.sol#979-985)
+		- pool.mint(address(this),range_scope_1.lower,range_scope_1.upper,compoundLiq_scope_2,abi.encode(address(this))) (src/single/Burve.sol#803-809)
+	- islandShares = burnIsland(shares) (src/single/Burve.sol#377)
+		- stationProxy.withdrawLP(address(island),islandBurnShares,msg.sender) (src/single/Burve.sol#430)
+		- island.burn(islandBurnShares,address(this)) (src/single/Burve.sol#431)
+	- burnV3(range,liqInRange) (src/single/Burve.sol#383)
+		- (x,y) = pool.burn(range.lower,range.upper,liq) (src/single/Burve.sol#438)
+		- pool.collect(address(this),range.lower,range.upper,uint128(x),uint128(y)) (src/single/Burve.sol#443-449)
+	State variables written after the call(s):
+	- islandShares = burnIsland(shares) (src/single/Burve.sol#377)
+		- islandSharesPerOwner[msg.sender] -= islandBurnShares (src/single/Burve.sol#426)
+	Burve.islandSharesPerOwner (src/single/Burve.sol#51) can be used in cross function reentrancies:
+	- Burve._update(address,address,uint256) (src/single/Burve.sol#700-736)
+	- Burve.burnIsland(uint256) (src/single/Burve.sol#412-432)
+	- Burve.islandSharesPerOwner (src/single/Burve.sol#51)
+	- Burve.mintIsland(address,uint128) (src/single/Burve.sol#296-344)
+	- Burve.queryValue(address) (src/single/Burve.sol#457-471)
+	- islandShares = burnIsland(shares) (src/single/Burve.sol#377)
+		- totalIslandShares -= islandBurnShares (src/single/Burve.sol#427)
+	Burve.totalIslandShares (src/single/Burve.sol#49) can be used in cross function reentrancies:
+	- Burve.burnIsland(uint256) (src/single/Burve.sol#412-432)
+	- Burve.mintIsland(address,uint128) (src/single/Burve.sol#296-344)
+	- Burve.queryTVL() (src/single/Burve.sol#477-487)
+	- Burve.totalIslandShares (src/single/Burve.sol#49)
+	- totalShares -= shares (src/single/Burve.sol#389)
+	Burve.totalShares (src/single/Burve.sol#47) can be used in cross function reentrancies:
+	- Burve.burn(uint256,uint160,uint160) (src/single/Burve.sol#350-407)
+	- Burve.getInfo() (src/single/Burve.sol#685-695)
+	- Burve.mint(address,uint128,uint160,uint160) (src/single/Burve.sol#226-290)
+	- Burve.queryTVL() (src/single/Burve.sol#477-487)
+	- Burve.queryValueV3Ranges(uint256) (src/single/Burve.sol#575-681)
+	- Burve.totalShares (src/single/Burve.sol#47)
+Reentrancy in Burve.compoundV3Ranges() (src/single/Burve.sol#739-815):
+	External calls:
+	- collectV3Fees() (src/single/Burve.sol#741)
+		- pool.burn(range.lower,range.upper,0) (src/single/Burve.sol#978)
+		- pool.collect(address(this),range.lower,range.upper,type()(uint128).max,type()(uint128).max) (src/single/Burve.sol#979-985)
+	State variables written after the call(s):
+	- totalNominalLiq += compoundedNominalLiq (src/single/Burve.sol#750)
+	Burve.totalNominalLiq (src/single/Burve.sol#45) can be used in cross function reentrancies:
+	- Burve.burn(uint256,uint160,uint160) (src/single/Burve.sol#350-407)
+	- Burve.collectV3Fees() (src/single/Burve.sol#959-987)
+	- Burve.compoundV3Ranges() (src/single/Burve.sol#739-815)
+	- Burve.getInfo() (src/single/Burve.sol#685-695)
+	- Burve.mint(address,uint128,uint160,uint160) (src/single/Burve.sol#226-290)
+	- Burve.queryValueV3Ranges(uint256) (src/single/Burve.sol#575-681)
+	- Burve.totalNominalLiq (src/single/Burve.sol#45)
+Reentrancy in Burve.migrateStationProxy(IStationProxy) (src/single/Burve.sol#208-219):
+	External calls:
+	- stationProxy.migrate(newStationProxy) (src/single/Burve.sol#217)
+	State variables written after the call(s):
+	- stationProxy = newStationProxy (src/single/Burve.sol#218)
+	Burve.stationProxy (src/single/Burve.sol#37) can be used in cross function reentrancies:
+	- Burve._update(address,address,uint256) (src/single/Burve.sol#700-736)
+	- Burve.burnIsland(uint256) (src/single/Burve.sol#412-432)
+	- Burve.constructor(address,address,address,TickRange[],uint128[]) (src/single/Burve.sol#129-204)
+	- Burve.getInfo() (src/single/Burve.sol#685-695)
+	- Burve.migrateStationProxy(IStationProxy) (src/single/Burve.sol#208-219)
+	- Burve.mintIsland(address,uint128) (src/single/Burve.sol#296-344)
+	- Burve.stationProxy (src/single/Burve.sol#37)
+Reentrancy in Burve.mint(address,uint128,uint160,uint160) (src/single/Burve.sol#226-290):
+	External calls:
+	- compoundV3Ranges() (src/single/Burve.sol#237)
+		- pool.burn(range.lower,range.upper,0) (src/single/Burve.sol#978)
+		- pool.collect(address(this),range.lower,range.upper,type()(uint128).max,type()(uint128).max) (src/single/Burve.sol#979-985)
+		- pool.mint(address(this),range_scope_1.lower,range_scope_1.upper,compoundLiq_scope_2,abi.encode(address(this))) (src/single/Burve.sol#803-809)
+	- islandShares = mintIsland(recipient,liqInRange) (src/single/Burve.sol#253)
+		- (success,data) = token.call(abi.encodeWithSelector(IERC20.transferFrom.selector,from,to,value)) (src/TransferHelper.sol#20-27)
+		- TransferHelper.safeTransferFrom(address(token0),msg.sender,address(this),mint0) (src/single/Burve.sol#316-321)
+		- TransferHelper.safeTransferFrom(address(token1),msg.sender,address(this),mint1) (src/single/Burve.sol#322-327)
+		- island.mint(mintShares,address(this)) (src/single/Burve.sol#333)
+		- stationProxy.depositLP(address(island),mintShares,recipient) (src/single/Burve.sol#340)
+	- pool.mint(address(this),range.lower,range.upper,liqInRange,abi.encode(msg.sender)) (src/single/Burve.sol#256-262)
+	State variables written after the call(s):
+	- islandShares = mintIsland(recipient,liqInRange) (src/single/Burve.sol#253)
+		- islandSharesPerOwner[recipient] += mintShares (src/single/Burve.sol#312)
+	Burve.islandSharesPerOwner (src/single/Burve.sol#51) can be used in cross function reentrancies:
+	- Burve._update(address,address,uint256) (src/single/Burve.sol#700-736)
+	- Burve.burnIsland(uint256) (src/single/Burve.sol#412-432)
+	- Burve.islandSharesPerOwner (src/single/Burve.sol#51)
+	- Burve.mintIsland(address,uint128) (src/single/Burve.sol#296-344)
+	- Burve.queryValue(address) (src/single/Burve.sol#457-471)
+	- islandShares = mintIsland(recipient,liqInRange) (src/single/Burve.sol#253)
+		- totalIslandShares += mintShares (src/single/Burve.sol#313)
+	Burve.totalIslandShares (src/single/Burve.sol#49) can be used in cross function reentrancies:
+	- Burve.burnIsland(uint256) (src/single/Burve.sol#412-432)
+	- Burve.mintIsland(address,uint128) (src/single/Burve.sol#296-344)
+	- Burve.queryTVL() (src/single/Burve.sol#477-487)
+	- Burve.totalIslandShares (src/single/Burve.sol#49)
+	- totalNominalLiq += mintNominalLiq (src/single/Burve.sol#283)
+	Burve.totalNominalLiq (src/single/Burve.sol#45) can be used in cross function reentrancies:
+	- Burve.burn(uint256,uint160,uint160) (src/single/Burve.sol#350-407)
+	- Burve.collectV3Fees() (src/single/Burve.sol#959-987)
+	- Burve.compoundV3Ranges() (src/single/Burve.sol#739-815)
+	- Burve.getInfo() (src/single/Burve.sol#685-695)
+	- Burve.mint(address,uint128,uint160,uint160) (src/single/Burve.sol#226-290)
+	- Burve.queryValueV3Ranges(uint256) (src/single/Burve.sol#575-681)
+	- Burve.totalNominalLiq (src/single/Burve.sol#45)
+Reentrancy in Burve.mint(address,uint128,uint160,uint160) (src/single/Burve.sol#226-290):
+	External calls:
+	- compoundV3Ranges() (src/single/Burve.sol#237)
+		- pool.burn(range.lower,range.upper,0) (src/single/Burve.sol#978)
+		- pool.collect(address(this),range.lower,range.upper,type()(uint128).max,type()(uint128).max) (src/single/Burve.sol#979-985)
+		- pool.mint(address(this),range_scope_1.lower,range_scope_1.upper,compoundLiq_scope_2,abi.encode(address(this))) (src/single/Burve.sol#803-809)
+	- islandShares = mintIsland(recipient,liqInRange) (src/single/Burve.sol#253)
+		- (success,data) = token.call(abi.encodeWithSelector(IERC20.transferFrom.selector,from,to,value)) (src/TransferHelper.sol#20-27)
+		- TransferHelper.safeTransferFrom(address(token0),msg.sender,address(this),mint0) (src/single/Burve.sol#316-321)
+		- TransferHelper.safeTransferFrom(address(token1),msg.sender,address(this),mint1) (src/single/Burve.sol#322-327)
+		- island.mint(mintShares,address(this)) (src/single/Burve.sol#333)
+		- stationProxy.depositLP(address(island),mintShares,recipient) (src/single/Burve.sol#340)
+	- pool.mint(address(this),range.lower,range.upper,liqInRange,abi.encode(msg.sender)) (src/single/Burve.sol#256-262)
+	- _mint(recipient,shares) (src/single/Burve.sol#287)
+		- stationProxy.withdrawLP(address(island),islandTransfer,from) (src/single/Burve.sol#724)
+		- stationProxy.depositLP(address(island),islandTransfer,to) (src/single/Burve.sol#731)
+	State variables written after the call(s):
+	- _mint(recipient,shares) (src/single/Burve.sol#287)
+		- islandSharesPerOwner[from] -= islandTransfer (src/single/Burve.sol#719)
+		- islandSharesPerOwner[to] += islandTransfer (src/single/Burve.sol#721)
+	Burve.islandSharesPerOwner (src/single/Burve.sol#51) can be used in cross function reentrancies:
+	- Burve._update(address,address,uint256) (src/single/Burve.sol#700-736)
+	- Burve.burnIsland(uint256) (src/single/Burve.sol#412-432)
+	- Burve.islandSharesPerOwner (src/single/Burve.sol#51)
+	- Burve.mintIsland(address,uint128) (src/single/Burve.sol#296-344)
+	- Burve.queryValue(address) (src/single/Burve.sol#457-471)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-1
+INFO:Detectors:
+ValueLib.t(SearchParams,uint256[],uint256[],uint256).ftX128 (src/multi/Value.sol#150) is a local variable never initialized
+ClosureImpl.addEarnings(Closure,VertexId,uint256).unspent (src/multi/closure/Closure.sol#676) is a local variable never initialized
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#uninitialized-local-variables
+INFO:Detectors:
+BurveFacetBase.validTokens(address,address) (src/multi/deprecated/Base.sol#12-17) ignores return value by TokenRegLib.getIdx(t0) (src/multi/deprecated/Base.sol#14)
+BurveFacetBase.validTokens(address,address) (src/multi/deprecated/Base.sol#12-17) ignores return value by TokenRegLib.getIdx(t1) (src/multi/deprecated/Base.sol#15)
+BurveFacetBase.validToken(address) (src/multi/deprecated/Base.sol#19-22) ignores return value by TokenRegLib.getIdx(token) (src/multi/deprecated/Base.sol#20)
+PayLib.sendFunds(address,uint256[16],bytes) (src/multi/deprecated/Helpers.sol#8-22) ignores return value by RFTLib.settle(recipient,tokens,balanceChanges,data) (src/multi/deprecated/Helpers.sol#21)
+PayLib.recieveFunds(address,uint256[16],bytes) (src/multi/deprecated/Helpers.sol#24-38) ignores return value by RFTLib.settle(payer,tokens,balanceChanges,data) (src/multi/deprecated/Helpers.sol#37)
+PayLib.sendFunds(address,address,uint256,bytes) (src/multi/deprecated/Helpers.sol#40-51) ignores return value by RFTLib.settle(recipient,tokens,balanceChanges,data) (src/multi/deprecated/Helpers.sol#50)
+PayLib.receiveFunds(address,address,uint256,bytes) (src/multi/deprecated/Helpers.sol#53-64) ignores return value by RFTLib.settle(payer,tokens,balanceChanges,data) (src/multi/deprecated/Helpers.sol#63)
+SimplexFacet.addVertex(address,address,VaultType) (src/multi/facets/SimplexFacet.sol#178-191) ignores return value by TokenRegLib.register(token) (src/multi/facets/SimplexFacet.sol#181)
+VaultFacet.addVault(address,address,VaultType) (src/multi/facets/VaultFacet.sol#32-39) ignores return value by VertexLib.newId(token) (src/multi/facets/VaultFacet.sol#35)
+Burve.mint(address,uint128,uint160,uint160) (src/single/Burve.sol#226-290) ignores return value by pool.mint(address(this),range.lower,range.upper,liqInRange,abi.encode(msg.sender)) (src/single/Burve.sol#256-262)
+Burve.mintIsland(address,uint128) (src/single/Burve.sol#296-344) ignores return value by (sqrtRatioX96,None,None,None,None,None,None) = pool.slot0() (src/single/Burve.sol#300)
+Burve.mintIsland(address,uint128) (src/single/Burve.sol#296-344) ignores return value by island.mint(mintShares,address(this)) (src/single/Burve.sol#333)
+Burve.burnIsland(uint256) (src/single/Burve.sol#412-432) ignores return value by island.burn(islandBurnShares,address(this)) (src/single/Burve.sol#431)
+Burve.burnV3(TickRange,uint128) (src/single/Burve.sol#437-450) ignores return value by pool.collect(address(this),range.lower,range.upper,uint128(x),uint128(y)) (src/single/Burve.sol#443-449)
+Burve.queryValueIsland(uint256) (src/single/Burve.sol#494-568) ignores return value by (sqrtRatioX96,tick,None,None,None,None,None) = pool.slot0() (src/single/Burve.sol#505)
+Burve.queryValueV3Ranges(uint256) (src/single/Burve.sol#575-681) ignores return value by (sqrtRatioX96,tick,None,None,None,None,None) = pool.slot0() (src/single/Burve.sol#582)
+Burve.queryValueV3Ranges(uint256) (src/single/Burve.sol#575-681) ignores return value by (liquidity,feeGrowthInside0LastX128,feeGrowthInside1LastX128,None,None) = pool.positions(positionId) (src/single/Burve.sol#605-611)
+Burve.compoundV3Ranges() (src/single/Burve.sol#739-815) ignores return value by (sqrtRatioX96,None,None,None,None,None,None) = pool.slot0() (src/single/Burve.sol#743)
+Burve.compoundV3Ranges() (src/single/Burve.sol#739-815) ignores return value by pool.mint(address(this),range_scope_1.lower,range_scope_1.upper,compoundLiq_scope_2,abi.encode(address(this))) (src/single/Burve.sol#803-809)
+Burve.getCompoundAmountsPerUnitNominalLiqX64() (src/single/Burve.sol#924-956) ignores return value by (sqrtRatioX96,None,None,None,None,None,None) = pool.slot0() (src/single/Burve.sol#929)
+Burve.collectV3Fees() (src/single/Burve.sol#959-987) ignores return value by pool.burn(range.lower,range.upper,0) (src/single/Burve.sol#978)
+Burve.collectV3Fees() (src/single/Burve.sol#959-987) ignores return value by pool.collect(address(this),range.lower,range.upper,type()(uint128).max,type()(uint128).max) (src/single/Burve.sol#979-985)
+Burve.withinSqrtPX96Limits(uint160,uint160) (src/single/Burve.sol#106-123) ignores return value by (sqrtRatioX96,None,None,None,None,None,None) = pool.slot0() (src/single/Burve.sol#110)
+FeeLib.getFeeGrowthInside(IUniswapV3Pool,int24,int24,int24,uint256,uint256) (src/single/Fees.sol#73-132) ignores return value by (None,None,lowerFeeGrowthOutside0X128,lowerFeeGrowthOutside1X128,None,None,None,None) = pool.ticks(tickLower) (src/single/Fees.sol#85-94)
+FeeLib.getFeeGrowthInside(IUniswapV3Pool,int24,int24,int24,uint256,uint256) (src/single/Fees.sol#73-132) ignores return value by (None,None,upperFeeGrowthOutside0X128,upperFeeGrowthOutside1X128,None,None,None,None) = pool.ticks(tickUpper) (src/single/Fees.sol#95-104)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#unused-return
+INFO:Detectors:
+BGTExchanger.constructor(address)._bgtToken (src/integrations/BGTExchange/BGTExchanger.sol#25) lacks a zero-check on :
+		- bgtToken = _bgtToken (src/integrations/BGTExchange/BGTExchanger.sol#27)
+E4626ViewAdjustor.constructor(address)._assetToken (src/integrations/adjustor/E4626ViewAdjustor.sol#14) lacks a zero-check on :
+		- assetToken = _assetToken (src/integrations/adjustor/E4626ViewAdjustor.sol#15)
+MixedAdjustor.setDefaultAdjustor(address).adjustor (src/integrations/adjustor/MixedAdjustor.sol#28) lacks a zero-check on :
+		- defAdj = adjustor (src/integrations/adjustor/MixedAdjustor.sol#30)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-zero-address-validation
+INFO:Detectors:
+SimplexFacet.setAdjustor(address) (src/multi/facets/SimplexFacet.sol#298-308) has external calls inside a loop: IAdjustor(adjustor).cacheAdjustment(tokens[i]) (src/multi/facets/SimplexFacet.sol#306)
+Burve.mintIsland(address,uint128) (src/single/Burve.sol#296-344) has external calls inside a loop: (sqrtRatioX96,None,None,None,None,None,None) = pool.slot0() (src/single/Burve.sol#300)
+Burve.mintIsland(address,uint128) (src/single/Burve.sol#296-344) has external calls inside a loop: (amount0,amount1) = getAmountsForLiquidity(sqrtRatioX96,liq,island.lowerTick(),island.upperTick(),true) (src/single/Burve.sol#302-308)
+Burve.mintIsland(address,uint128) (src/single/Burve.sol#296-344) has external calls inside a loop: (mint0,mint1,mintShares) = island.getMintAmounts(amount0,amount1) (src/single/Burve.sol#309-310)
+Burve.mintIsland(address,uint128) (src/single/Burve.sol#296-344) has external calls inside a loop: island.mint(mintShares,address(this)) (src/single/Burve.sol#333)
+Burve.mintIsland(address,uint128) (src/single/Burve.sol#296-344) has external calls inside a loop: stationProxy.depositLP(address(island),mintShares,recipient) (src/single/Burve.sol#340)
+TransferHelper.safeTransferFrom(address,address,address,uint256) (src/TransferHelper.sol#14-32) has external calls inside a loop: (success,data) = token.call(abi.encodeWithSelector(IERC20.transferFrom.selector,from,to,value)) (src/TransferHelper.sol#20-27)
+Burve.mint(address,uint128,uint160,uint160) (src/single/Burve.sol#226-290) has external calls inside a loop: pool.mint(address(this),range.lower,range.upper,liqInRange,abi.encode(msg.sender)) (src/single/Burve.sol#256-262)
+Burve.burnIsland(uint256) (src/single/Burve.sol#412-432) has external calls inside a loop: stationProxy.withdrawLP(address(island),islandBurnShares,msg.sender) (src/single/Burve.sol#430)
+Burve.burnIsland(uint256) (src/single/Burve.sol#412-432) has external calls inside a loop: island.burn(islandBurnShares,address(this)) (src/single/Burve.sol#431)
+Burve.burnV3(TickRange,uint128) (src/single/Burve.sol#437-450) has external calls inside a loop: (x,y) = pool.burn(range.lower,range.upper,liq) (src/single/Burve.sol#438)
+Burve.burnV3(TickRange,uint128) (src/single/Burve.sol#437-450) has external calls inside a loop: pool.collect(address(this),range.lower,range.upper,uint128(x),uint128(y)) (src/single/Burve.sol#443-449)
+Burve.queryValueV3Ranges(uint256) (src/single/Burve.sol#575-681) has external calls inside a loop: (liquidity,feeGrowthInside0LastX128,feeGrowthInside1LastX128,None,None) = pool.positions(positionId) (src/single/Burve.sol#605-611)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation/#calls-inside-a-loop
+INFO:Detectors:
+Reentrancy in BGTExchanger.exchange(address,uint128) (src/integrations/BGTExchange/BGTExchanger.sol#31-48):
+	External calls:
+	- TransferHelper.safeTransferFrom(inToken,msg.sender,address(this),spendAmount) (src/integrations/BGTExchange/BGTExchanger.sol#40-45)
+	State variables written after the call(s):
+	- owed[msg.sender] += bgtAmount (src/integrations/BGTExchange/BGTExchanger.sol#46)
+Reentrancy in Burve.mint(address,uint128,uint160,uint160) (src/single/Burve.sol#226-290):
+	External calls:
+	- compoundV3Ranges() (src/single/Burve.sol#237)
+		- pool.burn(range.lower,range.upper,0) (src/single/Burve.sol#978)
+		- pool.collect(address(this),range.lower,range.upper,type()(uint128).max,type()(uint128).max) (src/single/Burve.sol#979-985)
+		- pool.mint(address(this),range_scope_1.lower,range_scope_1.upper,compoundLiq_scope_2,abi.encode(address(this))) (src/single/Burve.sol#803-809)
+	- islandShares = mintIsland(recipient,liqInRange) (src/single/Burve.sol#253)
+		- (success,data) = token.call(abi.encodeWithSelector(IERC20.transferFrom.selector,from,to,value)) (src/TransferHelper.sol#20-27)
+		- TransferHelper.safeTransferFrom(address(token0),msg.sender,address(this),mint0) (src/single/Burve.sol#316-321)
+		- TransferHelper.safeTransferFrom(address(token1),msg.sender,address(this),mint1) (src/single/Burve.sol#322-327)
+		- island.mint(mintShares,address(this)) (src/single/Burve.sol#333)
+		- stationProxy.depositLP(address(island),mintShares,recipient) (src/single/Burve.sol#340)
+	- pool.mint(address(this),range.lower,range.upper,liqInRange,abi.encode(msg.sender)) (src/single/Burve.sol#256-262)
+	State variables written after the call(s):
+	- totalShares += shares (src/single/Burve.sol#286)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-2
+INFO:Detectors:
+Reentrancy in SimplexFacet.addVertex(address,address,VaultType) (src/multi/facets/SimplexFacet.sol#178-191):
+	External calls:
+	- Store.adjustor().cacheAdjustment(token) (src/multi/facets/SimplexFacet.sol#182)
+	Event emitted after the call(s):
+	- VertexAdded(token,vault,vid,vType) (src/multi/facets/SimplexFacet.sol#190)
+Reentrancy in Burve.burn(uint256,uint160,uint160) (src/single/Burve.sol#350-407):
+	External calls:
+	- compoundV3Ranges() (src/single/Burve.sol#359)
+		- pool.burn(range.lower,range.upper,0) (src/single/Burve.sol#978)
+		- pool.collect(address(this),range.lower,range.upper,type()(uint128).max,type()(uint128).max) (src/single/Burve.sol#979-985)
+		- pool.mint(address(this),range_scope_1.lower,range_scope_1.upper,compoundLiq_scope_2,abi.encode(address(this))) (src/single/Burve.sol#803-809)
+	- islandShares = burnIsland(shares) (src/single/Burve.sol#377)
+		- stationProxy.withdrawLP(address(island),islandBurnShares,msg.sender) (src/single/Burve.sol#430)
+		- island.burn(islandBurnShares,address(this)) (src/single/Burve.sol#431)
+	- burnV3(range,liqInRange) (src/single/Burve.sol#383)
+		- (x,y) = pool.burn(range.lower,range.upper,liq) (src/single/Burve.sol#438)
+		- pool.collect(address(this),range.lower,range.upper,uint128(x),uint128(y)) (src/single/Burve.sol#443-449)
+	- _burn(msg.sender,shares) (src/single/Burve.sol#390)
+		- stationProxy.withdrawLP(address(island),islandTransfer,from) (src/single/Burve.sol#724)
+		- stationProxy.depositLP(address(island),islandTransfer,to) (src/single/Burve.sol#731)
+	- TransferHelper.safeTransfer(address(token0),msg.sender,postBalance0 - priorBalance0) (src/single/Burve.sol#395-399)
+	- TransferHelper.safeTransfer(address(token1),msg.sender,postBalance1 - priorBalance1) (src/single/Burve.sol#400-404)
+	Event emitted after the call(s):
+	- Burn(msg.sender,shares,islandShares) (src/single/Burve.sol#406)
+Reentrancy in Burve.compoundV3Ranges() (src/single/Burve.sol#739-815):
+	External calls:
+	- collectV3Fees() (src/single/Burve.sol#741)
+		- pool.burn(range.lower,range.upper,0) (src/single/Burve.sol#978)
+		- pool.collect(address(this),range.lower,range.upper,type()(uint128).max,type()(uint128).max) (src/single/Burve.sol#979-985)
+	Event emitted after the call(s):
+	- MalformedPool() (src/single/Burve.sol#907)
+		- compoundedNominalLiq = collectAndCalcCompound() (src/single/Burve.sol#745)
+Reentrancy in ClosureImpl.stakeValue(Closure,uint256,uint256) (src/multi/closure/Closure.sol#517-540):
+	External calls:
+	- trimAllBalances(self) (src/multi/closure/Closure.sol#522)
+		- self.active.commit() (src/multi/vertex/VaultProxy.sol#247)
+		- self.backup.commit() (src/multi/vertex/VaultProxy.sol#248)
+		- vProxy.commit() (src/multi/vertex/Reserve.sol#28)
+		- getE4626(self).commit(self.temp) (src/multi/vertex/VaultPointer.sol#128)
+		- (earnings,bgtReal) = Store.vertex(vid).trimBalance(self.cid,realBalance,self.valueStaked,self.bgtValueStaked) (src/multi/closure/Closure.sol#735-740)
+		- (bgtEarned,spentAmount) = IBGTExchanger(s.bgtEx).exchange(token,uint128(amount)) (src/multi/Simplex.sol#125-128)
+		- (bgtEarned,unspent) = SimplexLib.bgtExchange(idx,bgtReal) (src/multi/closure/Closure.sol#744-747)
+		- vProxy.commit() (src/multi/vertex/Vertex.sol#83)
+		- unspentShares = ReserveLib.deposit(vid,unspent) (src/multi/closure/Closure.sol#751)
+		- self.totalVaultShares += self.vault.deposit(assetsToDeposit,address(this)) (src/multi/vertex/E4626.sol#87-90)
+		- self.totalVaultShares -= self.vault.withdraw(assetsToWithdraw,address(this),address(this)) (src/multi/vertex/E4626.sol#94-98)
+	Event emitted after the call(s):
+	- WarningExcessValueDetected(self.cid,maxValue,self.valueStaked) (src/multi/closure/Closure.sol#525-529)
+Reentrancy in ClosureImpl.swapInExact(Closure,VertexId,VertexId,uint256) (src/multi/closure/Closure.sol#381-434):
+	External calls:
+	- trimBalance(self,inVid) (src/multi/closure/Closure.sol#392)
+		- self.active.commit() (src/multi/vertex/VaultProxy.sol#247)
+		- self.backup.commit() (src/multi/vertex/VaultProxy.sol#248)
+		- vProxy.commit() (src/multi/vertex/Reserve.sol#28)
+		- getE4626(self).commit(self.temp) (src/multi/vertex/VaultPointer.sol#128)
+		- (earnings,bgtReal) = Store.vertex(vid).trimBalance(self.cid,realBalance,self.valueStaked,self.bgtValueStaked) (src/multi/closure/Closure.sol#735-740)
+		- (bgtEarned,spentAmount) = IBGTExchanger(s.bgtEx).exchange(token,uint128(amount)) (src/multi/Simplex.sol#125-128)
+		- (bgtEarned,unspent) = SimplexLib.bgtExchange(idx,bgtReal) (src/multi/closure/Closure.sol#744-747)
+		- vProxy.commit() (src/multi/vertex/Vertex.sol#83)
+		- unspentShares = ReserveLib.deposit(vid,unspent) (src/multi/closure/Closure.sol#751)
+		- self.totalVaultShares += self.vault.deposit(assetsToDeposit,address(this)) (src/multi/vertex/E4626.sol#87-90)
+		- self.totalVaultShares -= self.vault.withdraw(assetsToWithdraw,address(this),address(this)) (src/multi/vertex/E4626.sol#94-98)
+	- trimBalance(self,outVid) (src/multi/closure/Closure.sol#393)
+		- self.active.commit() (src/multi/vertex/VaultProxy.sol#247)
+		- self.backup.commit() (src/multi/vertex/VaultProxy.sol#248)
+		- vProxy.commit() (src/multi/vertex/Reserve.sol#28)
+		- getE4626(self).commit(self.temp) (src/multi/vertex/VaultPointer.sol#128)
+		- (earnings,bgtReal) = Store.vertex(vid).trimBalance(self.cid,realBalance,self.valueStaked,self.bgtValueStaked) (src/multi/closure/Closure.sol#735-740)
+		- (bgtEarned,spentAmount) = IBGTExchanger(s.bgtEx).exchange(token,uint128(amount)) (src/multi/Simplex.sol#125-128)
+		- (bgtEarned,unspent) = SimplexLib.bgtExchange(idx,bgtReal) (src/multi/closure/Closure.sol#744-747)
+		- vProxy.commit() (src/multi/vertex/Vertex.sol#83)
+		- unspentShares = ReserveLib.deposit(vid,unspent) (src/multi/closure/Closure.sol#751)
+		- self.totalVaultShares += self.vault.deposit(assetsToDeposit,address(this)) (src/multi/vertex/E4626.sol#87-90)
+		- self.totalVaultShares -= self.vault.withdraw(assetsToWithdraw,address(this),address(this)) (src/multi/vertex/E4626.sol#94-98)
+	Event emitted after the call(s):
+	- InsufficientBalance(self.vid,cid,targetReal,realBalance) (src/multi/vertex/Vertex.sol#72)
+		- trimBalance(self,outVid) (src/multi/closure/Closure.sol#393)
+Reentrancy in ClosureImpl.swapOutExact(Closure,VertexId,VertexId,uint256) (src/multi/closure/Closure.sol#438-494):
+	External calls:
+	- trimBalance(self,inVid) (src/multi/closure/Closure.sol#449)
+		- self.active.commit() (src/multi/vertex/VaultProxy.sol#247)
+		- self.backup.commit() (src/multi/vertex/VaultProxy.sol#248)
+		- vProxy.commit() (src/multi/vertex/Reserve.sol#28)
+		- getE4626(self).commit(self.temp) (src/multi/vertex/VaultPointer.sol#128)
+		- (earnings,bgtReal) = Store.vertex(vid).trimBalance(self.cid,realBalance,self.valueStaked,self.bgtValueStaked) (src/multi/closure/Closure.sol#735-740)
+		- (bgtEarned,spentAmount) = IBGTExchanger(s.bgtEx).exchange(token,uint128(amount)) (src/multi/Simplex.sol#125-128)
+		- (bgtEarned,unspent) = SimplexLib.bgtExchange(idx,bgtReal) (src/multi/closure/Closure.sol#744-747)
+		- vProxy.commit() (src/multi/vertex/Vertex.sol#83)
+		- unspentShares = ReserveLib.deposit(vid,unspent) (src/multi/closure/Closure.sol#751)
+		- self.totalVaultShares += self.vault.deposit(assetsToDeposit,address(this)) (src/multi/vertex/E4626.sol#87-90)
+		- self.totalVaultShares -= self.vault.withdraw(assetsToWithdraw,address(this),address(this)) (src/multi/vertex/E4626.sol#94-98)
+	- trimBalance(self,outVid) (src/multi/closure/Closure.sol#450)
+		- self.active.commit() (src/multi/vertex/VaultProxy.sol#247)
+		- self.backup.commit() (src/multi/vertex/VaultProxy.sol#248)
+		- vProxy.commit() (src/multi/vertex/Reserve.sol#28)
+		- getE4626(self).commit(self.temp) (src/multi/vertex/VaultPointer.sol#128)
+		- (earnings,bgtReal) = Store.vertex(vid).trimBalance(self.cid,realBalance,self.valueStaked,self.bgtValueStaked) (src/multi/closure/Closure.sol#735-740)
+		- (bgtEarned,spentAmount) = IBGTExchanger(s.bgtEx).exchange(token,uint128(amount)) (src/multi/Simplex.sol#125-128)
+		- (bgtEarned,unspent) = SimplexLib.bgtExchange(idx,bgtReal) (src/multi/closure/Closure.sol#744-747)
+		- vProxy.commit() (src/multi/vertex/Vertex.sol#83)
+		- unspentShares = ReserveLib.deposit(vid,unspent) (src/multi/closure/Closure.sol#751)
+		- self.totalVaultShares += self.vault.deposit(assetsToDeposit,address(this)) (src/multi/vertex/E4626.sol#87-90)
+		- self.totalVaultShares -= self.vault.withdraw(assetsToWithdraw,address(this),address(this)) (src/multi/vertex/E4626.sol#94-98)
+	Event emitted after the call(s):
+	- InsufficientBalance(self.vid,cid,targetReal,realBalance) (src/multi/vertex/Vertex.sol#72)
+		- trimBalance(self,outVid) (src/multi/closure/Closure.sol#450)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#reentrancy-vulnerabilities-3
+INFO:Detectors:
+Timed.fetchPrecommit(uint256,uint32) (src/Timed.sol#148-161) uses timestamp for comparisons
+	Dangerous comparisons:
+	- actualTime < expectedTime (src/Timed.sol#157)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#block-timestamp
+INFO:Detectors:
+FullMath.mulDiv(uint256,uint256,uint256) (src/FullMath.sol#17-112) uses assembly
+	- INLINE ASM (src/FullMath.sol#29-33)
+	- INLINE ASM (src/FullMath.sol#38-40)
+	- INLINE ASM (src/FullMath.sol#55-57)
+	- INLINE ASM (src/FullMath.sol#59-62)
+	- INLINE ASM (src/FullMath.sol#69-71)
+	- INLINE ASM (src/FullMath.sol#74-76)
+	- INLINE ASM (src/FullMath.sol#80-82)
+FullMath.mulDivX256(uint256,uint256,bool) (src/FullMath.sol#133-189) uses assembly
+	- INLINE ASM (src/FullMath.sol#146-149)
+	- INLINE ASM (src/FullMath.sol#152-155)
+	- INLINE ASM (src/FullMath.sol#160-162)
+	- INLINE ASM (src/FullMath.sol#163-165)
+	- INLINE ASM (src/FullMath.sol#170-172)
+FullMath.mul512(uint256,uint256) (src/FullMath.sol#194-203) uses assembly
+	- INLINE ASM (src/FullMath.sol#198-202)
+FullMath.mulX128(uint256,uint256,bool) (src/FullMath.sol#230-243) uses assembly
+	- INLINE ASM (src/FullMath.sol#237-242)
+Timed.timedStore() (src/Timed.sol#100-105) uses assembly
+	- INLINE ASM (src/Timed.sol#102-104)
+SimplexDiamond.fallback() (src/multi/Diamond.sol#205-236) uses assembly
+	- INLINE ASM (src/multi/Diamond.sol#209-211)
+	- INLINE ASM (src/multi/Diamond.sol#220-235)
+Store.load() (src/multi/Store.sol#36-41) uses assembly
+	- INLINE ASM (src/multi/Store.sol#38-40)
+ClosureDistImpl.getClosures(ClosureDist) (src/multi/deprecated/Dist.sol#66-73) uses assembly
+	- INLINE ASM (src/multi/deprecated/Dist.sol#70-72)
+VaultPointerImpl.getE4626(VaultPointer) (src/multi/vertex/VaultPointer.sol#148-154) uses assembly
+	- INLINE ASM (src/multi/vertex/VaultPointer.sol#151-153)
+VaultLib.getVault(address) (src/multi/vertex/VaultProxy.sol#149-163) uses assembly
+	- INLINE ASM (src/multi/vertex/VaultProxy.sol#156-158)
+TickMath.getTickAtSqrtRatio(uint160) (src/single/integrations/uniswap/TickMath.sol#61-208) uses assembly
+	- INLINE ASM (src/single/integrations/uniswap/TickMath.sol#69-73)
+	- INLINE ASM (src/single/integrations/uniswap/TickMath.sol#74-78)
+	- INLINE ASM (src/single/integrations/uniswap/TickMath.sol#79-83)
+	- INLINE ASM (src/single/integrations/uniswap/TickMath.sol#84-88)
+	- INLINE ASM (src/single/integrations/uniswap/TickMath.sol#89-93)
+	- INLINE ASM (src/single/integrations/uniswap/TickMath.sol#94-98)
+	- INLINE ASM (src/single/integrations/uniswap/TickMath.sol#99-103)
+	- INLINE ASM (src/single/integrations/uniswap/TickMath.sol#104-107)
+	- INLINE ASM (src/single/integrations/uniswap/TickMath.sol#114-119)
+	- INLINE ASM (src/single/integrations/uniswap/TickMath.sol#120-125)
+	- INLINE ASM (src/single/integrations/uniswap/TickMath.sol#126-131)
+	- INLINE ASM (src/single/integrations/uniswap/TickMath.sol#132-137)
+	- INLINE ASM (src/single/integrations/uniswap/TickMath.sol#138-143)
+	- INLINE ASM (src/single/integrations/uniswap/TickMath.sol#144-149)
+	- INLINE ASM (src/single/integrations/uniswap/TickMath.sol#150-155)
+	- INLINE ASM (src/single/integrations/uniswap/TickMath.sol#156-161)
+	- INLINE ASM (src/single/integrations/uniswap/TickMath.sol#162-167)
+	- INLINE ASM (src/single/integrations/uniswap/TickMath.sol#168-173)
+	- INLINE ASM (src/single/integrations/uniswap/TickMath.sol#174-179)
+	- INLINE ASM (src/single/integrations/uniswap/TickMath.sol#180-185)
+	- INLINE ASM (src/single/integrations/uniswap/TickMath.sol#186-191)
+	- INLINE ASM (src/single/integrations/uniswap/TickMath.sol#192-196)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#assembly-usage
+INFO:Detectors:
+Burve.mintIsland(address,uint128) (src/single/Burve.sol#296-344) has costly operations inside a loop:
+	- totalIslandShares += mintShares (src/single/Burve.sol#313)
+Burve.burnIsland(uint256) (src/single/Burve.sol#412-432) has costly operations inside a loop:
+	- totalIslandShares -= islandBurnShares (src/single/Burve.sol#427)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#costly-operations-inside-a-loop
+INFO:Detectors:
+TickMath.getSqrtRatioAtTick(int24) (src/single/integrations/uniswap/TickMath.sol#23-54) has a high cyclomatic complexity (24).
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#cyclomatic-complexity
+INFO:Detectors:
+newClosureDist(ClosureId[]) (src/multi/deprecated/Dist.sol#14-24) is never used and should be removed
+newClosureId(address[]) (src/multi/closure/Id.sol#12-20) is never used and should be removed
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#dead-code
+INFO:Detectors:
+Version constraint >=0.8.19 contains known severe issues (https://solidity.readthedocs.io/en/latest/bugs.html)
+	- VerbatimInvalidDeduplication
+	- FullInlinerNonExpressionSplitArgumentEvaluationOrder
+	- MissingSideEffectsOnSelectorAccess.
+It is used by:
+	- >=0.8.19 (src/single/integrations/kodiak/IKodiakIsland.sol#2)
+	- >=0.8.19 (src/single/integrations/kodiak/pool/IUniswapV3MintCallback.sol#2)
+	- >=0.8.19 (src/single/integrations/kodiak/pool/IUniswapV3SwapCallback.sol#2)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-versions-of-solidity
+INFO:Detectors:
+Low level call in TransferHelper.safeTransferFrom(address,address,address,uint256) (src/TransferHelper.sol#14-32):
+	- (success,data) = token.call(abi.encodeWithSelector(IERC20.transferFrom.selector,from,to,value)) (src/TransferHelper.sol#20-27)
+Low level call in TransferHelper.safeTransfer(address,address,uint256) (src/TransferHelper.sol#39-47):
+	- (success,data) = token.call(abi.encodeWithSelector(IERC20.transfer.selector,to,value)) (src/TransferHelper.sol#40-42)
+Low level call in TransferHelper.safeApprove(address,address,uint256) (src/TransferHelper.sol#54-62):
+	- (success,data) = token.call(abi.encodeWithSelector(IERC20.approve.selector,to,value)) (src/TransferHelper.sol#55-57)
+Low level call in TransferHelper.safeTransferETH(address,uint256) (src/TransferHelper.sol#68-71):
+	- (success,None) = to.call{value: value}(new bytes(0)) (src/TransferHelper.sol#69)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#low-level-calls
+INFO:Detectors:
+Burve (src/single/Burve.sol#23-1090) should inherit from IUniswapV3MintCallback (src/single/integrations/kodiak/pool/IUniswapV3MintCallback.sol#6-18)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#missing-inheritance
+INFO:Detectors:
+Parameter Timed.precommit(PreCommits,uint256,bytes)._entry (src/Timed.sol#66) is not in mixedCase
+Parameter Timed.memoryPrecommit(uint256,bytes)._entry (src/Timed.sol#118) is not in mixedCase
+Parameter FixedAdjustor.setAdjustment(address,uint256)._adjX128 (src/integrations/adjustor/FixedAdjustor.sol#20) is not in mixedCase
+Parameter ValueLib.stripArrays(uint8,uint256[16],uint256[16])._esX128 (src/multi/Value.sol#56) is not in mixedCase
+Parameter ValueLib.stripArrays(uint8,uint256[16],uint256[16])._xs (src/multi/Value.sol#57) is not in mixedCase
+Parameter ValueLib.v(uint256,uint256,uint256,bool)._x (src/multi/Value.sol#82) is not in mixedCase
+Parameter ValueLib.dvdt(uint256,uint256,uint256)._x (src/multi/Value.sol#244) is not in mixedCase
+Parameter SimplexFacet.addClosure(uint16,uint128,uint128,uint128)._cid (src/multi/facets/SimplexFacet.sol#196) is not in mixedCase
+Parameter SwapFacet.swap(address,address,address,int256,uint256,uint16)._cid (src/multi/facets/SwapFacet.sol#58) is not in mixedCase
+Parameter ValueFacet.addValue(address,uint16,uint128,uint128)._closureId (src/multi/facets/ValueFacet.sol#60) is not in mixedCase
+Parameter ValueFacet.addValueSingle(address,uint16,uint128,uint128,address,uint128)._closureId (src/multi/facets/ValueFacet.sol#102) is not in mixedCase
+Parameter ValueFacet.addSingleForValue(address,uint16,address,uint128,uint256,uint128)._closureId (src/multi/facets/ValueFacet.sol#141) is not in mixedCase
+Parameter ValueFacet.removeValue(address,uint16,uint128,uint128)._closureId (src/multi/facets/ValueFacet.sol#178) is not in mixedCase
+Parameter ValueFacet.removeValueSingle(address,uint16,uint128,uint128,address,uint128)._closureId (src/multi/facets/ValueFacet.sol#216) is not in mixedCase
+Parameter ValueFacet.removeSingleForValue(address,uint16,address,uint128,uint256,uint128)._closureId (src/multi/facets/ValueFacet.sol#250) is not in mixedCase
+Parameter ValueTokenFacet.mint(uint256,uint256,uint16)._cid (src/multi/facets/ValueTokenFacet.sol#16) is not in mixedCase
+Parameter ValueTokenFacet.burn(uint256,uint256,uint16)._cid (src/multi/facets/ValueTokenFacet.sol#25) is not in mixedCase
+Parameter VaultE4626Impl.init(VaultE4626,address,address)._token (src/multi/vertex/E4626.sol#38) is not in mixedCase
+Parameter VaultE4626Impl.init(VaultE4626,address,address)._vault (src/multi/vertex/E4626.sol#39) is not in mixedCase
+Parameter Burve.subtractManagerFee(uint256,uint256,uint16)._fee0 (src/single/Burve.sol#1046) is not in mixedCase
+Parameter Burve.subtractManagerFee(uint256,uint256,uint16)._fee1 (src/single/Burve.sol#1047) is not in mixedCase
+Parameter Burve.subtractManagerFee(uint256,uint256,uint16)._managerFeeBPS (src/single/Burve.sol#1048) is not in mixedCase
+Parameter Burve.nameFromPool(address)._pool (src/single/Burve.sol#1063) is not in mixedCase
+Parameter Burve.symbolFromPool(address)._pool (src/single/Burve.sol#1079) is not in mixedCase
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#conformance-to-solidity-naming-conventions
+INFO:Detectors:
+TickMath.getSqrtRatioAtTick(int24) (src/single/integrations/uniswap/TickMath.sol#23-54) uses literals with too many digits:
+	- ratio = 0x100000000000000000000000000000000 (src/single/integrations/uniswap/TickMath.sol#27)
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#too-many-digits
+INFO:Detectors:
+Loop condition i < distX96.length (src/single/Burve.sol#592) should use cached array length instead of referencing `length` member of the storage array.
+ Loop condition i < distX96.length (src/single/Burve.sol#759) should use cached array length instead of referencing `length` member of the storage array.
+ Loop condition i < distX96.length (src/single/Burve.sol#931) should use cached array length instead of referencing `length` member of the storage array.
+ Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#cache-array-length
+INFO:Detectors:
+BGTExchanger.bgtToken (src/integrations/BGTExchange/BGTExchanger.sol#15) should be immutable 
+Burve.island (src/single/Burve.sol#35) should be immutable 
+Burve.pool (src/single/Burve.sol#29) should be immutable 
+Burve.token0 (src/single/Burve.sol#31) should be immutable 
+Burve.token1 (src/single/Burve.sol#33) should be immutable 
+E4626ViewAdjustor.assetToken (src/integrations/adjustor/E4626ViewAdjustor.sol#12) should be immutable 
+Reference: https://github.com/crytic/slither/wiki/Detector-Documentation#state-variables-that-could-be-declared-immutable
+INFO:Slither:. analyzed (109 contracts with 100 detectors), 161 result(s) found

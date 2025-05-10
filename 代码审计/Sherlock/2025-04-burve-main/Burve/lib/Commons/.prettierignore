@@ -1,0 +1,19 @@
+# directories
+.yarn/
+**/broadcast
+**/cache
+**/out
+**/node_modules
+# Ignore solidity files, solhint will handle
+**/lib
+**/src
+**/script
+**/test
+
+# files
+*.env
+*.log
+.pnp.*
+coverage.json
+yarn-debug.log*
+yarn-error.log*

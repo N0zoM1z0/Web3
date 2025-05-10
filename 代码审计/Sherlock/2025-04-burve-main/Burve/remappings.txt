@@ -1,0 +1,6 @@
+openzeppelin-contracts/=lib/openzeppelin-contracts/contracts
+Commons/=lib/Commons/src/
+CommonsTestLib/=lib/Commons/test/lib/
+forge-std/=lib/forge-std/src/
+prb-test/=lib/Commons/lib/prb-test/src/
+v3-core/=lib/v3-core/

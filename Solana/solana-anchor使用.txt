@@ -1,0 +1,11 @@
+两个终端进入docker
+docker exec -it 4ae92afd7f4e /bin/bash
+
+一个终端：
+solana-test-validator
+
+另一个：
+anchor test --skip-local-validator
+
+导出为web3-env.tar.gz后导入：
+cat web3-env.tar.gz | docker import - web3-env:latest
