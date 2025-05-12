@@ -1,0 +1,8 @@
+## echinda: 
+
+docker: eth-security-toolbox-latest.tar
+导入镜像： docker load -i eth-security-toolbox-latest.tar
+docker tag 01e72cdaa49f trailofbits/eth-security-toolbox:latest
+
+创实例：
+docker run -itd -v "$PWD":/training trailofbits/eth-security-toolbox

@@ -1,0 +1,141 @@
+name: echidna
+
+author: Trail of Bits <echidna-dev@trailofbits.com>
+maintainer: Trail of Bits <echidna-dev@trailofbits.com>
+
+version: 2.2.6
+
+ghc-options:
+  - -O2
+  - -Wall
+  - -fno-warn-orphans
+  - -feager-blackholing
+  # https://github.com/haskell/cabal/issues/4739
+  - -optP-Wno-nonportable-include-path
+  - -fspecialize-aggressively
+  - -fexpose-all-unfoldings
+  - -Wunused-packages
+
+dependencies:
+  - aeson
+  - base
+  - containers
+  - directory
+  - hevm
+  - MonadRandom
+  - mtl
+  - text
+
+language: GHC2021
+
+default-extensions:
+  - DataKinds
+  - DuplicateRecordFields
+  - LambdaCase
+  - MultiWayIf
+  - NoFieldSelectors
+  - OverloadedLabels
+  - OverloadedRecordDot
+  - OverloadedStrings
+
+library:
+  source-dirs: lib/
+  dependencies:
+    - ansi-terminal
+    - async
+    - base16-bytestring
+    - binary
+    - brick
+    - bytestring
+    - data-bword
+    - data-dword
+    - deepseq
+    - exceptions
+    - extra
+    - filepath
+    - hashable
+    - html-conduit
+    - html-entities
+    - http-conduit
+    - ListLike
+    - optics
+    - optics-core
+    - process
+    - random
+    - rosezipper
+    - semver
+    - signal
+    - split
+    - strip-ansi-escape
+    - time
+    - unliftio
+    - utf8-string
+    - vector
+    - vty
+    - vty-crossplatform
+    - wai-extra
+    - warp
+    - word-wrap
+    - xml-conduit
+    - yaml
+
+executables:
+  echidna:
+    main: Main.hs
+    source-dirs: src/
+    dependencies:
+      - code-page
+      - echidna
+      - filepath
+      - hashable
+      - optparse-applicative
+      - time
+      - with-utf8
+    ghc-options:
+      - -threaded
+      - '"-with-rtsopts=-A64m -N"'
+    when:
+      - condition: (os(linux) || os(windows)) && flag(static)
+        ghc-options:
+          - -optl-static
+      - condition: os(linux) || os(windows)
+        ghc-options:
+          - -O2
+          - -optl-pthread
+      - condition: os(darwin)
+        ld-options: -Wl,-keep_dwarf_unwind
+        ghc-options: -fcompact-unwind
+
+tests:
+  echidna-testsuite:
+    main: Spec.hs
+    source-dirs: src/test
+    dependencies:
+      - data-dword
+      - echidna
+      - exceptions
+      - optics-core
+      - process
+      - semver
+      - split
+      - tasty
+      - tasty-hunit
+      - tasty-quickcheck
+      - yaml
+    when:
+        - condition: (os(linux) || os(windows)) && flag(static)
+          ghc-options:
+            - -optl-static
+        - condition: os(linux) || os(windows)
+          ghc-options:
+            - -O2
+            - -optl-pthread
+        - condition: os(darwin)
+          ld-options: -Wl,-keep_dwarf_unwind
+          ghc-options: -fcompact-unwind
+
+flags:
+  static:
+    description: Pass -static to ghc when linking the stack binary.
+    manual: true
+    default: false
