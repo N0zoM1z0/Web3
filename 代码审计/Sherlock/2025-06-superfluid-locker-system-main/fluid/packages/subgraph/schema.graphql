@@ -1,0 +1,80 @@
+type Program @entity {
+  id: String! # uint256
+  programAdmin: Bytes! # address
+  signer: Bytes! # address
+  token: Bytes! # address
+  distributionPool: Bytes! # address
+  fundingAmount: BigInt! # uint256
+  subsidyAmount: BigInt! # uint256
+  earlyEndDate: BigInt! # uint256
+  endDate: BigInt! # uint256
+  stoppedDate: BigInt! # uint256
+  fundingCompensationAmount: BigInt! # uint256
+  subsidyCompensationAmount: BigInt! # uint256
+  cancellationDate: BigInt! # uint256
+  returnedDeposit: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type Locker @entity(immutable: true) {
+  """
+  The address of the deployed locker contract.
+  """
+  id: Bytes!
+
+  """
+  The address of the locker owner.
+  """
+  lockerOwner: Bytes!
+
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type FluidStreamClaimEvent @entity(immutable: true) {
+  """
+  A generated unique identifier for the claim event.
+  """
+  id: Bytes!
+
+  """
+  The locker contract that the claim event is associated with.
+  """
+  locker: Locker!
+
+  """
+  The address of the msg.sender.
+  """
+  claimer: Bytes!
+
+  """
+  A mapping of programId to the claim event units.
+  """
+  units: [ClaimEventUnit!]! @derivedFrom(field: "event")
+
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type ClaimEventUnit @entity(immutable: true) {
+  """
+  A generated unique identifier for the claim event unit.
+  """
+  id: Bytes!
+
+  """
+  The programId that the claim event unit is associated with.
+  """
+  programId: String!
+
+  """
+  The amount of units claimed.
+  """
+  amount: BigInt! # uint256
+
+  event: FluidStreamClaimEvent!
+}

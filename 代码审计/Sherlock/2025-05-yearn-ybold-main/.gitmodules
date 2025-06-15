@@ -1,0 +1,18 @@
+[submodule "yv3-liquityv2-sp-strategy/lib/forge-std"]
+	path = yv3-liquityv2-sp-strategy/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "yv3-liquityv2-sp-strategy/lib/openzeppelin-contracts"]
+	path = yv3-liquityv2-sp-strategy/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
+[submodule "yv3-liquityv2-sp-strategy/lib/tokenized-strategy"]
+	path = yv3-liquityv2-sp-strategy/lib/tokenized-strategy
+	url = https://github.com/yearn/tokenized-strategy
+[submodule "yv3-liquityv2-sp-strategy/lib/yearn-vaults-v3"]
+	path = yv3-liquityv2-sp-strategy/lib/yearn-vaults-v3
+	url = https://github.com/yearn/yearn-vaults-v3
+[submodule "yv3-liquityv2-sp-strategy/lib/vault-periphery"]
+	path = yv3-liquityv2-sp-strategy/lib/vault-periphery
+	url = https://github.com/yearn/vault-periphery
+[submodule "yv3-liquityv2-sp-strategy/lib/tokenized-strategy-periphery"]
+	path = yv3-liquityv2-sp-strategy/lib/tokenized-strategy-periphery
+	url = https://github.com/yearn/tokenized-strategy-periphery

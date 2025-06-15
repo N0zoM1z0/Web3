@@ -1,0 +1,24 @@
+[submodule "Lend-V2/lib/forge-std"]
+	path = Lend-V2/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "Lend-V2/lib/solidity-bytes-utils"]
+	path = Lend-V2/lib/solidity-bytes-utils
+	url = https://github.com/GNSPS/solidity-bytes-utils
+[submodule "Lend-V2/lib/LayerZero"]
+	path = Lend-V2/lib/LayerZero
+	url = https://github.com/LayerZero-Labs/LayerZero
+[submodule "Lend-V2/lib/openzeppelin-contracts"]
+	path = Lend-V2/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
+[submodule "Lend-V2/lib/openzeppelin-contracts-upgradeable"]
+	path = Lend-V2/lib/openzeppelin-contracts-upgradeable
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable
+[submodule "Lend-V2/lib/hardhat-deploy"]
+	path = Lend-V2/lib/hardhat-deploy
+	url = https://github.com/wighawag/hardhat-deploy
+[submodule "Lend-V2/lib/LayerZero-v2"]
+	path = Lend-V2/lib/LayerZero-v2
+	url = https://github.com/LayerZero-Labs/LayerZero-v2
+[submodule "Lend-V2/lib/pyth-sdk-solidity"]
+	path = Lend-V2/lib/pyth-sdk-solidity
+	url = https://github.com/pyth-network/pyth-sdk-solidity

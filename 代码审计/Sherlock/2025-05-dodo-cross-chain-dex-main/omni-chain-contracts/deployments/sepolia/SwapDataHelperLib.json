@@ -1,0 +1,392 @@
+{
+  "address": "0x0dDE4B51CD15D913fEf861Ee9c048d226b891eE1",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "externalId",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "outputAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "receiver",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "swapDataB",
+          "type": "bytes"
+        }
+      ],
+      "name": "buildOutputMessage",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "decodeCompressedMixSwapParams",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "fromToken",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "toToken",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "fromTokenAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "expReturnAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "minReturnAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address[]",
+              "name": "mixAdapters",
+              "type": "address[]"
+            },
+            {
+              "internalType": "address[]",
+              "name": "mixPairs",
+              "type": "address[]"
+            },
+            {
+              "internalType": "address[]",
+              "name": "assetTo",
+              "type": "address[]"
+            },
+            {
+              "internalType": "uint256",
+              "name": "directions",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes[]",
+              "name": "moreInfo",
+              "type": "bytes[]"
+            },
+            {
+              "internalType": "bytes",
+              "name": "feeData",
+              "type": "bytes"
+            },
+            {
+              "internalType": "uint256",
+              "name": "deadline",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct MixSwapParams",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "message",
+          "type": "bytes"
+        }
+      ],
+      "name": "decodeMessage",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "targetZRC20",
+              "type": "address"
+            },
+            {
+              "internalType": "uint32",
+              "name": "dstChainId",
+              "type": "uint32"
+            },
+            {
+              "internalType": "bytes",
+              "name": "sender",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "receiver",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "swapDataZ",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "contractAddress",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "swapDataB",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "accounts",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct DecodedMessage",
+          "name": "",
+          "type": "tuple"
+        },
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "fromToken",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "toToken",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "fromTokenAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "expReturnAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "minReturnAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address[]",
+              "name": "mixAdapters",
+              "type": "address[]"
+            },
+            {
+              "internalType": "address[]",
+              "name": "mixPairs",
+              "type": "address[]"
+            },
+            {
+              "internalType": "address[]",
+              "name": "assetTo",
+              "type": "address[]"
+            },
+            {
+              "internalType": "uint256",
+              "name": "directions",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes[]",
+              "name": "moreInfo",
+              "type": "bytes[]"
+            },
+            {
+              "internalType": "bytes",
+              "name": "feeData",
+              "type": "bytes"
+            },
+            {
+              "internalType": "uint256",
+              "name": "deadline",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct MixSwapParams",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes",
+          "name": "message",
+          "type": "bytes"
+        }
+      ],
+      "name": "decodeNativeMessage",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "targetZRC20",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes",
+              "name": "sender",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "receiver",
+              "type": "bytes"
+            },
+            {
+              "internalType": "bytes",
+              "name": "swapData",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct DecodedNativeMessage",
+          "name": "",
+          "type": "tuple"
+        },
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "fromToken",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "toToken",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "fromTokenAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "expReturnAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "minReturnAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address[]",
+              "name": "mixAdapters",
+              "type": "address[]"
+            },
+            {
+              "internalType": "address[]",
+              "name": "mixPairs",
+              "type": "address[]"
+            },
+            {
+              "internalType": "address[]",
+              "name": "assetTo",
+              "type": "address[]"
+            },
+            {
+              "internalType": "uint256",
+              "name": "directions",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes[]",
+              "name": "moreInfo",
+              "type": "bytes[]"
+            },
+            {
+              "internalType": "bytes",
+              "name": "feeData",
+              "type": "bytes"
+            },
+            {
+              "internalType": "uint256",
+              "name": "deadline",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct MixSwapParams",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x6f43c5fc875f1846b0fa6fe8332eb39b052116f7a2153d6a7cace32ad8dc804f",
+  "receipt": {
+    "to": null,
+    "from": "0xfa0d8ebcA31a1501144A785a2929e9F91b0571d0",
+    "contractAddress": "0x0dDE4B51CD15D913fEf861Ee9c048d226b891eE1",
+    "transactionIndex": 107,
+    "gasUsed": "837779",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0xb600300972006b946cccf2efa36f7d6d5691e4cb60ad94f2a07182f10510aab7",
+    "transactionHash": "0x6f43c5fc875f1846b0fa6fe8332eb39b052116f7a2153d6a7cace32ad8dc804f",
+    "logs": [],
+    "blockNumber": 8357755,
+    "cumulativeGasUsed": "13839177",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 2,
+  "solcInputHash": "de329952110d6d7cf489d03597bd331e",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.26+commit.8a97fa7a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"externalId\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"outputAmount\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"receiver\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"swapDataB\",\"type\":\"bytes\"}],\"name\":\"buildOutputMessage\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"\",\"type\":\"bytes\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"name\":\"decodeCompressedMixSwapParams\",\"outputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"fromToken\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"toToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"fromTokenAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"expReturnAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"minReturnAmount\",\"type\":\"uint256\"},{\"internalType\":\"address[]\",\"name\":\"mixAdapters\",\"type\":\"address[]\"},{\"internalType\":\"address[]\",\"name\":\"mixPairs\",\"type\":\"address[]\"},{\"internalType\":\"address[]\",\"name\":\"assetTo\",\"type\":\"address[]\"},{\"internalType\":\"uint256\",\"name\":\"directions\",\"type\":\"uint256\"},{\"internalType\":\"bytes[]\",\"name\":\"moreInfo\",\"type\":\"bytes[]\"},{\"internalType\":\"bytes\",\"name\":\"feeData\",\"type\":\"bytes\"},{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"}],\"internalType\":\"struct MixSwapParams\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"message\",\"type\":\"bytes\"}],\"name\":\"decodeMessage\",\"outputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"targetZRC20\",\"type\":\"address\"},{\"internalType\":\"uint32\",\"name\":\"dstChainId\",\"type\":\"uint32\"},{\"internalType\":\"bytes\",\"name\":\"sender\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"receiver\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"swapDataZ\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"contractAddress\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"swapDataB\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"accounts\",\"type\":\"bytes\"}],\"internalType\":\"struct DecodedMessage\",\"name\":\"\",\"type\":\"tuple\"},{\"components\":[{\"internalType\":\"address\",\"name\":\"fromToken\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"toToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"fromTokenAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"expReturnAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"minReturnAmount\",\"type\":\"uint256\"},{\"internalType\":\"address[]\",\"name\":\"mixAdapters\",\"type\":\"address[]\"},{\"internalType\":\"address[]\",\"name\":\"mixPairs\",\"type\":\"address[]\"},{\"internalType\":\"address[]\",\"name\":\"assetTo\",\"type\":\"address[]\"},{\"internalType\":\"uint256\",\"name\":\"directions\",\"type\":\"uint256\"},{\"internalType\":\"bytes[]\",\"name\":\"moreInfo\",\"type\":\"bytes[]\"},{\"internalType\":\"bytes\",\"name\":\"feeData\",\"type\":\"bytes\"},{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"}],\"internalType\":\"struct MixSwapParams\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes\",\"name\":\"message\",\"type\":\"bytes\"}],\"name\":\"decodeNativeMessage\",\"outputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"targetZRC20\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"sender\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"receiver\",\"type\":\"bytes\"},{\"internalType\":\"bytes\",\"name\":\"swapData\",\"type\":\"bytes\"}],\"internalType\":\"struct DecodedNativeMessage\",\"name\":\"\",\"type\":\"tuple\"},{\"components\":[{\"internalType\":\"address\",\"name\":\"fromToken\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"toToken\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"fromTokenAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"expReturnAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"minReturnAmount\",\"type\":\"uint256\"},{\"internalType\":\"address[]\",\"name\":\"mixAdapters\",\"type\":\"address[]\"},{\"internalType\":\"address[]\",\"name\":\"mixPairs\",\"type\":\"address[]\"},{\"internalType\":\"address[]\",\"name\":\"assetTo\",\"type\":\"address[]\"},{\"internalType\":\"uint256\",\"name\":\"directions\",\"type\":\"uint256\"},{\"internalType\":\"bytes[]\",\"name\":\"moreInfo\",\"type\":\"bytes[]\"},{\"internalType\":\"bytes\",\"name\":\"feeData\",\"type\":\"bytes\"},{\"internalType\":\"uint256\",\"name\":\"deadline\",\"type\":\"uint256\"}],\"internalType\":\"struct MixSwapParams\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/libraries/SwapDataHelperLib.sol\":\"SwapDataHelperLib\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[],\"viaIR\":true},\"sources\":{\"contracts/libraries/BytesHelperLib.sol\":{\"content\":\"// SPDX-License-Identifier: UNLICENSED\\npragma solidity ^0.8.7;\\n\\nlibrary BytesHelperLib {\\n    error OffsetOutOfBounds();\\n    function bytesToAddress(\\n        bytes calldata data,\\n        uint256 offset\\n    ) internal pure returns (address output) {\\n        bytes memory b = data[offset:offset + 20];\\n        assembly {\\n            output := mload(add(b, 20))\\n        }\\n    }\\n\\n    function bytesToUint32(\\n        bytes calldata data,\\n        uint256 offset\\n    ) internal pure returns (uint32 output) {\\n        bytes memory b = data[offset:offset + 4];\\n        assembly {\\n            output := mload(add(b, 4))\\n        }\\n    }\\n\\n    function addressToBytes(\\n        address someAddress\\n    ) internal pure returns (bytes32) {\\n        return bytes32(uint256(uint160(someAddress)));\\n    }\\n\\n    function bytesToBool(\\n        bytes calldata data,\\n        uint256 offset\\n    ) internal pure returns (bool) {\\n        if (offset >= data.length) {\\n            revert OffsetOutOfBounds();\\n        }\\n        return uint8(data[offset]) != 0;\\n    }\\n}\\n\",\"keccak256\":\"0xfbeb398977ade0497a46fd947c98bf0a58843c2f9f8a4bb35769cf35c97576ca\",\"license\":\"UNLICENSED\"},\"contracts/libraries/SwapDataHelperLib.sol\":{\"content\":\"// SPDX-License-Identifier: UNLICENSED\\npragma solidity ^0.8.7;\\n\\nimport {BytesHelperLib} from \\\"./BytesHelperLib.sol\\\";\\n\\nstruct MixSwapParams {\\n    address fromToken;\\n    address toToken;\\n    uint256 fromTokenAmount;\\n    uint256 expReturnAmount;\\n    uint256 minReturnAmount;\\n    address[] mixAdapters;\\n    address[] mixPairs;\\n    address[] assetTo;\\n    uint256 directions;\\n    bytes[] moreInfo;\\n    bytes feeData;\\n    uint256 deadline;\\n}\\n\\nstruct DecodedNativeMessage {\\n    address targetZRC20;\\n    bytes sender;\\n    bytes receiver;\\n    bytes swapData;\\n}\\n\\nstruct DecodedMessage {\\n    address targetZRC20;\\n    uint32 dstChainId;\\n    bytes sender;\\n    bytes receiver; // compatible for btc/sol/evm\\n    bytes swapDataZ;\\n    bytes contractAddress; // empty for withdraw, non-empty for withdrawAndCall\\n    bytes swapDataB;\\n    bytes accounts;\\n}\\n\\nlibrary SwapDataHelperLib {\\n    function buildOutputMessage(\\n        bytes32 externalId,\\n        uint256 outputAmount,\\n        bytes memory receiver,\\n        bytes memory swapDataB\\n    ) public pure returns (bytes memory) {\\n        return abi.encodePacked(\\n            externalId,\\n            bytes32(outputAmount),\\n            uint16(receiver.length),\\n            uint16(swapDataB.length),\\n            receiver,\\n            swapDataB\\n        );\\n    }\\n\\n    function decodeMessage(\\n        bytes calldata message\\n    ) public pure returns (DecodedMessage memory, MixSwapParams memory) {\\n        uint32 dstChainId;\\n        address targetZRC20;\\n        uint16 senderLen;\\n        uint16 receiverLen;\\n        uint16 swapDataZLen;\\n        uint16 contractAddressLen;\\n        uint16 swapDataBLen;\\n        uint16 accountsLen;\\n\\n        assembly {\\n            dstChainId := shr(224, calldataload(message.offset)) // 4 bytes\\n            targetZRC20 := shr(96, calldataload(add(message.offset, 4))) // 20 bytes\\n            senderLen := shr(240, calldataload(add(message.offset, 24))) // 2 bytes\\n            receiverLen := shr(240, calldataload(add(message.offset, 26))) // 2 bytes\\n            swapDataZLen := shr(240, calldataload(add(message.offset, 28))) // 2 bytes\\n            contractAddressLen := shr(240, calldataload(add(message.offset, 30))) // 2 bytes\\n            swapDataBLen := shr(240, calldataload(add(message.offset, 32))) // 2 bytes\\n            accountsLen := shr(240, calldataload(add(message.offset, 34))) // 2 bytes\\n        }\\n\\n        uint offset = 36;\\n        bytes calldata sender = message[offset : offset + senderLen];\\n        offset += senderLen;\\n\\n        bytes calldata receiver = message[offset : offset + receiverLen];\\n        offset += receiverLen;\\n\\n        bytes calldata swapDataZ = message[offset : offset + swapDataZLen];\\n        offset += swapDataZLen;\\n\\n        bytes calldata contractAddress = message[offset : offset + contractAddressLen];\\n        offset += contractAddressLen;\\n\\n        bytes calldata swapDataB = message[offset : offset + swapDataBLen];\\n        offset += swapDataBLen;\\n\\n        bytes calldata accounts = message[offset : offset + accountsLen];\\n\\n        DecodedMessage memory decoded = DecodedMessage({\\n            dstChainId: dstChainId,\\n            targetZRC20: targetZRC20,\\n            sender: sender,\\n            receiver: receiver,\\n            contractAddress: contractAddress,\\n            swapDataZ: swapDataZ,\\n            swapDataB: swapDataB,\\n            accounts: accounts\\n        });\\n\\n        MixSwapParams memory params = decodeCompressedMixSwapParams(swapDataZ);\\n        return (decoded, params);\\n    }\\n\\n    function decodeNativeMessage(\\n        bytes calldata message\\n    ) public pure returns (DecodedNativeMessage memory, MixSwapParams memory) {\\n        address targetZRC20 = BytesHelperLib.bytesToAddress(message, 0); // 20 bytes\\n        uint offset = 20;\\n\\n        uint16 senderLen;\\n        uint16 receiverLen;\\n\\n        assembly {\\n            senderLen := shr(240, calldataload(add(message.offset, offset)))         // offset + 0\\n            receiverLen := shr(240, calldataload(add(message.offset, add(offset, 2)))) // offset + 2\\n        }\\n\\n        offset += 4; // advance past both lengths\\n        bytes memory sender = message[offset : offset + senderLen];\\n        offset += senderLen;\\n        bytes memory receiver = message[offset : offset + receiverLen];\\n        offset += receiverLen;\\n        bytes calldata swapData = message[offset:];\\n\\n        DecodedNativeMessage memory decoded = DecodedNativeMessage({\\n            targetZRC20: targetZRC20,\\n            sender: sender,\\n            receiver: receiver,\\n            swapData: swapData\\n        });\\n\\n        MixSwapParams memory params = decodeCompressedMixSwapParams(swapData);\\n        return (decoded, params);\\n    }\\n\\n    function decodeCompressedMixSwapParams(bytes calldata data) public pure returns (MixSwapParams memory) {\\n        if (data.length == 0) {\\n            return MixSwapParams({\\n                fromToken: address(0),\\n                toToken: address(0),\\n                fromTokenAmount: 0,\\n                expReturnAmount: 0,\\n                minReturnAmount: 0,\\n                mixAdapters: new address[](1),\\n                mixPairs: new address[](1),\\n                assetTo: new address[](1),\\n                directions: 0,\\n                moreInfo: new bytes[](1),\\n                feeData: new bytes(0),\\n                deadline: 0\\n            });\\n        }\\n\\n        unchecked {\\n            uint offset = 0;\\n            address fromToken;\\n            address toToken;\\n            uint256 fromTokenAmount;\\n            uint256 expReturnAmount;\\n            uint256 minReturnAmount;\\n            uint256 directions;\\n            uint256 deadline;\\n\\n            assembly {\\n                fromToken := shr(96, calldataload(add(data.offset, offset)))\\n                offset := add(offset, 20)\\n                toToken := shr(96, calldataload(add(data.offset, offset)))\\n                offset := add(offset, 20)\\n                fromTokenAmount := calldataload(add(data.offset, offset))\\n                offset := add(offset, 32)\\n                expReturnAmount := calldataload(add(data.offset, offset))\\n                offset := add(offset, 32)\\n                minReturnAmount := calldataload(add(data.offset, offset))\\n                offset := add(offset, 32)\\n                directions := calldataload(add(data.offset, offset))\\n                offset := add(offset, 32)\\n                deadline := calldataload(add(data.offset, offset))\\n                offset := add(offset, 32)\\n            }\\n\\n            // mixAdapters\\n            uint8 adapterLen = uint8(data[offset]);\\n            offset += 1;\\n            address[] memory mixAdapters = new address[](adapterLen);\\n            for (uint i = 0; i < adapterLen; ++i) {\\n                address a;\\n                assembly {\\n                    a := shr(96, calldataload(add(data.offset, offset)))\\n                }\\n                mixAdapters[i] = a;\\n                offset += 20;\\n            }\\n\\n            // mixPairs\\n            uint8 pairLen = uint8(data[offset]);\\n            offset += 1;\\n            address[] memory mixPairs = new address[](pairLen);\\n            for (uint i = 0; i < pairLen; ++i) {\\n                address p;\\n                assembly {\\n                    p := shr(96, calldataload(add(data.offset, offset)))\\n                }\\n                mixPairs[i] = p;\\n                offset += 20;\\n            }\\n\\n            // assetTo\\n            uint8 toLen = uint8(data[offset]);\\n            offset += 1;\\n            address[] memory assetTo = new address[](toLen);\\n            for (uint i = 0; i < toLen; ++i) {\\n                address t;\\n                assembly {\\n                    t := shr(96, calldataload(add(data.offset, offset)))\\n                }\\n                assetTo[i] = t;\\n                offset += 20;\\n            }\\n\\n            // moreInfo lengths\\n            uint8 infoCount = uint8(data[offset]);\\n            offset += 1;\\n            uint16[] memory lens = new uint16[](infoCount);\\n            for (uint i = 0; i < infoCount; ++i) {\\n                uint16 l;\\n                assembly {\\n                    l := shr(240, calldataload(add(data.offset, offset)))\\n                }\\n                lens[i] = l;\\n                offset += 2;\\n            }\\n\\n            // moreInfo contents\\n            bytes[] memory moreInfo = new bytes[](infoCount);\\n            for (uint i = 0; i < infoCount; ++i) {\\n                moreInfo[i] = data[offset : offset + lens[i]];\\n                offset += lens[i];\\n            }\\n\\n            // feeData\\n            uint16 feeLen;\\n            assembly {\\n                feeLen := shr(240, calldataload(add(data.offset, offset)))\\n            }\\n            offset += 2;\\n            bytes memory feeData = data[offset : offset + feeLen];\\n\\n            return MixSwapParams({\\n                fromToken: fromToken,\\n                toToken: toToken,\\n                fromTokenAmount: fromTokenAmount,\\n                expReturnAmount: expReturnAmount,\\n                minReturnAmount: minReturnAmount,\\n                mixAdapters: mixAdapters,\\n                mixPairs: mixPairs,\\n                assetTo: assetTo,\\n                directions: directions,\\n                moreInfo: moreInfo,\\n                feeData: feeData,\\n                deadline: deadline\\n            });\\n        }\\n    }\\n\\n}\\n\",\"keccak256\":\"0xde54c6eee18bf40bf7b46d8a6975a6eef64727bbd696f9d80088f6d1e2a59295\",\"license\":\"UNLICENSED\"}},\"version\":1}",
+  "bytecode": "0x60808060405234601957610e2f908161001f823930815050f35b600080fdfe6080604052600436101561001257600080fd5b60003560e01c806360a85ed114610057578063634d45b214610052578063aa06aea51461004d5763fbaa267f1461004857600080fd5b6106d1565b610645565b6104a3565b60803660031901126100c65760443567ffffffffffffffff81116100c6576100839036906004016101a8565b60643567ffffffffffffffff81116100c6576100c2916100aa6100b69236906004016101a8565b906024356004356107ca565b6040519182918261020e565b0390f35b600080fd5b634e487b7160e01b600052604160045260246000fd5b6080810190811067ffffffffffffffff8211176100fd57604052565b6100cb565b90601f8019910116810190811067ffffffffffffffff8211176100fd57604052565b6040519061013461010083610102565b565b60405190610134608083610102565b6040519061013461018083610102565b67ffffffffffffffff81116100fd57601f01601f191660200190565b92919261017d82610155565b9161018b6040519384610102565b8294818452818301116100c6578281602093846000960137010152565b9080601f830112156100c6578160206101c393359101610171565b90565b60005b8381106101d95750506000910152565b81810151838201526020016101c9565b90602091610202815180928185528580860191016101c6565b601f01601f1916010190565b9060206101c39281815201906101e9565b9060206003198301126100c65760043567ffffffffffffffff81116100c657826023820112156100c65780600401359267ffffffffffffffff84116100c657602484830101116100c6576024019190565b906020808351928381520192019060005b81811061028e5750505090565b82516001600160a01b0316845260209384019390920191600101610281565b9080602083519182815201916020808360051b8301019401926000915b8383106102d957505050505090565b90919293946020806102f7600193601f1986820301875289516101e9565b970193019301919392906102ca565b80516001600160a01b03168252906020828101516001600160a01b031690820152604082015160408201526060820151606082015260808201516080820152610160806103c86103b461039461038261037060a089015161018060a08a0152610180890190610270565b60c089015188820360c08a0152610270565b60e088015187820360e0890152610270565b6101008701516101008701526101208701518682036101208801526102ad565b6101408601518582036101408701526101e9565b93015191015290565b604080825282516001600160a01b0316908201526101c392909161049590602081015163ffffffff16606085015260e061048061046961045461043e610428604087015161010060808c01526101408b01906101e9565b60608701518a8203603f190160a08c01526101e9565b6080860151898203603f190160c08b01526101e9565b60a0850151888203603f1901858a01526101e9565b60c0840151878203603f19016101008901526101e9565b910151848203603f19016101208601526101e9565b916020818403910152610306565b6104ac3661021f565b6104b4610840565b506104bd610890565b50601882013560f01c601a83013560f01c601c84013560f01c91601e85013560f01c93602086013560f01c6104f183610900565b6104fc908389610931565b94909361050890610900565b966105138289610924565b61051f9089868c61094e565b9261052a9199610924565b97610535888a610924565b610541908a878d61094e565b9861054c919a610924565b928a6105588486610924565b6105649086898461094e565b9461056f9196610924565b9661057a8789610924565b6105869089838561094e565b976105919199610924565b6105a2602284013560f01c82610924565b916105ac9361094e565b9790986105b7610124565b60048e013560601c81529c3560e01c60208e01526105d791369190610171565b60408c015236906105e792610171565b60608a01526105f736888a610171565b60808a0152369061060792610171565b60a0880152369061061792610171565b60c0860152369061062792610171565b60e084015261063591610abd565b6040519182916100c291836103d1565b6100c261065a6106543661021f565b90610abd565b604051918291602083526020830190610306565b90916104956101c3936040845260018060a01b03815116604085015260606106bd6106a7602084015160808489015260c08801906101e9565b6040840151878203603f190160808901526101e9565b910151848203603f190160a08601526101e9565b6107ba6106dd3661021f565b91906060806040516106ee816100e1565b600081528160208201528160408201520152610708610890565b506107138382610ddc565b9261077e601483013560f01c91601684013560f01c938161077861075961075161074a610741896018610924565b6018868861094e565b3691610171565b966018610924565b9661077261074a61076a838b610924565b8a868861094e565b97610924565b9161094e565b92909161079b61078c610136565b6001600160a01b039097168752565b602086015260408501526107b0368383610171565b6060850152610abd565b906100c26040519283928361066e565b90926064906101c39380518251906040519788966020880152604087015261ffff60f01b9060f01b16606086015261ffff60f01b9060f01b16606285015261081b81518092602086880191016101c6565b830161083082518093602086850191016101c6565b010103601f198101835282610102565b60405190610100820182811067ffffffffffffffff8211176100fd57604052606060e083600081526000602082015282604082015282808201528260808201528260a08201528260c08201520152565b60405190610180820182811067ffffffffffffffff8211176100fd57604052600061016083828152826020820152826040820152826060820152826080820152606060a0820152606060c0820152606060e082015282610100820152606061012082015260606101408201520152565b602401908160241161090e57565b634e487b7160e01b600052601160045260246000fd5b9190820180921161090e57565b90929192836024116100c65783116100c657602401916023190190565b909392938483116100c65784116100c6578101920390565b67ffffffffffffffff81116100fd5760051b60200190565b6040805190919061098f8382610102565b6001815291601f1901366020840137565b906109aa82610966565b6109b76040519182610102565b82815280926109c8601f1991610966565b0190602036910137565b604080519091906109e38382610102565b6001815291601f19018260005b8281106109fc57505050565b8060606020809385010152016109f0565b90610a1782610966565b610a246040519182610102565b8281528092610a35601f1991610966565b019060005b828110610a4657505050565b806060602080938501015201610a3a565b60405190610a66602083610102565b6000808352366020840137565b634e487b7160e01b600052603260045260246000fd5b9060c81015610a985760c80190565b610a73565b90821015610a98570190565b8051821015610a985760209160051b010190565b919091610ac8610890565b508215610d5857610af3610aed610adf8584610a89565b356001600160f81b03191690565b60f81c90565b60ff169060c9610b02836109a0565b926000905b808210610d3457505060ff6001610b25610aed610adf858a88610a9d565b9201911690610b33826109a0565b916000905b808210610d1057505060ff6001610b56610aed610adf858b89610a9d565b92019116610b63816109a0565b906000905b808210610cdd57505060ff6001610b86610aed610adf868c8a610a9d565b9301921691610b94836109a0565b60005b848110610cac5750610ba884610a0d565b936000915b818310610c465750505061074a8160a8979899600280610bd9958a013560f01c8401019201908861094e565b92610be2610145565b853560601c815296601486013560601c602089015260288601356040890152604886013560608901526068860135608089015260a088015260c087015260e08601526088830135610100860152610120850152610140840152013561016082015290565b90919280610c7c61074a8d600194610c73610c6c610c648b8a610aa9565b5161ffff1690565b61ffff1690565b8101918d61094e565b610c868689610aa9565b52610c918588610aa9565b50610ca2610c6c610c648786610aa9565b0193019190610bad565b91600281610cd26001938a989598013560f01c610cc9878a610aa9565b9061ffff169052565b019201939093610b97565b9092601481610d0760019389013560601c610cf88888610aa9565b6001600160a01b039091169052565b01930190610b68565b9091601481610d2b60019388013560601c610cf88789610aa9565b01920190610b38565b9091601481610d4f60019387013560601c610cf8878a610aa9565b01920190610b07565b509050610d6361097e565b610d6b61097e565b610d7361097e565b610d7b6109d2565b90610d84610a57565b92610d8d610145565b94600086526000602087015260006040870152600060608701526000608087015260a086015260c085015260e08401526000610100840152610120830152610140820152600061016082015290565b906014116100c657610df48160149250823691610171565b01519056fea2646970667358221220c4e165c5575df8bb0af9443b6d9797bea8b9ce06ebf400f4a96939183ec2254f64736f6c634300081a0033",
+  "deployedBytecode": "0x6080604052600436101561001257600080fd5b60003560e01c806360a85ed114610057578063634d45b214610052578063aa06aea51461004d5763fbaa267f1461004857600080fd5b6106d1565b610645565b6104a3565b60803660031901126100c65760443567ffffffffffffffff81116100c6576100839036906004016101a8565b60643567ffffffffffffffff81116100c6576100c2916100aa6100b69236906004016101a8565b906024356004356107ca565b6040519182918261020e565b0390f35b600080fd5b634e487b7160e01b600052604160045260246000fd5b6080810190811067ffffffffffffffff8211176100fd57604052565b6100cb565b90601f8019910116810190811067ffffffffffffffff8211176100fd57604052565b6040519061013461010083610102565b565b60405190610134608083610102565b6040519061013461018083610102565b67ffffffffffffffff81116100fd57601f01601f191660200190565b92919261017d82610155565b9161018b6040519384610102565b8294818452818301116100c6578281602093846000960137010152565b9080601f830112156100c6578160206101c393359101610171565b90565b60005b8381106101d95750506000910152565b81810151838201526020016101c9565b90602091610202815180928185528580860191016101c6565b601f01601f1916010190565b9060206101c39281815201906101e9565b9060206003198301126100c65760043567ffffffffffffffff81116100c657826023820112156100c65780600401359267ffffffffffffffff84116100c657602484830101116100c6576024019190565b906020808351928381520192019060005b81811061028e5750505090565b82516001600160a01b0316845260209384019390920191600101610281565b9080602083519182815201916020808360051b8301019401926000915b8383106102d957505050505090565b90919293946020806102f7600193601f1986820301875289516101e9565b970193019301919392906102ca565b80516001600160a01b03168252906020828101516001600160a01b031690820152604082015160408201526060820151606082015260808201516080820152610160806103c86103b461039461038261037060a089015161018060a08a0152610180890190610270565b60c089015188820360c08a0152610270565b60e088015187820360e0890152610270565b6101008701516101008701526101208701518682036101208801526102ad565b6101408601518582036101408701526101e9565b93015191015290565b604080825282516001600160a01b0316908201526101c392909161049590602081015163ffffffff16606085015260e061048061046961045461043e610428604087015161010060808c01526101408b01906101e9565b60608701518a8203603f190160a08c01526101e9565b6080860151898203603f190160c08b01526101e9565b60a0850151888203603f1901858a01526101e9565b60c0840151878203603f19016101008901526101e9565b910151848203603f19016101208601526101e9565b916020818403910152610306565b6104ac3661021f565b6104b4610840565b506104bd610890565b50601882013560f01c601a83013560f01c601c84013560f01c91601e85013560f01c93602086013560f01c6104f183610900565b6104fc908389610931565b94909361050890610900565b966105138289610924565b61051f9089868c61094e565b9261052a9199610924565b97610535888a610924565b610541908a878d61094e565b9861054c919a610924565b928a6105588486610924565b6105649086898461094e565b9461056f9196610924565b9661057a8789610924565b6105869089838561094e565b976105919199610924565b6105a2602284013560f01c82610924565b916105ac9361094e565b9790986105b7610124565b60048e013560601c81529c3560e01c60208e01526105d791369190610171565b60408c015236906105e792610171565b60608a01526105f736888a610171565b60808a0152369061060792610171565b60a0880152369061061792610171565b60c0860152369061062792610171565b60e084015261063591610abd565b6040519182916100c291836103d1565b6100c261065a6106543661021f565b90610abd565b604051918291602083526020830190610306565b90916104956101c3936040845260018060a01b03815116604085015260606106bd6106a7602084015160808489015260c08801906101e9565b6040840151878203603f190160808901526101e9565b910151848203603f190160a08601526101e9565b6107ba6106dd3661021f565b91906060806040516106ee816100e1565b600081528160208201528160408201520152610708610890565b506107138382610ddc565b9261077e601483013560f01c91601684013560f01c938161077861075961075161074a610741896018610924565b6018868861094e565b3691610171565b966018610924565b9661077261074a61076a838b610924565b8a868861094e565b97610924565b9161094e565b92909161079b61078c610136565b6001600160a01b039097168752565b602086015260408501526107b0368383610171565b6060850152610abd565b906100c26040519283928361066e565b90926064906101c39380518251906040519788966020880152604087015261ffff60f01b9060f01b16606086015261ffff60f01b9060f01b16606285015261081b81518092602086880191016101c6565b830161083082518093602086850191016101c6565b010103601f198101835282610102565b60405190610100820182811067ffffffffffffffff8211176100fd57604052606060e083600081526000602082015282604082015282808201528260808201528260a08201528260c08201520152565b60405190610180820182811067ffffffffffffffff8211176100fd57604052600061016083828152826020820152826040820152826060820152826080820152606060a0820152606060c0820152606060e082015282610100820152606061012082015260606101408201520152565b602401908160241161090e57565b634e487b7160e01b600052601160045260246000fd5b9190820180921161090e57565b90929192836024116100c65783116100c657602401916023190190565b909392938483116100c65784116100c6578101920390565b67ffffffffffffffff81116100fd5760051b60200190565b6040805190919061098f8382610102565b6001815291601f1901366020840137565b906109aa82610966565b6109b76040519182610102565b82815280926109c8601f1991610966565b0190602036910137565b604080519091906109e38382610102565b6001815291601f19018260005b8281106109fc57505050565b8060606020809385010152016109f0565b90610a1782610966565b610a246040519182610102565b8281528092610a35601f1991610966565b019060005b828110610a4657505050565b806060602080938501015201610a3a565b60405190610a66602083610102565b6000808352366020840137565b634e487b7160e01b600052603260045260246000fd5b9060c81015610a985760c80190565b610a73565b90821015610a98570190565b8051821015610a985760209160051b010190565b919091610ac8610890565b508215610d5857610af3610aed610adf8584610a89565b356001600160f81b03191690565b60f81c90565b60ff169060c9610b02836109a0565b926000905b808210610d3457505060ff6001610b25610aed610adf858a88610a9d565b9201911690610b33826109a0565b916000905b808210610d1057505060ff6001610b56610aed610adf858b89610a9d565b92019116610b63816109a0565b906000905b808210610cdd57505060ff6001610b86610aed610adf868c8a610a9d565b9301921691610b94836109a0565b60005b848110610cac5750610ba884610a0d565b936000915b818310610c465750505061074a8160a8979899600280610bd9958a013560f01c8401019201908861094e565b92610be2610145565b853560601c815296601486013560601c602089015260288601356040890152604886013560608901526068860135608089015260a088015260c087015260e08601526088830135610100860152610120850152610140840152013561016082015290565b90919280610c7c61074a8d600194610c73610c6c610c648b8a610aa9565b5161ffff1690565b61ffff1690565b8101918d61094e565b610c868689610aa9565b52610c918588610aa9565b50610ca2610c6c610c648786610aa9565b0193019190610bad565b91600281610cd26001938a989598013560f01c610cc9878a610aa9565b9061ffff169052565b019201939093610b97565b9092601481610d0760019389013560601c610cf88888610aa9565b6001600160a01b039091169052565b01930190610b68565b9091601481610d2b60019388013560601c610cf88789610aa9565b01920190610b38565b9091601481610d4f60019387013560601c610cf8878a610aa9565b01920190610b07565b509050610d6361097e565b610d6b61097e565b610d7361097e565b610d7b6109d2565b90610d84610a57565b92610d8d610145565b94600086526000602087015260006040870152600060608701526000608087015260a086015260c085015260e08401526000610100840152610120830152610140820152600061016082015290565b906014116100c657610df48160149250823691610171565b01519056fea2646970667358221220c4e165c5575df8bb0af9443b6d9797bea8b9ce06ebf400f4a96939183ec2254f64736f6c634300081a0033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [],
+    "types": null
+  }
+}

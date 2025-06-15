@@ -1,0 +1,232 @@
+[
+  {
+    "inputs": [
+      { "name": "_bentoBox", "internalType": "address", "type": "address" },
+      {
+        "name": "priviledgedUserList",
+        "internalType": "address[]",
+        "type": "address[]"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "inputs": [
+      { "name": "amountOut", "internalType": "uint256", "type": "uint256" }
+    ],
+    "name": "MinimalOutputBalanceViolation",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "previousOwner",
+        "internalType": "address",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "name": "newOwner",
+        "internalType": "address",
+        "type": "address"
+      }
+    ],
+    "name": "OwnershipTransferred",
+    "anonymous": false,
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "from",
+        "internalType": "address",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "to",
+        "internalType": "address",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "name": "tokenIn",
+        "internalType": "address",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "name": "tokenOut",
+        "internalType": "address",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "name": "amountIn",
+        "internalType": "uint256",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "amountOutMin",
+        "internalType": "uint256",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "amountOut",
+        "internalType": "uint256",
+        "type": "uint256"
+      }
+    ],
+    "name": "Route",
+    "anonymous": false,
+    "type": "event"
+  },
+  {
+    "outputs": [],
+    "inputs": [
+      { "name": "amount0Delta", "internalType": "int256", "type": "int256" },
+      { "name": "amount1Delta", "internalType": "int256", "type": "int256" },
+      { "name": "data", "internalType": "bytes", "type": "bytes" }
+    ],
+    "name": "algebraSwapCallback",
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "outputs": [
+      {
+        "name": "",
+        "internalType": "contract IBentoBoxMinimal",
+        "type": "address"
+      }
+    ],
+    "inputs": [],
+    "name": "bentoBox",
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "outputs": [{ "name": "", "internalType": "address", "type": "address" }],
+    "inputs": [],
+    "name": "owner",
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "outputs": [],
+    "inputs": [
+      { "name": "amount0Delta", "internalType": "int256", "type": "int256" },
+      { "name": "amount1Delta", "internalType": "int256", "type": "int256" },
+      { "name": "data", "internalType": "bytes", "type": "bytes" }
+    ],
+    "name": "pancakeV3SwapCallback",
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "outputs": [],
+    "inputs": [],
+    "name": "pause",
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "outputs": [{ "name": "", "internalType": "bool", "type": "bool" }],
+    "inputs": [{ "name": "", "internalType": "address", "type": "address" }],
+    "name": "priviledgedUsers",
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "outputs": [
+      { "name": "amountOut", "internalType": "uint256", "type": "uint256" }
+    ],
+    "inputs": [
+      { "name": "tokenIn", "internalType": "address", "type": "address" },
+      { "name": "amountIn", "internalType": "uint256", "type": "uint256" },
+      { "name": "tokenOut", "internalType": "address", "type": "address" },
+      { "name": "amountOutMin", "internalType": "uint256", "type": "uint256" },
+      { "name": "to", "internalType": "address", "type": "address" },
+      { "name": "route", "internalType": "bytes", "type": "bytes" }
+    ],
+    "name": "processRoute",
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "outputs": [],
+    "inputs": [],
+    "name": "renounceOwnership",
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "outputs": [],
+    "inputs": [],
+    "name": "resume",
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "outputs": [],
+    "inputs": [
+      { "name": "user", "internalType": "address", "type": "address" },
+      { "name": "priviledge", "internalType": "bool", "type": "bool" }
+    ],
+    "name": "setPriviledge",
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "outputs": [],
+    "inputs": [
+      { "name": "newOwner", "internalType": "address", "type": "address" }
+    ],
+    "name": "transferOwnership",
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "outputs": [
+      { "name": "amountOut", "internalType": "uint256", "type": "uint256" }
+    ],
+    "inputs": [
+      {
+        "name": "transferValueTo",
+        "internalType": "address payable",
+        "type": "address"
+      },
+      {
+        "name": "amountValueTransfer",
+        "internalType": "uint256",
+        "type": "uint256"
+      },
+      { "name": "tokenIn", "internalType": "address", "type": "address" },
+      { "name": "amountIn", "internalType": "uint256", "type": "uint256" },
+      { "name": "tokenOut", "internalType": "address", "type": "address" },
+      { "name": "amountOutMin", "internalType": "uint256", "type": "uint256" },
+      { "name": "to", "internalType": "address", "type": "address" },
+      { "name": "route", "internalType": "bytes", "type": "bytes" }
+    ],
+    "name": "transferValueAndprocessRoute",
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "outputs": [],
+    "inputs": [
+      { "name": "amount0Delta", "internalType": "int256", "type": "int256" },
+      { "name": "amount1Delta", "internalType": "int256", "type": "int256" },
+      { "name": "data", "internalType": "bytes", "type": "bytes" }
+    ],
+    "name": "uniswapV3SwapCallback",
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  { "stateMutability": "payable", "type": "receive" }
+]

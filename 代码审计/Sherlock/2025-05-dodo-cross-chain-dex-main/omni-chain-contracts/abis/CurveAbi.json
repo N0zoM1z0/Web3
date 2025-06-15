@@ -1,0 +1,73 @@
+[
+    {
+		"type": "function",
+		"name": "add_liquidity",
+		"stateMutability": "nonpayable",
+		"inputs": [
+			{
+				"name": "_amounts",
+				"type": "uint256[2]"
+			},
+			{
+				"name": "_min_mint_amount",
+				"type": "uint256"
+			}
+		],
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		]
+	},
+    {
+		"type": "function",
+		"name": "exchange",
+		"stateMutability": "nonpayable",
+		"inputs": [
+			{
+				"name": "i",
+				"type": "int128"
+			},
+			{
+				"name": "j",
+				"type": "int128"
+			},
+			{
+				"name": "_dx",
+				"type": "uint256"
+			},
+			{
+				"name": "_min_dy",
+				"type": "uint256"
+			}
+		],
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		]
+	},
+    {
+		"type": "function",
+		"name": "remove_liquidity",
+		"stateMutability": "nonpayable",
+		"inputs": [
+			{
+				"name": "_burn_amount",
+				"type": "uint256"
+			},
+			{
+				"name": "_min_amounts",
+				"type": "uint256[2]"
+			}
+		],
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256[2]"
+			}
+		]
+	}
+]
