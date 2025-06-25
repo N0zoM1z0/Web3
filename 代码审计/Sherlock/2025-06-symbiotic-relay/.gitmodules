@@ -1,0 +1,18 @@
+[submodule "middleware-sdk/lib/forge-std"]
+	path = middleware-sdk/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "middleware-sdk/lib/openzeppelin-contracts"]
+	path = middleware-sdk/lib/openzeppelin-contracts
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts
+[submodule "middleware-sdk/lib/openzeppelin-contracts-upgradeable"]
+	path = middleware-sdk/lib/openzeppelin-contracts-upgradeable
+	url = https://github.com/OpenZeppelin/openzeppelin-contracts-upgradeable
+[submodule "middleware-sdk/lib/core"]
+	path = middleware-sdk/lib/core
+	url = https://github.com/symbioticfi/core
+[submodule "middleware-sdk/lib/crypto-lib"]
+	path = middleware-sdk/lib/crypto-lib
+	url = https://github.com/get-smooth/crypto-lib
+[submodule "middleware-sdk/lib/rewards"]
+	path = middleware-sdk/lib/rewards
+	url = https://github.com/symbioticfi/rewards
