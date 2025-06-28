@@ -1,0 +1,6 @@
+crates/core/executor
+crates/core/machine
+crates/recursion
+crates/stark
+crates/zkvm/entrypoint
+crates/zkvm/lib

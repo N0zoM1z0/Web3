@@ -32,7 +32,7 @@ library BaseSlashingLogic {
         }
 
         if (
-            !IVotingPowerProvider(address(this)).isOperatorRegisteredAt(
+            !IVotingPowerProvider(address(this)).isOperatorRegisteredAt( // the same issue (context exectution)
                 operator, timestamp, slashVaultHints.operatorRegisteredHint
             )
         ) {

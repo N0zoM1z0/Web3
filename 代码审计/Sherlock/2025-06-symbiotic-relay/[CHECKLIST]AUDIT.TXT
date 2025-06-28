@@ -1,50 +1,53 @@
-middleware-sdk/examples/MyKeyRegistry.sol
-middleware-sdk/examples/MyNetwork.sol
-middleware-sdk/examples/MySettlement.sol
-middleware-sdk/examples/MyValSetDriver.sol
-middleware-sdk/examples/MyVotingPowerProvider.sol
+middleware-sdk/examples/MyKeyRegistry.sol ✔️
+middleware-sdk/examples/MyNetwork.sol ✔️
+middleware-sdk/examples/MySettlement.sol ✔️
+middleware-sdk/examples/MyValSetDriver.sol ✔️
+middleware-sdk/examples/MyVotingPowerProvider.sol ✔️
 middleware-sdk/pkg/proof/circuit.go
-middleware-sdk/src/contracts/libraries/keys/KeyBlsBn254.sol
+middleware-sdk/src/contracts/libraries/keys/KeyBlsBn254.sol ✔️
 middleware-sdk/src/contracts/libraries/keys/KeyEcdsaSecp256k1.sol
 middleware-sdk/src/contracts/libraries/sigs/SigBlsBn254.sol
 middleware-sdk/src/contracts/libraries/sigs/SigEcdsaSecp256k1.sol
-middleware-sdk/src/contracts/libraries/structs/Checkpoints.sol
-middleware-sdk/src/contracts/libraries/structs/PersistentSet.sol
-middleware-sdk/src/contracts/libraries/utils/InputNormalizer.sol
-middleware-sdk/src/contracts/libraries/utils/KeyTags.sol
-middleware-sdk/src/contracts/libraries/utils/ValSetVerifier.sol
-middleware-sdk/src/contracts/modules/base/NetworkManager.sol
-middleware-sdk/src/contracts/modules/base/OzEIP712.sol
-middleware-sdk/src/contracts/modules/base/PermissionManager.sol
-middleware-sdk/src/contracts/modules/common/permissions/OzAccessControl.sol
-middleware-sdk/src/contracts/modules/common/permissions/OzAccessManaged.sol
-middleware-sdk/src/contracts/modules/common/permissions/OzOwnable.sol
-middleware-sdk/src/contracts/modules/key-registry/KeyRegistry.sol
-middleware-sdk/src/contracts/modules/network/Network.sol
-middleware-sdk/src/contracts/modules/settlement/Settlement.sol
-middleware-sdk/src/contracts/modules/settlement/sig-verifiers/SigVerifierBlsBn254Simple.sol
-middleware-sdk/src/contracts/modules/settlement/sig-verifiers/SigVerifierBlsBn254ZK.sol
-middleware-sdk/src/contracts/modules/settlement/sig-verifiers/libraries/ExtraDataStorageHelper.sol
+middleware-sdk/src/contracts/libraries/structs/Checkpoints.sol ✔️
+middleware-sdk/src/contracts/libraries/structs/PersistentSet.sol ✔️
+middleware-sdk/src/contracts/libraries/utils/InputNormalizer.sol ✔️
+middleware-sdk/src/contracts/libraries/utils/KeyTags.sol ✔️
+middleware-sdk/src/contracts/libraries/utils/ValSetVerifier.sol 🤔
+middleware-sdk/src/contracts/modules/base/NetworkManager.sol ✔️
+middleware-sdk/src/contracts/modules/base/OzEIP712.sol ✔️
+middleware-sdk/src/contracts/modules/base/PermissionManager.sol ✔️
+middleware-sdk/src/contracts/modules/common/permissions/OzAccessControl.sol ✔️
+middleware-sdk/src/contracts/modules/common/permissions/OzAccessManaged.sol ✔️
+middleware-sdk/src/contracts/modules/common/permissions/OzOwnable.sol ✔️
+middleware-sdk/src/contracts/modules/key-registry/KeyRegistry.sol ✔️
+middleware-sdk/src/contracts/modules/network/Network.sol ✔️
+middleware-sdk/src/contracts/modules/settlement/Settlement.sol ✔️
+middleware-sdk/src/contracts/modules/settlement/sig-verifiers/SigVerifierBlsBn254Simple.sol ✔️
+middleware-sdk/src/contracts/modules/settlement/sig-verifiers/SigVerifierBlsBn254ZK.sol ✔️
+middleware-sdk/src/contracts/modules/settlement/sig-verifiers/libraries/ExtraDataStorageHelper.sol ✔️
 middleware-sdk/src/contracts/modules/valset-driver/EpochManager.sol ✔️
 middleware-sdk/src/contracts/modules/valset-driver/ValSetDriver.sol ✔️
-middleware-sdk/src/contracts/modules/voting-power/VotingPowerProvider.sol
-middleware-sdk/src/contracts/modules/voting-power/base/VotingPowerCalcManager.sol
-middleware-sdk/src/contracts/modules/voting-power/common/voting-power-calc/EqualStakeVPCalc.sol
-middleware-sdk/src/contracts/modules/voting-power/extensions/BaseRewards.sol
-middleware-sdk/src/contracts/modules/voting-power/extensions/BaseSlashing.sol
-middleware-sdk/src/contracts/modules/voting-power/extensions/MultiToken.sol
+middleware-sdk/src/contracts/modules/voting-power/VotingPowerProvider.sol ✔️
+middleware-sdk/src/contracts/modules/voting-power/base/VotingPowerCalcManager.sol ✔️
+middleware-sdk/src/contracts/modules/voting-power/common/voting-power-calc/EqualStakeVPCalc.sol ✔️
+
+--- # important!
+
+middleware-sdk/src/contracts/modules/voting-power/extensions/BaseRewards.sol ✔️
+middleware-sdk/src/contracts/modules/voting-power/extensions/BaseSlashing.sol ✔️
+middleware-sdk/src/contracts/modules/voting-power/extensions/MultiToken.sol ✔️
 middleware-sdk/src/contracts/modules/voting-power/extensions/OpNetVaultAutoDeploy.sol
 middleware-sdk/src/contracts/modules/voting-power/extensions/OperatorVaults.sol
 middleware-sdk/src/contracts/modules/voting-power/extensions/OperatorsBlacklist.sol
 middleware-sdk/src/contracts/modules/voting-power/extensions/OperatorsJail.sol
 middleware-sdk/src/contracts/modules/voting-power/extensions/OperatorsWhitelist.sol
 middleware-sdk/src/contracts/modules/voting-power/extensions/SharedVaults.sol
-middleware-sdk/src/contracts/modules/voting-power/extensions/logic/BaseRewardsLogic.sol
+middleware-sdk/src/contracts/modules/voting-power/extensions/logic/BaseRewardsLogic.sol ✔️
 middleware-sdk/src/contracts/modules/voting-power/extensions/logic/BaseSlashingLogic.sol
 middleware-sdk/src/contracts/modules/voting-power/extensions/logic/OpNetVaultAutoDeployLogic.sol
 middleware-sdk/src/contracts/modules/voting-power/logic/VotingPowerProviderLogic.sol
 
----
+--- # seem nonsense
 
 middleware-sdk/src/interfaces/modules/base/INetworkManager.sol
 middleware-sdk/src/interfaces/modules/base/IOzEIP712.sol

@@ -1,0 +1,19 @@
+[package]
+name = "tendermint-script"
+version = { workspace = true }
+edition = { workspace = true }
+publish = false
+
+[dependencies]
+sp1-sdk = { workspace = true }
+serde_json = { workspace = true }
+tendermint-light-client-verifier = { version = "0.35.0", default-features = false, features = [
+  "rust-crypto",
+] }
+serde_cbor = "0.11.2"
+
+[build-dependencies]
+sp1-build = { workspace = true }
+
+[features]
+cuda = ["sp1-sdk/cuda"]

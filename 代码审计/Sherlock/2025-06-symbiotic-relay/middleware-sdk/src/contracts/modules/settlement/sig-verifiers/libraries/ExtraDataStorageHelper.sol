@@ -23,7 +23,7 @@ library ExtraDataStorageHelper {
         return bytes32(
             uint256(
                 keccak256(abi.encode(GLOBAL_KEY_PREFIX_HASH, verificationType, KEY_TAG_PREFIX_HASH, keyTag, nameHash))
-            ) + index
+            ) + index // slot collision when index == 0
         );
     }
 }

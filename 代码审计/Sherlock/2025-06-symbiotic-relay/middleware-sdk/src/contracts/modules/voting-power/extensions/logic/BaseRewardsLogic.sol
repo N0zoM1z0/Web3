@@ -14,13 +14,13 @@ library BaseRewardsLogic {
     using SafeERC20 for IERC20;
 
     function distributeStakerRewards(address stakerRewards, address token, uint256 amount, bytes memory data) public {
-        IERC20(token).forceApprove(stakerRewards, amount);
+        IERC20(token).forceApprove(stakerRewards, amount); // Execution Context 的问题！！！应该在 BaseRewards 中处理而不是在这里处理，这里的address(this)是这个logic合约的地址！本身没有任何资产！
         IStakerRewards(stakerRewards).distributeRewards(INetworkManager(address(this)).NETWORK(), token, amount, data);
         emit IBaseRewards.DistributeStakerRewards(stakerRewards, token, amount, data);
     }
 
     function distributeOperatorRewards(address operatorRewards, address token, uint256 amount, bytes32 root) public {
-        IERC20(token).forceApprove(operatorRewards, amount);
+        IERC20(token).forceApprove(operatorRewards, amount); // the same here
         IDefaultOperatorRewards(operatorRewards).distributeRewards(
             INetworkManager(address(this)).NETWORK(), token, amount, root
         );
