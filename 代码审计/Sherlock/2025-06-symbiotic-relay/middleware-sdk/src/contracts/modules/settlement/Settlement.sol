@@ -383,7 +383,7 @@ abstract contract Settlement is NetworkManager, OzEIP712, PermissionManager, ISe
         if (length == 1) {
             revert Settlement_NoCheckpoint();
         }
-        checkpoint = trace.at(uint32(length - 2));
+        checkpoint = trace.at(uint32(length - 2)); // 🤔 只考虑倒数1，2？？？ what if trace.at(uint32(length - 2)).key > currentTimepoint
         return checkpoint._value;
     }
 }

@@ -82,7 +82,7 @@ library PersistentSet {
             uint256 totalLength = set._elements.length;
             values_ = new bytes32[](totalLength);
             uint256 actualLength;
-            for (uint256 i; i < totalLength; ++i) {
+            for (uint256 i; i < totalLength; ++i) { // Gas DoS
                 if (_containsAt(set, key, set._elements[i])) {
                     values_[actualLength++] = set._elements[i];
                 }

@@ -143,7 +143,7 @@ library OpNetVaultAutoDeployLogic {
         if (config.epochDuration == 0) {
             revert IOpNetVaultAutoDeploy.OpNetVaultAutoDeploy_InvalidEpochDuration();
         }
-        uint48 slashingWindow = IVotingPowerProvider(address(this)).getSlashingWindow();
+        uint48 slashingWindow = IVotingPowerProvider(address(this)).getSlashingWindow(); // the same issue as in BaseSlashingLogic
         if (config.epochDuration < slashingWindow) {
             revert IOpNetVaultAutoDeploy.OpNetVaultAutoDeploy_InvalidEpochDuration();
         }

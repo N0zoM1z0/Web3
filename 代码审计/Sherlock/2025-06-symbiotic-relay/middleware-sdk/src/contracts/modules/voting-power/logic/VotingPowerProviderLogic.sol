@@ -188,7 +188,7 @@ library VotingPowerProviderLogic {
         bytes memory hints
     ) public view returns (uint256) {
         return IBaseDelegator(IVault(vault).delegator()).stakeAt(
-            INetworkManager(address(this)).SUBNETWORK(), operator, timestamp, hints
+            INetworkManager(address(this)).SUBNETWORK(), operator, timestamp, hints // the same issue
         );
     }
 
